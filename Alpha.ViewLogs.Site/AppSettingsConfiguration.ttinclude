@@ -1,0 +1,202 @@
+<#@ import namespace="System" #>
+<#
+    var sites = new SiteInfo[]{
+         new SiteInfo
+        {
+            Environment = SiteEnvironment.none
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.local
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.napexternal
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.napinternal
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.proi1
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.proi7
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.sit
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.uati1
+        },
+        new SiteInfo
+        {
+            Environment = SiteEnvironment.uati7
+        }
+    };
+#>
+<#+
+    enum SiteEnvironment
+    {
+        none,
+        automation,
+        backupMNLExNapInternal,
+        backupMNLI1,
+        backupMNLI7,
+        backupMNLNapInternal,
+        local,
+        napexternal,
+        napinternal,
+        proi1,
+        proi7,
+        sit,
+        uati1,
+        uati7
+    }
+    class SiteInfo
+    {
+        public SiteEnvironment Environment { get; set; }
+        
+        #region For AppSetting file
+        public string RemoteRefURL
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.none:
+                        return "tcp://10.70.70.242:8888/CallGetRefFunction";
+                    case SiteEnvironment.local:
+                        return "tcp://10.70.70.242:8888/CallGetRefFunction";
+                    case SiteEnvironment.napexternal:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.napinternal:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.proi1:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.proi7:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.sit:
+                        return "tcp://172.16.4.118:8098/CallGetRefFunction";
+                    case SiteEnvironment.uati1:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.uati7:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";                 
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        
+        public string RemoteCacheUrl
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.none:
+                        return "tcp://10.70.70.242:8888/CallGetOddsFunction";
+                    case SiteEnvironment.local:
+                        return "tcp://10.70.70.242:8888/CallGetOddsFunction";
+                    case SiteEnvironment.napexternal:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";
+                    case SiteEnvironment.napinternal:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";
+                    case SiteEnvironment.proi1:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";
+                    case SiteEnvironment.proi7:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";
+                    case SiteEnvironment.sit:
+                        return "tcp://172.16.4.118:8098/CallGetOddsFunction";
+                    case SiteEnvironment.uati1:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";
+                    case SiteEnvironment.uati7:
+                        return "tcp://10.40.40.29:8098/CallGetOddsFunction";                 
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string PiwikSiteId
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.none:
+                        return "";
+                    case SiteEnvironment.local:
+                        return "";
+                    case SiteEnvironment.napexternal:
+                        return "29";
+                    case SiteEnvironment.napinternal:
+                        return "29";
+                    case SiteEnvironment.proi1:
+                        return "29";
+                    case SiteEnvironment.proi7:
+                        return "30";
+                    case SiteEnvironment.sit:
+                        return "";
+                    case SiteEnvironment.uati1:
+                        return "";
+                    case SiteEnvironment.uati7:
+                        return "";                 
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string ApplicationName
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.none:
+                        return "AlphaSiteName";
+                    case SiteEnvironment.local:
+                        return "AlphaSiteName";
+                    case SiteEnvironment.napexternal:
+                        return "AlphaSite_NAP_EXTERNAL";
+                    case SiteEnvironment.napinternal:
+                        return "AlphaSite_NAP_INTERNAL";
+                    case SiteEnvironment.proi1:
+                        return "AlphaSite_PRO_I1";
+                    case SiteEnvironment.proi7:
+                        return "AlphaSite_PRO_I7";
+                    case SiteEnvironment.sit:
+                        return "Alpha-MBC";
+                    case SiteEnvironment.uati1:
+                        return "AlphaSite_UAT_I1";
+                    case SiteEnvironment.uati7:
+                        return "AlphaSite_UAT_I7";                 
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        
+        public string IsDebug
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.none:
+                    case SiteEnvironment.local:
+                        return "true";
+                    default:
+                        return "false";
+                }
+            }
+        }
+
+        #endregion End for Webconfig file
+    }
+#>

@@ -1,0 +1,13 @@
+﻿
+
+// Generated helper templates
+// Generated items
+// Alpha.ViewLogs.Site\Web.AppSettings.uati7.config
+// Alpha.ViewLogs.Site\Web.AppSettings.uati1.config
+// Alpha.ViewLogs.Site\Web.AppSettings.sit.config
+// Alpha.ViewLogs.Site\Web.AppSettings.proi7.config
+// Alpha.ViewLogs.Site\Web.AppSettings.proi1.config
+// Alpha.ViewLogs.Site\Web.AppSettings.napinternal.config
+// Alpha.ViewLogs.Site\Web.AppSettings.napexternal.config
+// Alpha.ViewLogs.Site\Web.AppSettings.local.config
+// Alpha.ViewLogs.Site\Web.AppSettings.config

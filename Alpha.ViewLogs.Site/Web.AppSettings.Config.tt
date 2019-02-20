@@ -1,0 +1,67 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ include file="$(SolutionDir)\Packages\T4.TemplateFileManager.2.2.1\tools\ttinc\TemplateFilemanager.CS.ttinclude" #>
+<#@ include file="AppSettingsConfiguration.ttinclude" #>
+<#
+    var manager = TemplateFileManager.Create(this);
+
+    foreach(var site in sites)
+    {
+        var fileTransform =  site.Environment == SiteEnvironment.none ? "" :"." + site.Environment;
+        var fileName = string.Format("Web.AppSettings{0}.config", fileTransform);
+        manager.StartNewFile(fileName);
+#>
+<appSettings>
+  <add key="vs:EnableBrowserLink" value="false" />
+  <add key="ClientValidationEnabled" value="true" />
+  <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  <add key="ApplicationName" value="<#=site.ApplicationName#>" />
+
+  <add key="VirtualDirectory" value="site-viewlogs" />
+  <add key="ContentAppPath" value="/assets" />
+  <add key="OldMainAppPath" value="/site-oldmain" />
+
+  <add key="EnableBetsListMonitoring" value="true" />
+  <add key="UsersAlwaysAllowAccessBetsListMonitoring" value="1176086" />
+  <add key="ISPOSuperId" value="1533014" />
+  <add key="SpecialSuperId" value="689422" />
+  <add key="Disable151_31" value="0" />
+  <add key="Disable151_41" value="0" />
+  <add key="Disable151_51" value="0" />
+  <add key="Disable152_41" value="0" />
+  <add key="Disable152_51" value="0" />
+  <add key="Disable153_51" value="0" />
+  <add key="IsNeutralSite" value="0" />
+  <add key="Disabled_NumberGame" value="0" />
+  <add key="RemoteRefURL_Msg" value="" />
+  <add key="RemoteRefURL" value="<#=site.RemoteRefURL#>" />
+  <add key="RemoteCacheUrl" value="<#=site.RemoteCacheUrl#>" />
+
+  <add key="PiwikSiteId" value="<#=site.PiwikSiteId#>" />
+  <add key="PiwikUrl" value="//pw.detecas.com/piwik.php" />
+  <add key="PiwikScript" value="//pw.detecas.com/piwik.js" />
+  <add key="IsShowGoldDeluxeSettingForCredit" value="1" />
+  <add key="NonUseSecurityCodeSites" value="789y" />
+
+  <add key="ContentApp:StaticResourcesVersion" value="444"/>
+  <add key="TotalBetsForecast:AllowedSitesToViewTBF" value=""/>
+
+  <add key="EnableSecurityVerify" value="789y"/>
+  <add key="DeadlineEnableSecurity" value="01/01/2014"/>
+
+  <add key="IsDebug" value="<#=site.IsDebug#>" />
+  <add key="AccessDeniedPage" value="AccessDenied.aspx"/>
+
+  <add key="ActionIds_Racing_151_31" value="1129,339,338,340,337"/>
+  <add key="ActionIds_Racing_151_41" value="1130,343,342,344,341"/>
+  <add key="ActionIds_Racing_151_51" value="1125,322,324,321,323"/>
+  <add key="ActionIds_Racing_152_41" value="1126,327,326,328,325"/>
+  <add key="ActionIds_Racing_152_51" value="1127,330,332,329,331"/>
+  <add key="ActionIds_Racing_153_51" value="1128,334,336,333,335"/>
+
+  <add key="StoreProcedurePath" value="../App_Data/SPNames/Local"/>
+</appSettings><#
+    }
+
+    manager.Process();
+#>

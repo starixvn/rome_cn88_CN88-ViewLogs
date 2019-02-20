@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Dictionary>
+  <Words>
+    <Recognized >
+    </Recognized>
+    <Unrecognized />
+    <Deprecated />
+    <Compound>
+    </Compound>
+    <DiscreteExceptions>
+    </DiscreteExceptions>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>XML</Acronym>
+      <Acronym>RNG</Acronym>
+      <Acronym>IP</Acronym>
+      <Acronym>VN</Acronym>
+      <Acronym>IPVN</Acronym>
+      <Acronym>VNIP</Acronym>
+      <Acronym>VNIPs</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

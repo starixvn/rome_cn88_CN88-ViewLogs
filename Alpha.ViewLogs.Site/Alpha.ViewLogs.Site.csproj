@@ -1,0 +1,1693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alpha.ViewLogs.Site</RootNamespace>
+    <AssemblyName>Alpha.ViewLogs.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Alpha.ViewLogs.Site.Debug.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Alpha.ViewLogs.Site.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alpha.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Auth.3.0.2.1\lib\net461\Alpha.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Alpha.SubAccount, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.SubAccount.1.0.0\lib\net40\Alpha.SubAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Alpha.Utilities.IP, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Utilities.IP.1.0.0.1\lib\net40\Alpha.Utilities.IP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Alpha.Web, Version=1.0.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Web.1.0.1.8\lib\net461\Alpha.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Caching, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Caching.2.1.0\lib\net461\Fanex.Caching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Common.1.1.0.1\lib\net40\Fanex.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Module.Keno.KenoSetting, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Module.Keno.KenoSetting.1.0.0.4\lib\net40\Fanex.CustomerSetting.Module.Keno.KenoSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.CustomerSetting.Module.KenoStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.CustomerSetting.Module.KenoStatus.1.0.0.2\lib\net40\Fanex.CustomerSetting.Module.KenoStatus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data, Version=2.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.2.1.0.1\lib\net461\Fanex.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data.CrossCutting.WrappingException, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.CrossCutting.WrappingException.1.0.0.3\lib\net461\Fanex.Data.CrossCutting.WrappingException.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data.OldConnectionStringProvider, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.OldConnectionStringProvider.1.0.1\lib\net461\Fanex.Data.OldConnectionStringProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Data.Repository, Version=1.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.Repository.1.0.2.1\lib\net461\Fanex.Data.Repository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.1.0.4\lib\net40\Fanex.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.1.0.5\lib\net40\Fanex.Logging.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions.Database, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Database.1.0.3\lib\net40\Fanex.Logging.Extensions.Database.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.5\lib\net40\Fanex.Logging.Extensions.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Products, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Products.1.0.0.5\lib\net461\Fanex.Products.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.RemotingRef, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.RemotingRef.1.3.0\lib\net461\Fanex.RemotingRef.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MediatR, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.2.0.2\lib\net45\MediatR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessagePack, Version=1.7.3.4, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagePack.1.7.3.4\lib\net45\MessagePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ONEbook.UM, Version=2.0.2.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ONEbook.UM.2.0.2.7\lib\net40\ONEbook.UM.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=3.1.3.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.3.1.3\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web, Version=3.1.3.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.3.1.3\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.1.3.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.3\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model.Base, Version=3.0.4.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Base.3.0.4.1\lib\net461\Sunplus.Agent.Model.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Model.Definitions, Version=3.0.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Model.Definitions.3.0.2.3\lib\net40\Sunplus.Agent.Model.Definitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sunplus.Agent.Utilities, Version=3.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Agent.Utilities.3.0.0.4\lib\net40\Sunplus.Agent.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\SPNames\Internal\DBCust.IPDB.xml" />
+    <Content Include="App_Data\SPNames\Internal\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Internal\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\Local\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Local\DBCust.IPDB.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SPNames\Local\DBLOG.bodb_CustomerLog.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SPNames\Pro\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
+    <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBCust.IPDB.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1161.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1158.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1159.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_250.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_395.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_392.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_60503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_60502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_70508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_65507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Allbet\action_75515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75554.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75553.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70540.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75552.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70539.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70538.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70537.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_60512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70536.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_70541.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_65527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75555.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75548.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75549.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75550.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Bullfighting\action_75551.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_60005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75018.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75017.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70017.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75023.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70016.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75022.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75021.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70020.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75027.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70019.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75026.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75025.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70018.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75024.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75028.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75029.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70021.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75030.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70022.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_75031.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_70023.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_65015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\ColossusBets\action_60007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_60507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_60506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_70523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_65515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\FishingWorld\action_75527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_60000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_75007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_70005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_65003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\GoldDeluxe\action_60001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_60002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75013.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75014.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70010.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_75015.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_70011.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_65006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Keno\action_60003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75544.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75545.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75546.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_60511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_60510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_70535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_65523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75547.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75540.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75541.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75542.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lottery\action_75543.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70527.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75536.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75537.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75538.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75539.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70526.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70525.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_65516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_60508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_70524.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Lucky3\action_75535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65508.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_60504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65510.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75520.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75521.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75522.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_60505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70512.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65511.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75523.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_65509.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_70513.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75518.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\MacauGames\action_75519.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70545.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75560.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70546.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75561.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75562.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65530.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_60515.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70547.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65531.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75563.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75556.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75557.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70544.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75558.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_75559.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70543.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_70542.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65528.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_60514.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NG2\action_65529.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75035.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75034.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75033.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70026.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70025.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_65017.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_75032.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_70024.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_65016.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\NumberGame\action_60008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_70012.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_65008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\Casino\action_75016.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70548.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70549.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70550.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70551.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70552.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70553.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75564.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75565.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75566.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75567.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75568.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75569.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75570.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75571.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60516.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_60517.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65532.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65533.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65534.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_65535.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70548.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70549.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70550.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70551.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70552.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_70553.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75564.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75565.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75566.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75567.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75568.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75569.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75570.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\PokerGames\action_75571.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70504.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75506.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_60500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75502.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75500.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_70505.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_65503.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\VirtualSports\action_75507.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_684.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_682.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_683.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_681.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_680.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_679.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_851.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_926.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_927.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_928.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_929.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_930.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_931.xslt" />
+    <Content Include="assets\bundles\credit.js" />
+    <Content Include="assets\bundles\credit.min.js">
+      <DependentUpon>credit.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\default.css" />
+    <Content Include="assets\bundles\default.min.css">
+      <DependentUpon>default.css</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\login.js" />
+    <Content Include="assets\bundles\login.min.js">
+      <DependentUpon>login.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\setting.js" />
+    <Content Include="assets\bundles\setting.min.js">
+      <DependentUpon>setting.js</DependentUpon>
+    </Content>
+    <Content Include="assets\bundles\status.js" />
+    <Content Include="assets\bundles\status.min.js">
+      <DependentUpon>status.js</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.pro.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.uat.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.pro.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.uat.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.napinternal2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.napinternal3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.napinternal4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.pro2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.pro3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.pro4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.sit2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.sit3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.sit4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.uat2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.uat3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.uat4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.napinternal2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.napinternal3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.napinternal4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.pro2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.pro3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.pro4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.sit2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.sit3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.sit4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.uat2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.uat3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.uat4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1000_1099_CreditTerm\action_1004.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1100.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1101.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1102.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1103.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1104.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1105.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1106.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1107.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1109.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1110.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1111.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1112.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1113.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1114.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1115.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1116.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1117.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1118.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1119.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1120.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1125.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1126.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1127.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1128.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1129.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1130.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1133.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1134.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1135.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1136.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1138.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1139.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1142.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1143.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1144.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1145.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1148.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1150.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1152.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1153.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1155.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1100_1199_Status\action_1157.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1200.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1201.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1202.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1203.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1204.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1205.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1206.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1200_1299_Credit\action_1211.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1400_1499_SpecialDelete\action_1400.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1500.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1501.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1502.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1503.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_1500_1599_ArchiveAccount\action_1504.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_200.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_201.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_202.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_203.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_204.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_205.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_206.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_207.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_208.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_209.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_210.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_211.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_212.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_213.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_216.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_224.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_225.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_226.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_227.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_237.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_238.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_239.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_240.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_241.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_243.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_244.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_246.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_247.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_248.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_300.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_301.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_302.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_303.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_304.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_305.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_306.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_307.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_308.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_309.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_310.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_311.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_312.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_313.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_314.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_315.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_316.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_317.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_318.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_319.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_321.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_322.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_323.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_324.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_325.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_326.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_327.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_328.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_329.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_330.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_331.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_332.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_333.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_334.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_335.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_336.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_337.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_338.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_339.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_340.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_341.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_342.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_343.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_344.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_355.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_356.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_357.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_358.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_359.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_360.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_361.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_362.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_363.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_364.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_365.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_366.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_367.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_368.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_369.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_370.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_371.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_372.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_373.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_374.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_375.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_379.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_380.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_381.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_382.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_384.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_389.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_390.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_391.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_400.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_401.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_402.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_403.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_404.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_405.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_406.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_407.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_408.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_409.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_410.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_411.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_412.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_413.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_414.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_415.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_416.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_417.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_418.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_419.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_420.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_421.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_422.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_424.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_425.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_426.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_427.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_428.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_429.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_430.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_431.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_432.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_433.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_434.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_435.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_442.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_443.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_444.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_445.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_446.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_447.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_449.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_450.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_451.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_452.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_453.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_454.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_455.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_456.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_457.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_458.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_459.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_460.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_461.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_462.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_500.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_501.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_502.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_503.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_504.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_506.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_500_599_MinMaxPositionTaking\action_507.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_600.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_601.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_602.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_603.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_604.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_605.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_606.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_607.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_608.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_609.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_610.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_611.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_612.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_613.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_614.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_615.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_616.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_617.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_621.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_622.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_627.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_629.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_630.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_642.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_643.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_647.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_700_749_Transfer\action_700.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_800.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_801.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_802.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_803.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_804.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_800_849_Currency\action_805.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_850_899_WinLossLimit\action_850.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_900.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_901.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_902.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_903.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_904.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_905.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_906.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_907.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_908.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_910.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_911.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_914.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_916.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_917.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_918.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_919.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_920.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_921.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_922.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_924.xslt" />
+    <Content Include="assets\scripts\old-main.js" />
+    <Content Include="assets\styles\viewlog.css">
+      <DependentUpon>viewlog.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.min.css">
+      <DependentUpon>viewlog.css</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\viewlog.scss" />
+    <Content Include="assets\styles\_mixins.scss" />
+    <Content Include="Alpha.ViewLogs.Site.Debug.ruleset" />
+    <Content Include="Alpha.ViewLogs.Site.ruleset" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
+    <CodeAnalysisDictionary Include="CodeAnalysis\CustomDictionary.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Credit\Index.cshtml" />
+    <Content Include="Views\Shared\MonthNames.cshtml" />
+    <Content Include="Views\Tab\Index.cshtml" />
+    <Content Include="Views\Setting\Index.cshtml" />
+    <Content Include="Web.AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <TypeScriptCompile Include="assets\scripts\core.ts" />
+    <TypeScriptCompile Include="assets\scripts\setting\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\setting\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\status\index-controller.ts" />
+    <TypeScriptCompile Include="assets\scripts\status\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\tab\index.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\DependencyConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Configurations\AppSettings.cs" />
+    <Compile Include="Constants\SessionKey.cs" />
+    <Compile Include="Constants\TabType.cs" />
+    <Compile Include="Controllers\ViewLogBaseController.cs" />
+    <Compile Include="Controllers\CreditController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\TabController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Handlers\BaseHandler.cs" />
+    <Compile Include="Handlers\CreditHandler.cs" />
+    <Compile Include="Handlers\LoginHandler.cs" />
+    <Compile Include="Handlers\SettingHandler.cs" />
+    <Compile Include="Handlers\StatusHandler.cs" />
+    <Compile Include="Helpers\AppPathHelper.cs" />
+    <Compile Include="Helpers\MicroSites.cs" />
+    <Compile Include="Helpers\StaticResources\AssetScripts.cs" />
+    <Compile Include="Helpers\StaticResources\AssetStyles.cs" />
+    <Compile Include="Helpers\MicroSitesImpl.cs" />
+    <Compile Include="Helpers\StaticResources\ViewLogsScripts.cs" />
+    <Compile Include="Helpers\StaticResources\ViewLogsStyles.cs" />
+    <Compile Include="Helpers\TrackingValueFormatter.cs" />
+    <Compile Include="Helpers\TrackingValueFormatterImpl.cs" />
+    <Compile Include="Helpers\StaticResources\BaseStaticResources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\LogQuery.cs" />
+    <Compile Include="Requests\Credit\IndexQuery.cs" />
+    <Compile Include="Requests\Login\IndexQuery.cs" />
+    <Compile Include="Requests\Setting\IndexQuery.cs" />
+    <Compile Include="Requests\Status\IndexQuery.cs" />
+    <Compile Include="ViewModels\LogActionTypeViewModel.cs" />
+    <Compile Include="ViewModels\LogItemViewModel.cs" />
+    <Compile Include="ViewModels\LogViewModel.cs" />
+    <Compile Include="ViewModels\Login\IndexViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginLogItemViewModel.cs" />
+    <Compile Include="ViewModels\Setting\IndexViewModel.cs" />
+    <Compile Include="ViewModels\TabViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="bundleconfig.json" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="Web.AppSettings.local.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.napinternal.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.sit.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.local2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.local3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.local4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="deployment.ignore" />
+    <Content Include="Web.AppSettings.backupMNL.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNL2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNL3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNL4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNLNap.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNLNap2.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNLNap3.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.AppSettings.backupMNLNap4.config">
+      <DependentUpon>Web.AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNL.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNL2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNL3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNL4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNLNap.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNLNap2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNLNap3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.backupMNLNap4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.local.config" />
+    <Content Include="Web.napinternal.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.local2.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.local3.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.local4.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sit.config">
+      <DependentUpon>Web.local.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\Google.Protobuf.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\SonarAnalyzer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alpha.ViewLogs\Alpha.ViewLogs.csproj">
+      <Project>{415fe6c8-c743-47c1-b520-bdbe3b1da2bf}</Project>
+      <Name>Alpha.ViewLogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64593</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64560/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Fanex.Visual-StyleCop.MSBuild.4.7.59.0\build\Fanex.Visual-StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fanex.Visual-StyleCop.MSBuild.4.7.59.0\build\Fanex.Visual-StyleCop.MSBuild.Targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"  
+      start /MIN xcopy /s /y /R "$(OutDir)roslyn\*.*" "$(WebProjectOutputDir)\bin\Roslyn"
+cd $(ProjectDir)
+cd ..
+cd build
+assets.build.cmd</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Fanex.Visual-StyleCop.MSBuild.4.7.59.0\build\Fanex.Visual-StyleCop.MSBuild.Targets" Condition="Exists('..\packages\Fanex.Visual-StyleCop.MSBuild.4.7.59.0\build\Fanex.Visual-StyleCop.MSBuild.Targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

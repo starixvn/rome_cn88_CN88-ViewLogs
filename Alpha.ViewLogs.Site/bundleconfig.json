@@ -1,0 +1,48 @@
+[
+  {
+    "outputFileName": "assets/bundles/default.css",
+    "inputFiles": [
+      "assets/styles/viewlog.css"
+    ]
+  },
+  {
+    "outputFileName": "assets/bundles/setting.js",
+    "inputFiles": [
+      "assets/scripts/old-main.js",
+      "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
+      "assets/scripts/setting/index-view.js",
+      "assets/scripts/setting/index-controller.js"
+    ]
+  },
+  {
+    "outputFileName": "assets/bundles/status.js",
+    "inputFiles": [
+      "assets/scripts/old-main.js",
+      "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
+      "assets/scripts/status/index-view.js",
+      "assets/scripts/status/index-controller.js"
+    ]
+  },
+  {
+    "outputFileName": "assets/bundles/credit.js",
+    "inputFiles": [
+      "assets/scripts/old-main.js",
+      "assets/scripts/core.js",
+      "assets/scripts/tab/index.js",
+      "assets/scripts/credit/index-view.js",
+      "assets/scripts/credit/index-controller.js"
+    ]
+  },
+  {
+    "outputFileName": "assets/bundles/login.js",
+    "inputFiles": [
+      "assets/scripts/old-main.js",
+      "assets/scripts/core.js",
+      "assets/scripts/login/index-view.js",
+      "assets/scripts/tab/index.js",
+      "assets/scripts/login/index-controller.js"
+    ]
+  }
+]

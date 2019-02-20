@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{112AA17E-5091-4A71-8599-A5948F0C7A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.ViewLogs", "Alpha.ViewLogs\Alpha.ViewLogs.csproj", "{415FE6C8-C743-47C1-B520-BDBE3B1DA2BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.ViewLogs.Site", "Alpha.ViewLogs.Site\Alpha.ViewLogs.Site.csproj", "{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.ViewLogs.Tests", "Alpha.ViewLogs.Tests\Alpha.ViewLogs.Tests.csproj", "{7C0D171F-2D9D-4986-9148-81C465A3A711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.ViewLogs.Site.Tests", "Alpha.ViewLogs.Site.Tests\Alpha.ViewLogs.Site.Tests.csproj", "{FB380412-8A33-4B4B-8497-C1D944A9D20C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{D87E19C5-7E4A-4123-9224-CCD1BD4555FE}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\Alpha-ViewLogsCSharp.ruleset = SonarQube\Alpha-ViewLogsCSharp.ruleset
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{415FE6C8-C743-47C1-B520-BDBE3B1DA2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415FE6C8-C743-47C1-B520-BDBE3B1DA2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415FE6C8-C743-47C1-B520-BDBE3B1DA2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415FE6C8-C743-47C1-B520-BDBE3B1DA2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69690E23-A8B5-4D96-8EBE-907A9FC1CA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0D171F-2D9D-4986-9148-81C465A3A711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0D171F-2D9D-4986-9148-81C465A3A711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0D171F-2D9D-4986-9148-81C465A3A711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0D171F-2D9D-4986-9148-81C465A3A711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB380412-8A33-4B4B-8497-C1D944A9D20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB380412-8A33-4B4B-8497-C1D944A9D20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB380412-8A33-4B4B-8497-C1D944A9D20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB380412-8A33-4B4B-8497-C1D944A9D20C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C0D171F-2D9D-4986-9148-81C465A3A711} = {112AA17E-5091-4A71-8599-A5948F0C7A0A}
+		{FB380412-8A33-4B4B-8497-C1D944A9D20C} = {112AA17E-5091-4A71-8599-A5948F0C7A0A}
+	EndGlobalSection
+EndGlobal
