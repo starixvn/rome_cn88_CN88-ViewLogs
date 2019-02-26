@@ -235,25 +235,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppResources\Resources.ko-KR.resx">
-      <LastGenOutput>Resources.ko-KR.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\Resources.th-TH.resx">
-      <LastGenOutput>Resources.th-TH.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\Resources.vi-VN.resx">
-      <LastGenOutput>Resources.vi-VN.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\Resources.zh-CN.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\Resources.ja-JP.resx">
-      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppResources\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -263,24 +244,11 @@
     <EmbeddedResource Include="AppResources\Resources.zh-TW.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.ja-JP.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.ko-KR.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TrackingValueResources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.th-TH.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.vi-VN.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-CN.resx" />
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-Hans.resx" />
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-TW.resx" />
   </ItemGroup>
