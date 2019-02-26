@@ -233,6 +233,34 @@
         <td class="colW2">
           <xsl:value-of select="@mpbv161" />
         </td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+      </tr>
+      <tr>
+       
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MinBv164')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@minbv164" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MaxBv164')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@maxbv164" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('MPMv164')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@mpmv164" />
+        </td>
+      </tr>
+      <tr>
+        
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('UpdMultiple')" />
         </td>
@@ -244,6 +272,10 @@
         </td>
         <td class="colW2">
           <xsl:value-of select="@ummb" />
+        </td>
+        <td class="colW1">
+        </td>
+        <td class="colW2">
         </td>
       </tr>
       <tr>
@@ -309,6 +341,12 @@
 
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('UMMBv164')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@ummbv164" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
         </td>
         <td class="colW2">
@@ -320,8 +358,7 @@
         </td>
         <td class="colW2">
           <xsl:value-of select="@language" />
-        </td>
-        <td class="colW1"></td><td class="colW2"></td>
+        </td>        
       </tr>
       <tr>
         <td class="colW1">

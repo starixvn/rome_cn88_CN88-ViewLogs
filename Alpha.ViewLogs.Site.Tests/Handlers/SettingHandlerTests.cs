@@ -405,6 +405,7 @@
         [TestCase(LanguageCode.English)]
         [TestCase(LanguageCode.ChineseTraditional)]
         [TestCase(LanguageCode.ChineseSimplified)]
+        [TestCase(LanguageCode.NewChineseSimplified)]
         [TestCase(LanguageCode.Japanese)]
         [TestCase(LanguageCode.Thai)]
         [TestCase(LanguageCode.Korean)]

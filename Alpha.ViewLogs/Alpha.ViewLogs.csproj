@@ -72,6 +72,7 @@
     <Compile Include="Helpers\IDateTime.cs" />
     <Compile Include="Helpers\Impl\DateTimeWrap.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Models\CN88SportBettype.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\Enumerations\Enumeration.cs" />
@@ -258,6 +259,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppResources\Resources.zh-Hans.resx" />
     <EmbeddedResource Include="AppResources\Resources.zh-TW.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -279,6 +281,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-CN.resx" />
+    <EmbeddedResource Include="AppResources\TrackingValueResources.zh-Hans.resx" />
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-TW.resx" />
   </ItemGroup>
   <ItemGroup>

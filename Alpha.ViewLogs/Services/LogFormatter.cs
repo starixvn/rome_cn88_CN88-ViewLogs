@@ -58,5 +58,11 @@
         string FormatChatbotSelfDestructionPeriod(string value);
 
         string GetPlatformOfSearchAndCopyFunction(string value);
+
+        string FormatDecimal(string value, string formatSpecifier);
+
+        string GetCN88BettypeName(int sporttype, int bettype, string isLive);
+
+        string GetCN88SportName(int sporttype);
     }
 }

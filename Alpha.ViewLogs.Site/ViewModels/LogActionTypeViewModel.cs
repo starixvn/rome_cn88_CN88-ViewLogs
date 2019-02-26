@@ -36,6 +36,8 @@
                     return logActionType.ChineseTraditionalName;
                 case LanguageCode.ChineseSimplified:
                     return logActionType.ChineseSimplifiedName;
+                case LanguageCode.NewChineseSimplified:
+                    return logActionType.ChineseSimplifiedName;
                 case LanguageCode.Japanese:
                     return logActionType.JapaneseName;
                 case LanguageCode.Thai:

@@ -4,9 +4,13 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Resources;
+    using System.Text;
+    using System.Text.RegularExpressions;
     using System.Xml.Linq;
+    using Alpha.ViewLogs.Models;
     using AppResources;
     using Constants;
+    using Fanex.Common;
     using Helpers;
     using Params;
     using Sunplus.Agent.Model.Definitions;
@@ -22,6 +26,35 @@
 
         private bool isShowMyanmarOdds;
         private bool isShowPokerGames;
+
+        private static readonly IDictionary<int, string> CN88Sporttype = new Dictionary<int, string>
+         {
+                { 1, "CN88Soccer" },
+                { 2, "CN88Basketball" },
+                { 99, "CN88OtherSports" },
+                { 9999, "CN88AllSports" }
+         };
+
+        private static readonly IEnumerable<CN88SportBettype> CN88SportBettypeMatrix = new List<CN88SportBettype>
+            {
+                new CN88SportBettype(1, 1, false, "CN88SoccerHandicap"),
+                new CN88SportBettype(1, 1, true, "CN88SoccerLiveHandicap"),
+                new CN88SportBettype(1, 5, false, "CN88Soccer1X2"),
+                new CN88SportBettype(1, 9999, false, "CN88SoccerOtherBettype"),
+                new CN88SportBettype(1, 9999, true, "CN88SoccerLiveOtherBettype"),
+
+                new CN88SportBettype(2, 1, false,"CN88BasketballHandicap"),
+                new CN88SportBettype(2, 1, true, "CN88BasketballLiveHandicap"),
+                new CN88SportBettype(2, 5, false, "CN88Basketball1X2"),
+                new CN88SportBettype(2, 9999, false, "CN88BasketballOtherBettype"),
+
+                new CN88SportBettype(99, 1, false, "CN88OtherSporstHandicap"),
+                new CN88SportBettype(99, 1, true, "CN88OtherSporstLiveHandicap"),
+                new CN88SportBettype(99, 5, false, "CN88OtherSporst1X2"),
+                new CN88SportBettype(99, 9999, false, "CN88OtherSportsOtherBettype"),
+
+                new CN88SportBettype(9999, 10, false, "CN88AllSportsBettype")
+            };
 
         public LogFormatterImpl(
             ViewLogIPService ipService,
@@ -305,6 +338,7 @@
             => value.Replace(LanguageCode.English.ToLowerInvariant(), GetLogResource(LanguageCode.English))
                     .Replace(LanguageCode.ChineseSimplified.ToLowerInvariant(), GetLogResource(LanguageCode.ChineseSimplified))
                     .Replace(LanguageCode.ChineseTraditional.ToLowerInvariant(), GetLogResource(LanguageCode.ChineseTraditional))
+                    .Replace(LanguageCode.NewChineseSimplified.ToLowerInvariant(), GetLogResource(LanguageCode.NewChineseSimplified))
                     .Replace(LanguageCode.Japanese.ToLowerInvariant(), GetLogResource(LanguageCode.Japanese))
                     .Replace(LanguageCode.Korean.ToLowerInvariant(), GetLogResource(LanguageCode.Korean))
                     .Replace(LanguageCode.Thai.ToLowerInvariant(), GetLogResource(LanguageCode.Thai))
@@ -327,5 +361,33 @@
             => string.IsNullOrWhiteSpace(value)
             ? string.Empty
             : GetLogResource($"SystemId_{value}");
+
+        public string FormatDecimal(string value, string formatSpecifier)
+        {
+            StringBuilder result = new StringBuilder(value);
+            string[] numbers = Regex.Split(value, @"\D+");
+            foreach (string number in numbers)
+            {
+                if (!string.IsNullOrEmpty(number))
+                {
+                    result.Replace(number, Converter.ToDecimal(number).ToString(formatSpecifier));
+                }
+            }
+
+            return result.ToString();
+        }
+
+        public string GetCN88BettypeName(int sporttype, int bettype, string isLive)
+        {
+            var resource = CN88SportBettypeMatrix.FirstOrDefault(sportBettype =>
+                sportBettype.Sporttype.Equals(sporttype) &&
+                sportBettype.Bettype.Equals(bettype) &&
+                sportBettype.IsLive.Equals(isLive.Equals("1")));
+
+            return resource == null ? string.Empty : GetLogResource(resource.ResourceKey);
+        }
+
+        public string GetCN88SportName(int sporttype)
+            => GetLogResource(CN88Sporttype[sporttype]);
     }
 }

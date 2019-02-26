@@ -8,6 +8,8 @@
 
         public string ChineseSimplifiedName { get; set; }
 
+        public string NewChineseSimplifiedName { get; set; }
+
         public string EnglishName { get; set; }
 
         public string VietnameseName { get; set; }

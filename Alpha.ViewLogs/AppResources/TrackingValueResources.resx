@@ -3816,8 +3816,8 @@
   <data name="Disable180_1201" xml:space="preserve">
     <value>Disabled Virtual Sports</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>General Information</value>
   </data>
   <data name="hideGD" xml:space="preserve">
     <value>Hide Gold Deluxe</value>
@@ -3924,10 +3924,91 @@
   <data name="SystemId_2" xml:space="preserve">
     <value>Web</value>
   </data>
+  <data name="zh-Hans" xml:space="preserve">
+    <value>New Simplified Chinese </value>
+  </data>
   <data name="SystemId_8" xml:space="preserve">
     <value>Chatbot</value>
   </data>
   <data name="CopyCustomer" xml:space="preserve">
     <value>Create new member from existing account</value>
+  </data>
+  <data name="MinBv164" xml:space="preserve">
+    <value>Happy 5 - Min Bet</value>
+  </data>
+  <data name="MaxBv164" xml:space="preserve">
+    <value>Happy 5 - Max Bet</value>
+  </data>
+  <data name="MPMv164" xml:space="preserve">
+    <value>Happy 5 - Max Per Match</value>
+  </data>
+  <data name="UMMBv164" xml:space="preserve">
+    <value>Update Min-Max Bet Happy 5</value>
+  </data>
+  <data name="AgentPTCN88" xml:space="preserve">
+    <value>Agent PT</value>
+  </data>
+  <data name="MasterPTCN88" xml:space="preserve">
+    <value>Master PT</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SuperPTCN88" xml:space="preserve">
+    <value>Super PT</value>
+  </data>
+  <data name="CN88AllSports" xml:space="preserve">
+    <value>All Sports</value>
+  </data>
+  <data name="CN88AllSportsBettype" xml:space="preserve">
+    <value>Outright</value>
+  </data>
+  <data name="CN88Basketball" xml:space="preserve">
+    <value>Basketball</value>
+  </data>
+  <data name="CN88Basketball1X2" xml:space="preserve">
+    <value>1 X 2, Live 1 X 2</value>
+  </data>
+  <data name="CN88BasketballHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88BasketballLiveHandicap" xml:space="preserve">
+    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+  </data>
+  <data name="CN88BasketballOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
+  </data>
+  <data name="CN88OtherSporst1X2" xml:space="preserve">
+    <value>1 X 2, Live 1 X 2</value>
+  </data>
+  <data name="CN88OtherSporstHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
+    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+  </data>
+  <data name="CN88OtherSports" xml:space="preserve">
+    <value>Other Sports</value>
+  </data>
+  <data name="CN88OtherSportsOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
+  </data>
+  <data name="CN88Soccer" xml:space="preserve">
+    <value>Soccer</value>
+  </data>
+  <data name="CN88Soccer1X2" xml:space="preserve">
+    <value>1 X 2, Live 1 X 2</value>
+  </data>
+  <data name="CN88SoccerHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88SoccerLiveHandicap" xml:space="preserve">
+    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+  </data>
+  <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
+    <value>Live Other Bet Types</value>
+  </data>
+  <data name="CN88SoccerOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
   </data>
 </root>

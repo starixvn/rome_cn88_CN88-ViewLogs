@@ -3882,4 +3882,16 @@
   <data name="CopyCustomer" xml:space="preserve">
     <value>從現有的賬號復制新的會員。</value>
   </data>
+  <data name="MPMv164" xml:space="preserve">
+    <value>快樂5-單場限額</value>
+  </data>
+  <data name="MaxBv164" xml:space="preserve">
+    <value>快樂5-最高投注</value>
+  </data>
+  <data name="MinBv164" xml:space="preserve">
+    <value>快樂5-最低投注</value>
+  </data>
+  <data name="zh-Hans" xml:space="preserve">
+    <value>簡體中文(新)</value>
+  </data>
 </root>

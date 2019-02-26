@@ -19,7 +19,7 @@ namespace Alpha.ViewLogs.AppResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TrackingValueResources {
@@ -2077,6 +2077,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agent PT.
+        /// </summary>
+        public static string AgentPTCN88 {
+            get {
+                return ResourceManager.GetString("AgentPTCN88", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agent Id.
         /// </summary>
         public static string agID {
@@ -2451,6 +2460,168 @@ namespace Alpha.ViewLogs.AppResources {
         public static string closedOnly {
             get {
                 return ResourceManager.GetString("closedOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Sports.
+        /// </summary>
+        public static string CN88AllSports {
+            get {
+                return ResourceManager.GetString("CN88AllSports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outright.
+        /// </summary>
+        public static string CN88AllSportsBettype {
+            get {
+                return ResourceManager.GetString("CN88AllSportsBettype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basketball.
+        /// </summary>
+        public static string CN88Basketball {
+            get {
+                return ResourceManager.GetString("CN88Basketball", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        /// </summary>
+        public static string CN88Basketball1X2 {
+            get {
+                return ResourceManager.GetString("CN88Basketball1X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Handicap, Over/Under, Odd/Even.
+        /// </summary>
+        public static string CN88BasketballHandicap {
+            get {
+                return ResourceManager.GetString("CN88BasketballHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        /// </summary>
+        public static string CN88BasketballLiveHandicap {
+            get {
+                return ResourceManager.GetString("CN88BasketballLiveHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Bet Types.
+        /// </summary>
+        public static string CN88BasketballOtherBettype {
+            get {
+                return ResourceManager.GetString("CN88BasketballOtherBettype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        /// </summary>
+        public static string CN88OtherSporst1X2 {
+            get {
+                return ResourceManager.GetString("CN88OtherSporst1X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Handicap, Over/Under, Odd/Even.
+        /// </summary>
+        public static string CN88OtherSporstHandicap {
+            get {
+                return ResourceManager.GetString("CN88OtherSporstHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        /// </summary>
+        public static string CN88OtherSporstLiveHandicap {
+            get {
+                return ResourceManager.GetString("CN88OtherSporstLiveHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Sports.
+        /// </summary>
+        public static string CN88OtherSports {
+            get {
+                return ResourceManager.GetString("CN88OtherSports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Bet Types.
+        /// </summary>
+        public static string CN88OtherSportsOtherBettype {
+            get {
+                return ResourceManager.GetString("CN88OtherSportsOtherBettype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soccer.
+        /// </summary>
+        public static string CN88Soccer {
+            get {
+                return ResourceManager.GetString("CN88Soccer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        /// </summary>
+        public static string CN88Soccer1X2 {
+            get {
+                return ResourceManager.GetString("CN88Soccer1X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Handicap, Over/Under, Odd/Even.
+        /// </summary>
+        public static string CN88SoccerHandicap {
+            get {
+                return ResourceManager.GetString("CN88SoccerHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        /// </summary>
+        public static string CN88SoccerLiveHandicap {
+            get {
+                return ResourceManager.GetString("CN88SoccerLiveHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Other Bet Types.
+        /// </summary>
+        public static string CN88SoccerLiveOtherBettype {
+            get {
+                return ResourceManager.GetString("CN88SoccerLiveOtherBettype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Bet Types.
+        /// </summary>
+        public static string CN88SoccerOtherBettype {
+            get {
+                return ResourceManager.GetString("CN88SoccerOtherBettype", resourceCulture);
             }
         }
         
@@ -3225,6 +3396,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string gender {
             get {
                 return ResourceManager.GetString("gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General Information.
+        /// </summary>
+        public static string GeneralInformation {
+            get {
+                return ResourceManager.GetString("GeneralInformation", resourceCulture);
             }
         }
         
@@ -6226,6 +6406,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Master PT.
+        /// </summary>
+        public static string MasterPTCN88 {
+            get {
+                return ResourceManager.GetString("MasterPTCN88", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Match ID.
         /// </summary>
         public static string matchID {
@@ -6375,6 +6564,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MaxBv161 {
             get {
                 return ResourceManager.GetString("MaxBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Max Bet.
+        /// </summary>
+        public static string MaxBv164 {
+            get {
+                return ResourceManager.GetString("MaxBv164", resourceCulture);
             }
         }
         
@@ -7293,6 +7491,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string MinBv161 {
             get {
                 return ResourceManager.GetString("MinBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Min Bet.
+        /// </summary>
+        public static string MinBv164 {
+            get {
+                return ResourceManager.GetString("MinBv164", resourceCulture);
             }
         }
         
@@ -8242,6 +8449,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Happy 5 - Max Per Match.
+        /// </summary>
+        public static string MPMv164 {
+            get {
+                return ResourceManager.GetString("MPMv164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soccer Parlay-Max Per Match.
         /// </summary>
         public static string MPMv1MP {
@@ -8409,6 +8625,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string mrecommend {
             get {
                 return ResourceManager.GetString("mrecommend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
@@ -9205,15 +9430,6 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sub Account ID.
         /// </summary>
         public static string subAccID {
@@ -9264,6 +9480,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string superId {
             get {
                 return ResourceManager.GetString("superId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Super PT.
+        /// </summary>
+        public static string SuperPTCN88 {
+            get {
+                return ResourceManager.GetString("SuperPTCN88", resourceCulture);
             }
         }
         
@@ -9570,6 +9795,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string UMMBv161 {
             get {
                 return ResourceManager.GetString("UMMBv161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Min-Max Bet Happy 5.
+        /// </summary>
+        public static string UMMBv164 {
+            get {
+                return ResourceManager.GetString("UMMBv164", resourceCulture);
             }
         }
         
@@ -11487,6 +11721,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string zh_CN {
             get {
                 return ResourceManager.GetString("zh-CN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Simplified Chinese .
+        /// </summary>
+        public static string zh_Hans {
+            get {
+                return ResourceManager.GetString("zh-Hans", resourceCulture);
             }
         }
         

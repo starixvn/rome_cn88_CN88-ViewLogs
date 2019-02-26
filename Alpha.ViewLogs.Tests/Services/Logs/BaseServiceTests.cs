@@ -311,6 +311,7 @@
 
         [TestCase(-1, null, LanguageCode.ChineseTraditional)]
         [TestCase(-1, null, LanguageCode.ChineseSimplified)]
+        [TestCase(-1, null, LanguageCode.NewChineseSimplified)]
         [TestCase(-1, null, LanguageCode.Japanese)]
         [TestCase(-1, null, LanguageCode.Thai)]
         [TestCase(-1, null, LanguageCode.Korean)]
@@ -321,6 +322,7 @@
         [TestCase(int.MinValue, null, LanguageCode.English)]
         [TestCase(1, "Action Name 1 - ChineseTraditional", LanguageCode.ChineseTraditional)]
         [TestCase(1, "Action Name 1 - ChineseSimplified", LanguageCode.ChineseSimplified)]
+        [TestCase(1, "Action Name 1 - ChineseSimplified", LanguageCode.NewChineseSimplified)]
         [TestCase(1, "Action Name 1 - Japanese", LanguageCode.Japanese)]
         [TestCase(1, "Action Name 1 - Thai", LanguageCode.Thai)]
         [TestCase(1, "Action Name 1 - Korean", LanguageCode.Korean)]
@@ -337,6 +339,7 @@
                 Id = 1,
                 ChineseTraditionalName = "Action Name 1 - ChineseTraditional",
                 ChineseSimplifiedName = "Action Name 1 - ChineseSimplified",
+                NewChineseSimplifiedName = "Action Name 1 - ChineseSimplified",
                 JapaneseName = "Action Name 1 - Japanese",
                 ThaiName = "Action Name 1 - Thai",
                 KoreanName = "Action Name 1 - Korean",

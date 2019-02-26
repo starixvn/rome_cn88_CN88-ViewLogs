@@ -3882,4 +3882,16 @@
   <data name="CopyCustomer" xml:space="preserve">
     <value>สร้างสมาชิกใหม่จากบัญชีที่มีอยู่</value>
   </data>
+  <data name="MPMv164" xml:space="preserve">
+    <value>Happy 5-ค่าเดิมพันสูงสุดต่อคู่การแข่งขัน</value>
+  </data>
+  <data name="MaxBv164" xml:space="preserve">
+    <value>Happy 5-ค่าเดิมพันสูงสุด</value>
+  </data>
+  <data name="MinBv164" xml:space="preserve">
+    <value>Happy 5-ค่าเดิมพันต้ำสุด</value>
+  </data>
+  <data name="zh-Hans" xml:space="preserve">
+    <value>จีนตัวย่อ</value>
+  </data>
 </root>

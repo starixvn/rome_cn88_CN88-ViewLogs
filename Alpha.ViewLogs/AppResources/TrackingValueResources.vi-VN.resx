@@ -3645,4 +3645,19 @@
   <data name="CopyCustomer" xml:space="preserve">
     <value>Tạo mới tài khoản Member dựa trên thiết lập của tài khoản có sẵn.</value>
   </data>
+  <data name="MPMv164" xml:space="preserve">
+    <value>Tiền cược lớn nhất cho mỗi trận  Happy 5</value>
+  </data>
+  <data name="MaxBv164" xml:space="preserve">
+    <value>Tiền cược lớn nhất cho Happy 5</value>
+  </data>
+  <data name="MinBv164" xml:space="preserve">
+    <value>Tiền cược nhỏ nhất cho Happy 5</value>
+  </data>
+  <data name="UMMBv164" xml:space="preserve">
+    <value>Cập nhật tiền cược nhỏ nhất / lớn nhất của Happy 5</value>
+  </data>
+  <data name="zh-Hans" xml:space="preserve">
+    <value>Tiếng Trung Giản Thể Mới</value>
+  </data>
 </root>
