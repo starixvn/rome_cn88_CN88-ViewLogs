@@ -29,6 +29,7 @@
     @Html.Hidden("viewIPInfoPath", Model.ViewIPInfoPath)
 
     @RenderSection("Scripts", required: false)
+    @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
     @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
 </body>
 </html>
