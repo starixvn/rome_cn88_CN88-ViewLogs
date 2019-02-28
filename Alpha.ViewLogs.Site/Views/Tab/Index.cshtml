@@ -3,7 +3,7 @@
 @using Alpha.ViewLogs.Site.Configurations;
 
 @model TabViewModel
-<ul id="nav-tabs" class="nav nav-tabs" role="tablist">
+<ul id="nav-tabs" class="nav nav-tabs-style2" role="tablist">
     <li role="presentation" class="@(string.Equals(Model.SelectedTabName, TabType.Setting,StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty)">
         <a data-tablink="/@(AppSettings.VirtualDirectory+"setting/index")" role="tab" aria-controls="@TabType.Setting" data-to data-toggle="tab" class="lnk-changetab">@Resources.Setting</a>
     </li>
