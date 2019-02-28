@@ -16,7 +16,12 @@ $height-td: 28px;
     right: 0;
     z-index: 99999;
 }
-
+.RptHeader{
+    background-color: #666;
+    text-indent: 10px;
+    height: 28px;
+    color: #fff;
+}
 .filter {
     .form-group {
         vertical-align: middle;
@@ -72,13 +77,14 @@ $height-td: 28px;
     }
 
     &.tblRpt-bordered > tbody > tr > td {
-        border-bottom: 1px solid #666;
+        border: 1px solid #ddd !important;
+        height: 25px;
     }
 }
 
 .tblRpt .tblDesc tr:last-child .tblDesc > tbody > tr > td,
 .tblRpt .tblDesc-ex tr:last-child .tblDesc-ex > tbody > tr > td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd !important;
 }
 
 .tblRpt .tblDesc, .tbl-sub-details, .tblRpt .tblDesc-ex {
@@ -86,8 +92,8 @@ $height-td: 28px;
 
     > tbody > tr > td {
         padding: 0 8px;
-        border-bottom: 1px solid #ddd;
-        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd !important;
+        border-right: 1px solid #ddd !important;
 
         &:last-child {
             border-right: none;
@@ -95,15 +101,15 @@ $height-td: 28px;
     }
 
     tbody tr.ex-row td:last-child {
-        border-right: 1px solid #ddd;
+        border-right: 1px solid #ddd !important;
     }
 
     tbody tr.ex-row + tr td {
-        border-top: 1px solid #ddd;
+        border-top: 1px solid #ddd !important;
     }
 
     tbody tr:last-child td {
-        border-bottom: none;
+        border-bottom: none !important;
     }
 
     td.colW1, td.colTitle {
