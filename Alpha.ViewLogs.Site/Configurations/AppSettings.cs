@@ -36,6 +36,14 @@
             }
         }
 
+        public static string SiteMainAppPath
+        {
+            get
+            {
+                return GetConfigValue("MainAppPath");
+            }
+        }
+
         public static string AccessDeniedPage
         {
             get

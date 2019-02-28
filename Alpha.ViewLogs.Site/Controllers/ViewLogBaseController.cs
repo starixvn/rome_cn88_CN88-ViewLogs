@@ -26,7 +26,7 @@
 
             if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
             {
-                Response.Redirect(microSites.OldMainPath(AppSettings.AccessDeniedPage));
+                Response.Redirect(microSites.SiteMainPath(AppSettings.AccessDeniedPage));
             }
         }
     }

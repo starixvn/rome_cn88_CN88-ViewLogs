@@ -14,5 +14,10 @@
         {
             return AppPathHelper.GetAppPath(HttpRuntime.AppDomainAppVirtualPath, virtualPath);
         }
+
+        public string SiteMainPath(string virtualPath)
+        {
+            return AppPathHelper.GetAppPath(AppSettings.SiteMainAppPath, virtualPath);
+        }
     }
 }

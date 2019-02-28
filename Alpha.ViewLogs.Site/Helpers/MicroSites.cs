@@ -5,5 +5,7 @@
         string OldMainPath(string virtualPath);
 
         string ViewLogsPath(string virtualPath);
+
+        string SiteMainPath(string virtualPath);
     }
 }
