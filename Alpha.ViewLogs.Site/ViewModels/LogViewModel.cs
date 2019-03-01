@@ -79,7 +79,7 @@
         {
             get
             {
-                return microSites.OldMainPath("~/_GlobalResources/Handlers/QueryUserName.ashx");
+                return microSites.SiteMainPath("~/Suggestion/Index");
             }
         }
 
