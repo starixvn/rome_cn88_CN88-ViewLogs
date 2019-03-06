@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @StaticResources.AssetStyles.RenderCommon("/bundles/common/common")
-    @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs-{Model.UserLevel}")
+    @AssetStyles.Render($"/bundles/site-viewlogs/viewlogs")
 
     <link rel="stylesheet" href="@ViewLogsStyles.GetAbsolutePath("~/assets/bundles/default")" />
 
