@@ -2,18 +2,23 @@
 
 body {
     font-size: 13px;
-    padding-top: 14px;
+    //padding-top: 14px;
 }
-
+.tab-box {
+    padding-top: 15px;
+    position: fixed;
+    left: 15px;
+    right: 14px;
+    background-color: #fff;
+    height: 48px;
+    z-index: 99999;
+}
 $sporttype-detail-bg: #d3d6db;
 $height-td: 28px;
 
-.nav.nav-tabs {
+.nav.nav-tabs-style2{
     background: #f4f4f4;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 99999;
+    
 }
 .RptHeader{
     background-color: #666;
@@ -267,4 +272,11 @@ $height-td: 28px;
     &.ex-row + tr td {
         border-top: 1px solid #ddd;
     }
+}
+
+.page-viewlog .tab-content {
+    margin-top: 48px;
+}
+.tblDesc {
+    width: 100%;
 }
