@@ -24,5 +24,6 @@ function slideToggle(id) {
 
 function OpenIPInfo(ip) {
     var url = $('#viewIPInfoPath').val() + '?ip=' + ip;
-    top.popupManager.open(url, '', 400, 300);
+    top.popupManager.init($, top);
+    top.popupManager.open({ title: 'IP Information', url: url, width: 500, height: 300 });
 }
