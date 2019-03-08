@@ -202,11 +202,14 @@ $height-td: 28px;
     background: #fff;
     position: absolute;
     top: 85px;
+    left: 16px;
+    margin-top: 8px;
     width: 230px;
     z-index: 9999;
 
     .opOut, .opOver {
-        padding: 0 5px;
+        padding: 4px 6px;
+        line-height: 18px;
     }
 
     .opOver {
