@@ -19,7 +19,7 @@ namespace Alpha.ViewLogs.AppResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TrackingValueResources {
@@ -2491,7 +2491,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
         /// </summary>
         public static string CN88Basketball1X2 {
             get {
@@ -2509,7 +2509,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        ///   Looks up a localized string similar to In-play Handicap, In-play Over/Under, In-play Odd/Even.
         /// </summary>
         public static string CN88BasketballLiveHandicap {
             get {
@@ -2527,7 +2527,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
         /// </summary>
         public static string CN88OtherSporst1X2 {
             get {
@@ -2545,7 +2545,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        ///   Looks up a localized string similar to In-play Handicap, In-play Over/Under, In-play Odd/Even.
         /// </summary>
         public static string CN88OtherSporstLiveHandicap {
             get {
@@ -2581,7 +2581,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, Live 1 X 2.
+        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
         /// </summary>
         public static string CN88Soccer1X2 {
             get {
@@ -2599,7 +2599,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Live Handicap, Live Over/Under, Live Odd/Even.
+        ///   Looks up a localized string similar to In-play Handicap, In-play Over/Under, In-play Odd/Even.
         /// </summary>
         public static string CN88SoccerLiveHandicap {
             get {
@@ -2608,7 +2608,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Live Other Bet Types.
+        ///   Looks up a localized string similar to In-play Other Bet Types.
         /// </summary>
         public static string CN88SoccerLiveOtherBettype {
             get {

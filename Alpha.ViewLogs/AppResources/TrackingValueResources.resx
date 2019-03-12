@@ -3967,25 +3967,25 @@
     <value>Basketball</value>
   </data>
   <data name="CN88Basketball1X2" xml:space="preserve">
-    <value>1 X 2, Live 1 X 2</value>
+    <value>1 X 2, In-play 1 X 2</value>
   </data>
   <data name="CN88BasketballHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
   </data>
   <data name="CN88BasketballLiveHandicap" xml:space="preserve">
-    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
   </data>
   <data name="CN88BasketballOtherBettype" xml:space="preserve">
     <value>Other Bet Types</value>
   </data>
   <data name="CN88OtherSporst1X2" xml:space="preserve">
-    <value>1 X 2, Live 1 X 2</value>
+    <value>1 X 2, In-play 1 X 2</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
   </data>
   <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
-    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
   </data>
   <data name="CN88OtherSports" xml:space="preserve">
     <value>Other Sports</value>
@@ -3997,16 +3997,16 @@
     <value>Soccer</value>
   </data>
   <data name="CN88Soccer1X2" xml:space="preserve">
-    <value>1 X 2, Live 1 X 2</value>
+    <value>1 X 2, In-play 1 X 2</value>
   </data>
   <data name="CN88SoccerHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
   </data>
   <data name="CN88SoccerLiveHandicap" xml:space="preserve">
-    <value>Live Handicap, Live Over/Under, Live Odd/Even</value>
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
   </data>
   <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
-    <value>Live Other Bet Types</value>
+    <value>In-play Other Bet Types</value>
   </data>
   <data name="CN88SoccerOtherBettype" xml:space="preserve">
     <value>Other Bet Types</value>
