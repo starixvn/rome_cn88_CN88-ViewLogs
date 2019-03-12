@@ -199,9 +199,10 @@ $height-td: 28px;
 .output {
     @include border-radius(1px);
     @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)');
+    border: 1px solid #c8c8c8;
     background: #fff;
     position: absolute;
-    top: 85px;
+    top: 84px;
     left: 16px;
     margin-top: 8px;
     width: 230px;
