@@ -1486,6 +1486,7 @@
     <Content Include="assets\styles\_mixins.scss" />
     <Content Include="Alpha.ViewLogs.Site.Debug.ruleset" />
     <Content Include="Alpha.ViewLogs.Site.ruleset" />
+    <Content Include="App_Data\AuthorizationSection.config" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
