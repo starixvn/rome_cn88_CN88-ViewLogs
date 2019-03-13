@@ -2,13 +2,13 @@
 {
     using System.Web.Mvc;
     using System.Web.SessionState;
+    using CN88.Web.Controllers;
     using Configurations;
     using Helpers;
     using Sunplus.Agent.Model.Entities;
-    using Web;
 
     [SessionState(SessionStateBehavior.ReadOnly)]
-    public abstract class ViewLogBaseController : BaseController
+    public abstract class ViewLogBaseController : CN88BaseController
     {
         private readonly MicroSites microSites;
 

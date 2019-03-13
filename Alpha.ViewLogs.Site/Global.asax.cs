@@ -1,7 +1,12 @@
 ﻿namespace Alpha.ViewLogs.Site
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
     using App_Start;
-    using Auth.Filters;
+    using CN88.Web.Filters;
     using Configurations;
     using Fanex.Data;
     using Fanex.Data.CrossCutting.WrappingException;
@@ -10,13 +15,9 @@
     using Fanex.RemotingRef;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Model.Entities;
-    using System;
-    using System.Collections.Generic;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
     using Web;
     using Web.Filters;
+    using CN88CheckBelongingFilter = CN88.Web.Filters.CheckBelongingFilter;
 
     public class MvcApplication : HttpApplication
     {
@@ -34,7 +35,7 @@
             DbSettingProviderManager
                 .StartNewSession()
                 .Use(new OldConnectionStringProvider())
-                .UseDefaultDbSettingProvider(resourcePath: AppSettings.StoredProcedurePath, enableWatching: true)
+                .UseDefaultDbSettingProvider(resourcePath: AppSettings.StoredProcedurePath)
                 .Use((settingKey, commandTimeout) => new WrappingExceptionObjectDb(settingKey, commandTimeout))
                 .Run();
 
@@ -42,7 +43,8 @@
             LoggingManager.Init();
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
-            GlobalFilters.Filters.Add(new CheckBelongingFilter());
+            GlobalFilters.Filters.Add(new AfterLoginFlowFilter());
+            GlobalFilters.Filters.Add(new CN88CheckBelongingFilter());
             GlobalFilters.Filters.Add(new NoCacheFilter());
 
             RefDataTypeContainer
