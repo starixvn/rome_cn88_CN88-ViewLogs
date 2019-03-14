@@ -400,6 +400,11 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_105000.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_1169.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165000.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165001.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165004.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160005.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160006.xslt" />
