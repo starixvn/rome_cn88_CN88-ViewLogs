@@ -43,7 +43,7 @@
                 <xsl:for-each select="key('product-by-sport', @sport)">
                   <tr class="headerSportTypeDetail">
                     <td colspan="6">
-                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @isl)" />
+                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
                     </td>
                   </tr>
                   <tr>

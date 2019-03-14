@@ -23,7 +23,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPM')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpm" />
+          <xsl:value-of select="@mpe" />
         </td>
       </tr>
       <tr>
@@ -44,7 +44,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv2')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv2" />
+          <xsl:value-of select="@mpev2" />
         </td>
       </tr>
       <tr>
@@ -65,7 +65,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv3')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv3" />
+          <xsl:value-of select="@mpev3" />
         </td>
       </tr>
       <tr>
@@ -86,7 +86,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv5')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv5" />
+          <xsl:value-of select="@mpev5" />
         </td>
       </tr>
       <tr>
@@ -107,7 +107,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv8')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv8" />
+          <xsl:value-of select="@mpev8" />
         </td>
       </tr>
       <tr>
@@ -128,7 +128,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv10')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv10" />
+          <xsl:value-of select="@mpev10" />
         </td>
       </tr>
       <tr>
@@ -149,7 +149,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv11')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv11" />
+          <xsl:value-of select="@mpev11" />
         </td>
       </tr>
       <tr>
@@ -170,7 +170,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv99')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv99" />
+          <xsl:value-of select="@mpev99" />
         </td>
 
       </tr>
@@ -193,7 +193,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('MPMv161')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@mpmv161" />
+          <xsl:value-of select="@mpev161" />
         </td>
 
       </tr>

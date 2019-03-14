@@ -41,7 +41,7 @@
                 <xsl:for-each select="key('product-by-sport', @sport)">
                   <tr class="headerSportTypeDetail">
                     <td colspan="6">
-                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @isl)" />
+                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
                     </td>
                   </tr>
                   <tr>
@@ -55,7 +55,7 @@
                       <xsl:value-of select="xslLogFormat:GetLogResource('MaxPerMatch')" />
                     </td>
                     <td  class="colW2">
-                      <xsl:value-of select="xslLogFormat:FormatDecimal(@mpm, 'N0')" />
+                      <xsl:value-of select="xslLogFormat:FormatDecimal(@mpe, 'N0')" />
                     </td>
                     <td class="colW1"></td>
                     <td class="colW2"></td>

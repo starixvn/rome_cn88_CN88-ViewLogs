@@ -44,13 +44,13 @@
                       <xsl:value-of select="xslLogFormat:GetLogResource('MasterPTCN88')" />
                     </td>
                     <td class="colW2">
-                      <xsl:value-of select="@masterpt" />
+                      <xsl:value-of select="@masterpossess" />
                     </td>
                     <td class="colW1">
                       <xsl:value-of select="xslLogFormat:GetLogResource('AgentPTCN88')" />
                     </td>
                     <td class="colW2">
-                      <xsl:value-of select="@agentpt" />
+                      <xsl:value-of select="@agentpossess" />
                     </td>
                     <td class="colW1"></td>
                     <td class="colW2"></td>

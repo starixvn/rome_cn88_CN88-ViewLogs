@@ -12,10 +12,8 @@
           <xsl:value-of select="@name" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('creditAmt')" />
         </td>
         <td  class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatDecimal(@credit, 'N2')" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />

@@ -6442,7 +6442,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Bet.
+        ///   Looks up a localized string similar to Max Per Bet.
         /// </summary>
         public static string MaxBet {
             get {
@@ -6712,7 +6712,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Max Per Match.
+        ///   Looks up a localized string similar to Max Per Event.
         /// </summary>
         public static string MaxPerMatch {
             get {

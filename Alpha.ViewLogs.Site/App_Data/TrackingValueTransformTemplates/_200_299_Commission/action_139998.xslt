@@ -43,7 +43,7 @@
                 <xsl:for-each select="key('product-by-sport', @sport)">
                   <tr class="headerSportTypeDetail">
                     <td colspan="6">
-                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @isl)" />
+                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
                     </td>
                   </tr>
                   <xsl:choose>
@@ -71,19 +71,19 @@
                           <xsl:value-of select="xslLogFormat:GetLogResource('groupa')" />
                         </td>
                         <td class="colW2">
-                          <xsl:value-of select="@groupa" />
+                          <xsl:value-of select="@gra" />
                         </td>
                         <td class="colW1">
                           <xsl:value-of select="xslLogFormat:GetLogResource('groupb')" />
                         </td>
                         <td  class="colW2">
-                          <xsl:value-of select="@groupb" />
+                          <xsl:value-of select="@grb" />
                         </td>
                         <td class="colW1">
                           <xsl:value-of select="xslLogFormat:GetLogResource('groupc')" />
                         </td>
                         <td class="colW2">
-                          <xsl:value-of select="@groupc" />
+                          <xsl:value-of select="@grc" />
                         </td>
                       </tr>
                       <tr>
@@ -91,7 +91,7 @@
                           <xsl:value-of select="xslLogFormat:GetLogResource('groupd')" />
                         </td>
                         <td class="colW2">
-                          <xsl:value-of select="@groupd" />
+                          <xsl:value-of select="@grd" />
                         </td>
                         <td class="colW1">
                         </td>
