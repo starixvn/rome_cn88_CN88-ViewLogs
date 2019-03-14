@@ -32,6 +32,7 @@
                 { 1, "CN88Soccer" },
                 { 2, "CN88Basketball" },
                 { 99, "CN88OtherSports" },
+                { 9998, "CN88NoneSports" },
                 { 9999, "CN88AllSports" }
          };
 
@@ -387,7 +388,8 @@
             return resource == null ? string.Empty : GetLogResource(resource.ResourceKey);
         }
 
-        public string GetCN88SportName(int sporttype)
-            => GetLogResource(CN88Sporttype[sporttype]);
+        public string GetCN88SportName(int sporttype, int actionId = 0)
+            => actionId != 0 || sporttype == 9999 ? GetLogResource(CN88Sporttype[sporttype]) :
+            GetSportName(sporttype);
     }
 }

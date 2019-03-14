@@ -63,6 +63,6 @@
 
         string GetCN88BettypeName(int sporttype, int bettype, string isLive);
 
-        string GetCN88SportName(int sporttype);
+        string GetCN88SportName(int sporttype, int actionId = 0);
     }
 }

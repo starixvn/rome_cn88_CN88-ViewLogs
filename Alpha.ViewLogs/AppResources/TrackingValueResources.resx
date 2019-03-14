@@ -3990,11 +3990,14 @@
   <data name="CN88OtherSports" xml:space="preserve">
     <value>Other Sports</value>
   </data>
+  <data name="CN88NoneSports" xml:space="preserve">
+    <value>Non-Sport Products</value>
+  </data>
   <data name="CN88OtherSportsOtherBettype" xml:space="preserve">
     <value>Other Bet Types</value>
   </data>
   <data name="CN88Soccer" xml:space="preserve">
-    <value>Soccer</value>
+    <value>Sportsbook</value>
   </data>
   <data name="CN88Soccer1X2" xml:space="preserve">
     <value>1 X 2, In-play 1 X 2</value>

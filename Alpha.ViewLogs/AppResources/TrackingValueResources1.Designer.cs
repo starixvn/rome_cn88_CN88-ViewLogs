@@ -2077,7 +2077,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Agent PT.
+        ///   Looks up a localized string similar to Agent Possess.
         /// </summary>
         public static string AgentPTCN88 {
             get {
@@ -2527,6 +2527,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Non-Sport Products.
+        /// </summary>
+        public static string CN88NoneSports {
+            get {
+                return ResourceManager.GetString("CN88NoneSports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
         /// </summary>
         public static string CN88OtherSporst1X2 {
@@ -2572,7 +2581,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Soccer.
+        ///   Looks up a localized string similar to Sportsbook.
         /// </summary>
         public static string CN88Soccer {
             get {
@@ -2950,7 +2959,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Auto Master PT.
+        ///   Looks up a localized string similar to Disabled Auto Master Possess.
         /// </summary>
         public static string disableAMPT {
             get {
@@ -2959,7 +2968,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disabled Auto Master PT.
+        ///   Looks up a localized string similar to Disabled Auto Master Possess.
         /// </summary>
         public static string disableautompt {
             get {
@@ -6406,7 +6415,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Master PT.
+        ///   Looks up a localized string similar to Master Possess.
         /// </summary>
         public static string MasterPTCN88 {
             get {
@@ -8692,7 +8701,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Master PT.
+        ///   Looks up a localized string similar to New Master Possess.
         /// </summary>
         public static string newmpt {
             get {
@@ -8719,7 +8728,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Super PT.
+        ///   Looks up a localized string similar to New Super Possess.
         /// </summary>
         public static string newspt {
             get {
@@ -9484,7 +9493,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Super PT.
+        ///   Looks up a localized string similar to Super Possess.
         /// </summary>
         public static string SuperPTCN88 {
             get {

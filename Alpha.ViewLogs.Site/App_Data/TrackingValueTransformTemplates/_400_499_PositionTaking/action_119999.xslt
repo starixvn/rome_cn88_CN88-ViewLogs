@@ -31,7 +31,7 @@
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
         <tr class="action-name" onclick="slideToggle(this);">
           <td colspan="6">
-            <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport)" />
+            <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, 119999)" />
           </td>
         </tr>
         <tr>
