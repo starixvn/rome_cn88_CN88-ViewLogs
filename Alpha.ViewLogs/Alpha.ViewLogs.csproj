@@ -247,7 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>TrackingValueResources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-Hans.resx" />

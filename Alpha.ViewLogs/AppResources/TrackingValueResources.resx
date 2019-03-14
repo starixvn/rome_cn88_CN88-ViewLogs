@@ -286,7 +286,7 @@
     <value>Account Remark</value>
   </data>
   <data name="disableautompt" xml:space="preserve">
-    <value>Disabled Auto Master PT</value>
+    <value>Disabled Auto Master Possess</value>
   </data>
   <data name="isa_smlivept_3" xml:space="preserve">
     <value>Live OU</value>
@@ -1690,7 +1690,7 @@
     <value>Credit Grade</value>
   </data>
   <data name="disableAMPT" xml:space="preserve">
-    <value>Disabled Auto Master PT</value>
+    <value>Disabled Auto Master Possess</value>
   </data>
   <data name="gender" xml:space="preserve">
     <value>Gender</value>
@@ -1813,10 +1813,10 @@
     <value>Moneyline</value>
   </data>
   <data name="newspt" xml:space="preserve">
-    <value>New Super PT</value>
+    <value>New Super Possess</value>
   </data>
   <data name="newmpt" xml:space="preserve">
-    <value>New Master PT</value>
+    <value>New Master Possess</value>
   </data>
   <data name="v10apt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -3946,16 +3946,16 @@
     <value>Update Min-Max Bet Happy 5</value>
   </data>
   <data name="AgentPTCN88" xml:space="preserve">
-    <value>Agent PT</value>
+    <value>Agent Possess</value>
   </data>
   <data name="MasterPTCN88" xml:space="preserve">
-    <value>Master PT</value>
+    <value>Master Possess</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="SuperPTCN88" xml:space="preserve">
-    <value>Super PT</value>
+    <value>Super Possess</value>
   </data>
   <data name="CN88AllSports" xml:space="preserve">
     <value>All Sports</value>
