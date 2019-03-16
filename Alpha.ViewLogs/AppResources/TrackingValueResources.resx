@@ -4014,4 +4014,13 @@
   <data name="CN88SoccerOtherBettype" xml:space="preserve">
     <value>Other Bet Types</value>
   </data>
+  <data name="CN88NumberGameHappy5" xml:space="preserve">
+    <value>Number Game, Happy 5</value>
+  </data>
+  <data name="CN88KenoLottery" xml:space="preserve">
+    <value>Keno, Lottery</value>
+  </data>
+  <data name="CN88VirtualSports" xml:space="preserve">
+    <value>Virtual Sports</value>
+  </data>
 </root>

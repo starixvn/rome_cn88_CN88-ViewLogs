@@ -2527,11 +2527,29 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Keno, Lottery.
+        /// </summary>
+        public static string CN88KenoLottery {
+            get {
+                return ResourceManager.GetString("CN88KenoLottery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Non-Sport Products.
         /// </summary>
         public static string CN88NoneSports {
             get {
                 return ResourceManager.GetString("CN88NoneSports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Game, Happy 5.
+        /// </summary>
+        public static string CN88NumberGameHappy5 {
+            get {
+                return ResourceManager.GetString("CN88NumberGameHappy5", resourceCulture);
             }
         }
         
@@ -2631,6 +2649,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string CN88SoccerOtherBettype {
             get {
                 return ResourceManager.GetString("CN88SoccerOtherBettype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Sports.
+        /// </summary>
+        public static string CN88VirtualSports {
+            get {
+                return ResourceManager.GetString("CN88VirtualSports", resourceCulture);
             }
         }
         

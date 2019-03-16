@@ -54,7 +54,11 @@
                 new CN88SportBettype(99, 5, false, "CN88OtherSporst1X2"),
                 new CN88SportBettype(99, 9999, false, "CN88OtherSportsOtherBettype"),
 
-                new CN88SportBettype(9999, 10, false, "CN88AllSportsBettype")
+                new CN88SportBettype(9999, 10, false, "CN88AllSportsBettype"),
+
+                new CN88SportBettype(9998, 81, false, "CN88NumberGameHappy5"),
+                new CN88SportBettype(9998, 1501, false, "CN88KenoLottery"),
+                new CN88SportBettype(9998, 1201, false, "CN88VirtualSports"),
             };
 
         public LogFormatterImpl(
@@ -389,7 +393,10 @@
         }
 
         public string GetCN88SportName(int sporttype, int actionId = 0)
-            => actionId != 0 || sporttype == 9999 ? GetLogResource(CN88Sporttype[sporttype]) :
-            GetSportName(sporttype);
+            => sporttype != 1 || IsBetween(actionId, 105000, 139999) || sporttype == 9999 ?
+            GetLogResource(CN88Sporttype[sporttype]) : GetSportName(sporttype);
+
+        private static bool IsBetween(int value, int start, int end)
+            => start <= value && value <= end;
     }
 }
