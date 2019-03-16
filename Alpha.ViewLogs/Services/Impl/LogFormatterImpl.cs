@@ -393,10 +393,19 @@
         }
 
         public string GetCN88SportName(int sporttype, int actionId = 0)
-            => sporttype != 1 || IsBetween(actionId, 105000, 139999) || sporttype == 9999 ?
+            => IsNotSoccer(sporttype) || IsPossessActionId(actionId) || IsAllSports(sporttype) ?
             GetLogResource(CN88Sporttype[sporttype]) : GetSportName(sporttype);
+
+        private static bool IsPossessActionId(int actionId)
+            => IsBetween(actionId, 105000, 119999);
 
         private static bool IsBetween(int value, int start, int end)
             => start <= value && value <= end;
+
+        private static bool IsNotSoccer(int sportType)
+            => sportType != 1;
+
+        private static bool IsAllSports(int sportType)
+            => sportType == 9999;
     }
 }
