@@ -2491,6 +2491,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to In-Play Moneyline.
+        /// </summary>
+        public static string CN88Basketball1Moneyline {
+            get {
+                return ResourceManager.GetString("CN88Basketball1Moneyline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
         /// </summary>
         public static string CN88Basketball1X2 {
@@ -2514,6 +2523,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string CN88BasketballLiveHandicap {
             get {
                 return ResourceManager.GetString("CN88BasketballLiveHandicap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moneyline.
+        /// </summary>
+        public static string CN88BasketballMoneyline {
+            get {
+                return ResourceManager.GetString("CN88BasketballMoneyline", resourceCulture);
             }
         }
         

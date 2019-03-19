@@ -4023,4 +4023,10 @@
   <data name="CN88VirtualSports" xml:space="preserve">
     <value>Virtual Sports</value>
   </data>
+  <data name="CN88BasketballMoneyline" xml:space="preserve">
+    <value>Moneyline</value>
+  </data>
+  <data name="CN88Basketball1Moneyline" xml:space="preserve">
+    <value>In-Play Moneyline</value>
+  </data>
 </root>
