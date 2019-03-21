@@ -2491,7 +2491,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In-Play Moneyline.
+        ///   Looks up a localized string similar to Moneyline, In-Play Moneyline.
         /// </summary>
         public static string CN88Basketball1Moneyline {
             get {

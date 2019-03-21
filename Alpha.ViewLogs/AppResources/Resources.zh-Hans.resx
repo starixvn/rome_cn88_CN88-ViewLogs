@@ -295,4 +295,16 @@
   <data name="PageAccess_D" xml:space="preserve">
     <value>投注 &amp; 预测</value>
   </data>
+  <data name="Possess" xml:space="preserve">
+    <value>Possess</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+  <data name="BetLimit" xml:space="preserve">
+    <value>Bet Limit</value>
+  </data>
+  <data name="GeneralInfo" xml:space="preserve">
+    <value>General Info</value>
+  </data>
 </root>

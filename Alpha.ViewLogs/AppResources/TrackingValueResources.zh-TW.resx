@@ -3894,4 +3894,88 @@
   <data name="zh-Hans" xml:space="preserve">
     <value>簡體中文(新)</value>
   </data>
+  <data name="AgentPTCN88" xml:space="preserve">
+    <value>Agent Possess</value>
+  </data>
+  <data name="MasterPTCN88" xml:space="preserve">
+    <value>Master Possess</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SuperPTCN88" xml:space="preserve">
+    <value>Super Possess</value>
+  </data>
+  <data name="CN88AllSports" xml:space="preserve">
+    <value>All Sports</value>
+  </data>
+  <data name="CN88AllSportsBettype" xml:space="preserve">
+    <value>Outright</value>
+  </data>
+  <data name="CN88Basketball" xml:space="preserve">
+    <value>Basketball</value>
+  </data>
+  <data name="CN88Basketball1X2" xml:space="preserve">
+    <value>1 X 2, In-play 1 X 2</value>
+  </data>
+  <data name="CN88BasketballHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88BasketballLiveHandicap" xml:space="preserve">
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
+  </data>
+  <data name="CN88BasketballOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
+  </data>
+  <data name="CN88OtherSporst1X2" xml:space="preserve">
+    <value>1 X 2, In-play 1 X 2</value>
+  </data>
+  <data name="CN88OtherSporstHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
+  </data>
+  <data name="CN88OtherSports" xml:space="preserve">
+    <value>Other Sports</value>
+  </data>
+  <data name="CN88NoneSports" xml:space="preserve">
+    <value>Non-Sport Products</value>
+  </data>
+  <data name="CN88OtherSportsOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
+  </data>
+  <data name="CN88Soccer" xml:space="preserve">
+    <value>Sportsbook</value>
+  </data>
+  <data name="CN88Soccer1X2" xml:space="preserve">
+    <value>1 X 2, In-play 1 X 2</value>
+  </data>
+  <data name="CN88SoccerHandicap" xml:space="preserve">
+    <value>Handicap, Over/Under, Odd/Even</value>
+  </data>
+  <data name="CN88SoccerLiveHandicap" xml:space="preserve">
+    <value>In-play Handicap, In-play Over/Under, In-play Odd/Even</value>
+  </data>
+  <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
+    <value>In-play Other Bet Types</value>
+  </data>
+  <data name="CN88SoccerOtherBettype" xml:space="preserve">
+    <value>Other Bet Types</value>
+  </data>
+  <data name="CN88NumberGameHappy5" xml:space="preserve">
+    <value>Number Game, Happy 5</value>
+  </data>
+  <data name="CN88KenoLottery" xml:space="preserve">
+    <value>Keno, Lottery</value>
+  </data>
+  <data name="CN88VirtualSports" xml:space="preserve">
+    <value>Virtual Sports</value>
+  </data>
+  <data name="CN88BasketballMoneyline" xml:space="preserve">
+    <value>Moneyline</value>
+  </data>
+  <data name="CN88Basketball1Moneyline" xml:space="preserve">
+    <value>Moneyline, In-Play Moneyline</value>
+  </data>
 </root>

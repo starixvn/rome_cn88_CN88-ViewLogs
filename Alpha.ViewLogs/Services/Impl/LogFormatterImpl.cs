@@ -46,8 +46,7 @@
 
                 new CN88SportBettype(2, 1, false,"CN88BasketballHandicap"),
                 new CN88SportBettype(2, 1, true, "CN88BasketballLiveHandicap"),
-                new CN88SportBettype(2, 20, false, "CN88BasketballMoneyline"),
-                new CN88SportBettype(2, 20, true, "CN88Basketball1Moneyline"),
+                new CN88SportBettype(2, 20, false, "CN88Basketball1Moneyline"),
                 new CN88SportBettype(2, 9999, false, "CN88BasketballOtherBettype"),
 
                 new CN88SportBettype(99, 1, false, "CN88OtherSporstHandicap"),

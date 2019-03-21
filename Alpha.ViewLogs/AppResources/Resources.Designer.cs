@@ -106,6 +106,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Limit.
+        /// </summary>
+        public static string BetLimit {
+            get {
+                return ResourceManager.GetString("BetLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browser.
         /// </summary>
         public static string Browser {
@@ -129,6 +138,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Close {
             get {
                 return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commission.
+        /// </summary>
+        public static string Commission {
+            get {
+                return ResourceManager.GetString("Commission", resourceCulture);
             }
         }
         
@@ -291,6 +309,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string FullControl {
             get {
                 return ResourceManager.GetString("FullControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General Info.
+        /// </summary>
+        public static string GeneralInfo {
+            get {
+                return ResourceManager.GetString("GeneralInfo", resourceCulture);
             }
         }
         
@@ -543,6 +570,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string Pager_DisplayItems {
             get {
                 return ResourceManager.GetString("Pager_DisplayItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Possess.
+        /// </summary>
+        public static string Possess {
+            get {
+                return ResourceManager.GetString("Possess", resourceCulture);
             }
         }
         

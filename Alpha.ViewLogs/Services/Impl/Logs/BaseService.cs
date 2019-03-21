@@ -10,6 +10,8 @@
     using Fanex.Data.Repository;
     using Models;
     using Params;
+    using AppResources;
+    using System.Globalization;
 
     public abstract class BaseService
     {
@@ -73,20 +75,57 @@
 
         public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            var logActionTypes = ConfiguredCacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
+            //var logActionTypes = ConfiguredCacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
 
-            if (logActionTypes != null
-                && logActionTypes.Any())
+            //if (logActionTypes != null
+            //    && logActionTypes.Any())
+            //{
+            //    return logActionTypes;
+            //}
+
+            //logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
+
+            //ConfiguredCacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
+
+            //return logActionTypes;
+
+            IEnumerable<LogActionType> logActionTypes = new List<LogActionType>
             {
-                return logActionTypes;
-            }
-
-            logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
-
-            ConfiguredCacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
+                new LogActionType
+                {
+                    Id = 1,
+                    ChineseTraditionalName = GetFilterLogAction("Possess", "zh-TW"),
+                    NewChineseSimplifiedName = GetFilterLogAction("Possess", "zh-Hans"),
+                    EnglishName = GetFilterLogAction("Possess", "en-US")
+                },
+                new LogActionType
+                {
+                    Id = 2,
+                    ChineseTraditionalName = GetFilterLogAction("Commission", "zh-TW"),
+                    NewChineseSimplifiedName = GetFilterLogAction("Commission", "zh-Hans"),
+                    EnglishName = GetFilterLogAction("Commission", "en-US")
+                },
+                new LogActionType
+                {
+                    Id = 3,
+                    ChineseTraditionalName = GetFilterLogAction("BetLimit", "zh-TW"),
+                    NewChineseSimplifiedName = GetFilterLogAction("BetLimit", "zh-Hans"),
+                    EnglishName = GetFilterLogAction("BetLimit", "en-US")
+                },
+                new LogActionType
+                {
+                    Id = 4,
+                    ChineseTraditionalName = GetFilterLogAction("GeneralInfo", "zh-TW"),
+                    NewChineseSimplifiedName = GetFilterLogAction("GeneralInfo", "zh-Hans"),
+                    EnglishName = GetFilterLogAction("GeneralInfo", "en-US")
+                }
+            };
 
             return logActionTypes;
         }
+
+        private static string GetFilterLogAction(string name, string language)
+            => Resources.ResourceManager.GetString(name, new CultureInfo(language));
 
         public LogAction GetLogAction(int actionId)
         {
