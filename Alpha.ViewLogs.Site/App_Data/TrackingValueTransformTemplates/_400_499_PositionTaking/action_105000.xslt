@@ -22,10 +22,8 @@
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('product')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="xslLogFormat:GetProductName(@productid)" />
         </td>
       </tr>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
