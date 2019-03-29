@@ -54,7 +54,7 @@
                     return logAction.ChineseSimplifiedName;
 
                 case LanguageCode.NewChineseSimplified:
-                    return logAction.ChineseSimplifiedName;
+                    return logAction.NewChineseSimplifiedName;
 
                 case LanguageCode.Japanese:
                     return logAction.JapaneseName;
