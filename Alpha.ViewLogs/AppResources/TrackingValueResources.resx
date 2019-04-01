@@ -1813,10 +1813,10 @@
     <value>Moneyline</value>
   </data>
   <data name="newspt" xml:space="preserve">
-    <value>New Super Possess</value>
+    <value>New SMA Possess</value>
   </data>
   <data name="newmpt" xml:space="preserve">
-    <value>New Master Possess</value>
+    <value>New MA Possess</value>
   </data>
   <data name="v10apt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -3949,13 +3949,13 @@
     <value>Agent Possess</value>
   </data>
   <data name="MasterPTCN88" xml:space="preserve">
-    <value>Master Possess</value>
+    <value>MA Possess</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="SuperPTCN88" xml:space="preserve">
-    <value>Super Possess</value>
+    <value>SMA Possess</value>
   </data>
   <data name="CN88AllSports" xml:space="preserve">
     <value>All Sports</value>

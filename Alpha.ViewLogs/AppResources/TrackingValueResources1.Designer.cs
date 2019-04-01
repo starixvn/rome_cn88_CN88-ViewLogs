@@ -6460,7 +6460,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Master Possess.
+        ///   Looks up a localized string similar to MA Possess.
         /// </summary>
         public static string MasterPTCN88 {
             get {
@@ -8746,7 +8746,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Master Possess.
+        ///   Looks up a localized string similar to New MA Possess.
         /// </summary>
         public static string newmpt {
             get {
@@ -8773,7 +8773,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Super Possess.
+        ///   Looks up a localized string similar to New SMA Possess.
         /// </summary>
         public static string newspt {
             get {
@@ -9538,7 +9538,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Super Possess.
+        ///   Looks up a localized string similar to SMA Possess.
         /// </summary>
         public static string SuperPTCN88 {
             get {

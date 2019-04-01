@@ -296,15 +296,18 @@
     <value>投注 &amp; 预测</value>
   </data>
   <data name="Possess" xml:space="preserve">
-    <value>Possess</value>
+    <value>占成数</value>
   </data>
   <data name="Commission" xml:space="preserve">
-    <value>Commission</value>
+    <value>退水</value>
   </data>
   <data name="BetLimit" xml:space="preserve">
-    <value>Bet Limit</value>
+    <value>投注限额</value>
   </data>
   <data name="GeneralInfo" xml:space="preserve">
-    <value>General Info</value>
+    <value>一般信息</value>
+  </data>
+  <data name="AllTypes" xml:space="preserve">
+    <value>所有类别</value>
   </data>
 </root>
