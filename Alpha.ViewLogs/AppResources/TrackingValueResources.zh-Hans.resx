@@ -3901,7 +3901,7 @@
     <value>总代理占成数</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>名</value>
+    <value>名称</value>
   </data>
   <data name="SuperPTCN88" xml:space="preserve">
     <value>超级代理占成数</value>
@@ -3980,5 +3980,8 @@
   </data>
   <data name="GeneralInformation" xml:space="preserve">
     <value>一般信息</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>权限</value>
   </data>
 </root>

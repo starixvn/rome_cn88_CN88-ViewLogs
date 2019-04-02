@@ -4029,4 +4029,7 @@
   <data name="CN88Basketball1Moneyline" xml:space="preserve">
     <value>Moneyline, In-Play Moneyline</value>
   </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
 </root>

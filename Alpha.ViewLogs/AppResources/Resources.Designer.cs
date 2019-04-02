@@ -511,7 +511,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Member information: Update.
+        ///   Looks up a localized string similar to Account Management - Edit &amp; View.
         /// </summary>
         public static string PageAccess_B {
             get {
@@ -529,7 +529,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bets &amp; Forecast.
+        ///   Looks up a localized string similar to Total Bets.
         /// </summary>
         public static string PageAccess_D {
             get {
@@ -556,7 +556,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Member information: View.
+        ///   Looks up a localized string similar to Account Management - View Only.
         /// </summary>
         public static string PageAccess_H {
             get {
