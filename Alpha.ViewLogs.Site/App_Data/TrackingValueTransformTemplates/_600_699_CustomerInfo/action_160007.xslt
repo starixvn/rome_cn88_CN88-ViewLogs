@@ -12,7 +12,7 @@
           <xsl:value-of select="@name" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('creditAmt')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('credit')" />
         </td>
         <td  class="colW2">
           <xsl:value-of select="xslLogFormat:FormatDecimal(@credit, 'N2')" />
