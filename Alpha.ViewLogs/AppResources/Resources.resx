@@ -217,7 +217,7 @@
     <value>Login</value>
   </data>
   <data name="UsernameOrFirstLastName" xml:space="preserve">
-    <value>Username or First/Last Name</value>
+    <value>Username or Name</value>
   </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>Show old values</value>

@@ -727,7 +727,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Username or First/Last Name.
+        ///   Looks up a localized string similar to Username or Name.
         /// </summary>
         public static string UsernameOrFirstLastName {
             get {
