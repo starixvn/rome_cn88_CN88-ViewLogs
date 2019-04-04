@@ -75,11 +75,11 @@
             Assert.AreEqual(expectedDateTime, actualDateTime);
         }
 
-        [TestCase(2016, 8, 23, 0, 0, 0, "08/23/2016 12:00:00 AM")] // Beginning of Date
-        [TestCase(2016, 8, 23, 1, 1, 1, "08/23/2016 01:01:01 AM")]
-        [TestCase(2016, 8, 23, 12, 0, 0, "08/23/2016 12:00:00 PM")] // Mid-date
-        [TestCase(2016, 8, 23, 15, 1, 1, "08/23/2016 03:01:01 PM")]
-        [TestCase(2016, 8, 23, 23, 59, 59, "08/23/2016 11:59:59 PM")] // Ending of date
+        [TestCase(2016, 8, 23, 0, 0, 0, "2016-08-23 00:00:00")] // Beginning of Date
+        [TestCase(2016, 8, 23, 1, 1, 1, "2016-08-23 01:01:01")]
+        [TestCase(2016, 8, 23, 12, 0, 0, "2016-08-23 12:00:00")] // Mid-date
+        [TestCase(2016, 8, 23, 15, 1, 1, "2016-08-23 15:01:01")]
+        [TestCase(2016, 8, 23, 23, 59, 59, "2016-08-23 23:59:59")] // Ending of date
         public void ToLongDateWithSlash_DateTimeInDay_ReturnsLongDateWithSlash(
             int year,
             int month,
@@ -99,11 +99,11 @@
             Assert.AreEqual(expectedValue, actualDateTime);
         }
 
-        [TestCase(2016, 8, 23, 0, 0, 0, "08/23/2016<br/>12:00:00 AM")] // Beginning of Date
-        [TestCase(2016, 8, 23, 1, 1, 1, "08/23/2016<br/>01:01:01 AM")]
-        [TestCase(2016, 8, 23, 12, 0, 0, "08/23/2016<br/>12:00:00 PM")] // Mid-date
-        [TestCase(2016, 8, 23, 15, 1, 1, "08/23/2016<br/>03:01:01 PM")]
-        [TestCase(2016, 8, 23, 23, 59, 59, "08/23/2016<br/>11:59:59 PM")] // Ending of date
+        [TestCase(2016, 8, 23, 0, 0, 0, "2016-08-23<br/>00:00:00")] // Beginning of Date
+        [TestCase(2016, 8, 23, 1, 1, 1, "2016-08-23<br/>01:01:01")]
+        [TestCase(2016, 8, 23, 12, 0, 0, "2016-08-23<br/>12:00:00")] // Mid-date
+        [TestCase(2016, 8, 23, 15, 1, 1, "2016-08-23<br/>15:01:01")]
+        [TestCase(2016, 8, 23, 23, 59, 59, "2016-08-23<br/>23:59:59")] // Ending of date
         public void ToHtmlLongDateWithSlash_DateTimeInDay_ReturnsHtmlLongDateWithSlash(
             int year,
             int month,
