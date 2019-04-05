@@ -54,6 +54,7 @@
       <Mapping DataField="ActionTypeNameEN" ObjectProperty="EnglishName" />
       <Mapping DataField="ActionTypeNameCH" ObjectProperty="ChineseTraditionalName" />
       <Mapping DataField="ActionTypeNameCS" ObjectProperty="ChineseSimplifiedName" />
+      <Mapping DataField="ActionTypeNameCN" ObjectProperty="NewChineseSimplifiedName" />
       <Mapping DataField="ActionTypeNameJP" ObjectProperty="JapaneseName" />
       <Mapping DataField="ActionTypeNameVI" ObjectProperty="VietnameseName" />
       <Mapping DataField="ActionTypeNameTH" ObjectProperty="ThaiName" />
@@ -65,6 +66,7 @@
       <Mapping DataField="ActionNameEN" ObjectProperty="EnglishName" />
       <Mapping DataField="ActionNameCH" ObjectProperty="ChineseTraditionalName" />
       <Mapping DataField="ActionNameCS" ObjectProperty="ChineseSimplifiedName" />
+      <Mapping DataField="ActionNameCN" ObjectProperty="NewChineseSimplifiedName" />
       <Mapping DataField="ActionNameJP" ObjectProperty="JapaneseName" />
       <Mapping DataField="ActionNameVI" ObjectProperty="VietnameseName" />
       <Mapping DataField="ActionNameTH" ObjectProperty="ThaiName" />
