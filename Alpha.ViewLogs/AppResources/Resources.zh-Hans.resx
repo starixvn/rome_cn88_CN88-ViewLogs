@@ -310,4 +310,16 @@
   <data name="AllTypes" xml:space="preserve">
     <value>所有类别</value>
   </data>
+  <data name="ViewLogCredit" xml:space="preserve">
+    <value>检视额度变更纪录</value>
+  </data>
+  <data name="ViewLogSetting" xml:space="preserve">
+    <value>检视设定纪录</value>
+  </data>
+  <data name="ViewLogLogin" xml:space="preserve">
+    <value>检视登入纪录</value>
+  </data>
+  <data name="ViewLogStatus" xml:space="preserve">
+    <value>检视状态记录</value>
+  </data>
 </root>
