@@ -3724,7 +3724,7 @@
     <value>Cash-In Share</value>
   </data>
   <data name="v204discountvalue_commission" xml:space="preserve">
-    <value>Commission</value>
+    <value>退水</value>
   </data>
   <data name="DiscountMyanmarOdds" xml:space="preserve">
     <value>Discount % Odds</value>
@@ -3919,7 +3919,7 @@
     <value>標準盤, 滾球標準盤</value>
   </data>
   <data name="CN88BasketballHandicap" xml:space="preserve">
-    <value>Handicap, Over/Under, Odd/Even</value>
+    <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88BasketballLiveHandicap" xml:space="preserve">
     <value>滾球讓球, 滾球大小, 滾球單/雙</value>
@@ -3931,13 +3931,13 @@
     <value>標準盤, 滾球標準盤</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
-    <value>Handicap, Over/Under, Odd/Even</value>
+    <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
     <value>滾球讓球, 滾球大小, 滾球單/雙</value>
   </data>
   <data name="CN88OtherSports" xml:space="preserve">
-    <value>Other Sports</value>
+    <value>其他</value>
   </data>
   <data name="CN88NoneSports" xml:space="preserve">
     <value>非體育產品</value>
@@ -3952,7 +3952,7 @@
     <value>標準盤, 滾球標準盤</value>
   </data>
   <data name="CN88SoccerHandicap" xml:space="preserve">
-    <value>Handicap, Over/Under, Odd/Even</value>
+    <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88SoccerLiveHandicap" xml:space="preserve">
     <value>滾球讓球, 滾球大小, 滾球單/雙</value>
