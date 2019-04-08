@@ -2281,10 +2281,10 @@
     <value>最低投注</value>
   </data>
   <data name="MaxBet" xml:space="preserve">
-    <value>最高投注</value>
+    <value>單注最高</value>
   </data>
   <data name="MaxPerMatch" xml:space="preserve">
-    <value>單場限額</value>
+    <value>單場最高</value>
   </data>
   <data name="BonusCode" xml:space="preserve">
     <value>獎金代碼</value>
@@ -3943,7 +3943,7 @@
     <value>非體育產品</value>
   </data>
   <data name="CN88OtherSportsOtherBettype" xml:space="preserve">
-    <value>新寶:其他</value>
+    <value>其他玩法</value>
   </data>
   <data name="CN88Soccer" xml:space="preserve">
     <value>體育博彩</value>
@@ -3958,10 +3958,10 @@
     <value>滾球讓球, 滾球大小, 滾球單/雙</value>
   </data>
   <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
-    <value>新寶:滾球其他</value>
+    <value>滾球其他玩法</value>
   </data>
   <data name="CN88SoccerOtherBettype" xml:space="preserve">
-    <value>新寶:其他</value>
+    <value>其他玩法</value>
   </data>
   <data name="CN88NumberGameHappy5" xml:space="preserve">
     <value>百練賽 , 快樂5</value>

@@ -2281,10 +2281,10 @@
     <value>最低投注</value>
   </data>
   <data name="MaxBet" xml:space="preserve">
-    <value>最高投注</value>
+    <value>单注最高</value>
   </data>
   <data name="MaxPerMatch" xml:space="preserve">
-    <value>单场限额</value>
+    <value>单场最高</value>
   </data>
   <data name="BonusCode" xml:space="preserve">
     <value>奖金代码</value>
