@@ -37,7 +37,8 @@ var statusView = {
         linkChangTabs: null,
         pagination: null,
         dataLog: null,
-        navTabs: null
+        navTabs: null,
+        longMonthsInYear: null
     },
     showOldValuesCookieName: "",
     pageNumber: 0,
@@ -51,6 +52,7 @@ var statusView = {
         statusView.elelments.pagination = $("#pagination");
         statusView.elelments.dataLog = $("#DataLog");
         statusView.elelments.navTabs = $("#nav-tabs");
+        statusView.elelments.longMonthsInYear = $("#longMonthsInYear");
     },
     initElements: function (viewModel: any) {
         statusView.cacheElements();
@@ -106,6 +108,7 @@ var statusView = {
     },
     initMonthPicker: function (viewModel: any) {
         statusView.elelments.ddlMonth.monPickr({
+            longMonthsInYear: statusView.getLongMonthsInYear(),
             maxDate: viewModel.maxReportDate,
             minDate: viewModel.minReportDate,
             month: new Date(viewModel.dayInMonth),
@@ -124,6 +127,10 @@ var statusView = {
                 console.warn(msg);
             }
         });
+    },
+    getLongMonthsInYear: function () {
+        var longMonthsInYear = $.parseJSON(statusView.elelments.longMonthsInYear.val());
+        return longMonthsInYear;
     },
     showLoadingState: function () {
         statusView.elelments.btnSubmit.attr("disabled", "disabled");
