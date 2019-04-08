@@ -170,7 +170,7 @@
     <value>登入</value>
   </data>
   <data name="UsernameOrFirstLastName" xml:space="preserve">
-    <value>用户名或名/姓</value>
+    <value>帐户或名称</value>
   </data>
   <data name="ShowOldValues" xml:space="preserve">
     <value>显示旧数值</value>
