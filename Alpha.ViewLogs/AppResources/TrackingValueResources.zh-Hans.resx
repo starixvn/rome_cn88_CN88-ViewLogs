@@ -3916,31 +3916,31 @@
     <value>篮球</value>
   </data>
   <data name="CN88Basketball1X2" xml:space="preserve">
-    <value>標準盤, 滾球標準盤</value>
+    <value>标准盘, 滚球标准盘</value>
   </data>
   <data name="CN88BasketballHandicap" xml:space="preserve">
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88BasketballLiveHandicap" xml:space="preserve">
-    <value>滾球讓球, 滾球大小, 滾球單/雙</value>
+    <value>滚球让球, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88BasketballOtherBettype" xml:space="preserve">
     <value>其他玩法</value>
   </data>
   <data name="CN88OtherSporst1X2" xml:space="preserve">
-    <value>標準盤, 滾球標準盤</value>
+    <value>标准盘, 滚球标准盘</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
-    <value>滾球讓球, 滾球大小, 滾球單/雙</value>
+    <value>滚球让球, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88OtherSports" xml:space="preserve">
     <value>其他</value>
   </data>
   <data name="CN88NoneSports" xml:space="preserve">
-    <value>非體育產品</value>
+    <value>非体育产品</value>
   </data>
   <data name="CN88OtherSportsOtherBettype" xml:space="preserve">
     <value>其他玩法</value>
@@ -3949,13 +3949,13 @@
     <value>體育博彩</value>
   </data>
   <data name="CN88Soccer1X2" xml:space="preserve">
-    <value>標準盤, 滾球標準盤</value>
+    <value>标准盘, 滚球标准盘</value>
   </data>
   <data name="CN88SoccerHandicap" xml:space="preserve">
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88SoccerLiveHandicap" xml:space="preserve">
-    <value>滾球讓球, 滾球大小, 滾球單/雙</value>
+    <value>滚球让球, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
     <value>滚球其他玩法</value>
@@ -3964,19 +3964,19 @@
     <value>其他玩法</value>
   </data>
   <data name="CN88NumberGameHappy5" xml:space="preserve">
-    <value>百練賽 , 快樂5</value>
+    <value>百练赛 , 快乐5</value>
   </data>
   <data name="CN88KenoLottery" xml:space="preserve">
-    <value>快樂彩/彩票</value>
+    <value>快乐彩/彩票</value>
   </data>
   <data name="CN88VirtualSports" xml:space="preserve">
-    <value>虛擬運動</value>
+    <value>虚拟运动</value>
   </data>
   <data name="CN88BasketballMoneyline" xml:space="preserve">
     <value>Moneyline</value>
   </data>
   <data name="CN88Basketball1Moneyline" xml:space="preserve">
-    <value>勝負盤, 滾球勝負盤</value>
+    <value>胜负盘, 滚球胜负盘</value>
   </data>
   <data name="GeneralInformation" xml:space="preserve">
     <value>一般信息</value>
