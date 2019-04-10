@@ -366,4 +366,7 @@
   <data name="GeneralInfo" xml:space="preserve">
     <value>General Info</value>
   </data>
+  <data name="ipInfo" xml:space="preserve">
+    <value>IP information</value>
+  </data>
 </root>

@@ -32,5 +32,8 @@
     @RenderSection("Scripts", required: false)
     @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
     @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
+    <script>
+        var resources = { ipInfo: '@Resources.ipInfo' };
+    </script>
 </body>
 </html>

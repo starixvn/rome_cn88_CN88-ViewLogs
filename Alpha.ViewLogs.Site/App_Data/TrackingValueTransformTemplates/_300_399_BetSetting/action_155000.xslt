@@ -6,7 +6,7 @@
   <xsl:template match="r">
     <table class="tblDesc">
       <tr class="action-name">
-        <td colspan="6">General Information</td>
+        <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" /></td>
       </tr>
       <tr>
         <td class="colW1">

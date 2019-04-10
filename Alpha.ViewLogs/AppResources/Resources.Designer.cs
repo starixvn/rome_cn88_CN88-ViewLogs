@@ -331,6 +331,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IP information.
+        /// </summary>
+        public static string ipInfo {
+            get {
+                return ResourceManager.GetString("ipInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to January.
         /// </summary>
         public static string January {

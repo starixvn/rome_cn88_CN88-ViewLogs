@@ -322,4 +322,10 @@
   <data name="ViewLogStatus" xml:space="preserve">
     <value>检视状态记录</value>
   </data>
+  <data name="Pager_DisplayItems" xml:space="preserve">
+    <value>显示{0}到{1}，共{2}笔</value>
+  </data>
+  <data name="ipInfo" xml:space="preserve">
+    <value>IP信息</value>
+  </data>
 </root>

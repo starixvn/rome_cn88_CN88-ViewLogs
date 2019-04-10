@@ -3913,7 +3913,7 @@
     <value>冠軍</value>
   </data>
   <data name="CN88Basketball" xml:space="preserve">
-    <value>Basketball</value>
+    <value>籃球</value>
   </data>
   <data name="CN88Basketball1X2" xml:space="preserve">
     <value>標準盤, 滾球標準盤</value>
@@ -3977,5 +3977,8 @@
   </data>
   <data name="CN88Basketball1Moneyline" xml:space="preserve">
     <value>勝負盤, 滾球勝負盤</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>一般資訊</value>
   </data>
 </root>
