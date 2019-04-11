@@ -3454,7 +3454,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to General Data.
+        ///   Looks up a localized string similar to General Information.
         /// </summary>
         public static string GeneralInformation {
             get {
