@@ -197,7 +197,7 @@
     <value>由修改</value>
   </data>
   <data name="Action" xml:space="preserve">
-    <value>動作</value>
+    <value>功能</value>
   </data>
   <data name="NoInfo" xml:space="preserve">
     <value>沒資料顯示</value>
@@ -254,7 +254,7 @@
     <value>新價值</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>詳情</value>
+    <value>内容</value>
   </data>
   <data name="Domain" xml:space="preserve">
     <value>網址</value>

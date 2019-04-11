@@ -182,7 +182,7 @@
     <value>用户名</value>
   </data>
   <data name="To" xml:space="preserve">
-    <value>到</value>
+    <value>至</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>提交</value>
@@ -197,7 +197,7 @@
     <value>由修改</value>
   </data>
   <data name="Action" xml:space="preserve">
-    <value>动作</value>
+    <value>功能</value>
   </data>
   <data name="NoInfo" xml:space="preserve">
     <value>没资料显示</value>
@@ -254,7 +254,7 @@
     <value>新价值</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>详情</value>
+    <value>内容</value>
   </data>
   <data name="Domain" xml:space="preserve">
     <value>网址</value>

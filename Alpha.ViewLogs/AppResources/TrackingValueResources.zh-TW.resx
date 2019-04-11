@@ -2158,10 +2158,10 @@
     <value>鍵入一個用戶名</value>
   </data>
   <data name="actionDesc" xml:space="preserve">
-    <value>詳情</value>
+    <value>内容</value>
   </data>
   <data name="actionname" xml:space="preserve">
-    <value>動作</value>
+    <value>功能</value>
   </data>
   <data name="creditlog" xml:space="preserve">
     <value>信用額度</value>
