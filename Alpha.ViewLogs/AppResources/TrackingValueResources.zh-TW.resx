@@ -1144,7 +1144,7 @@
     <value>超級總代編號</value>
   </data>
   <data name="subaccname" xml:space="preserve">
-    <value>子用戶名稱</value>
+    <value>子帳戶名稱</value>
   </data>
   <data name="subaccount" xml:space="preserve">
     <value>子帐号</value>
