@@ -1693,16 +1693,16 @@
     <value>性別</value>
   </data>
   <data name="groupb" xml:space="preserve">
-    <value>B组</value>
+    <value>群組B</value>
   </data>
   <data name="groupc" xml:space="preserve">
-    <value>C组</value>
+    <value>群組C</value>
   </data>
   <data name="groupa" xml:space="preserve">
-    <value>A组</value>
+    <value>群組A</value>
   </data>
   <data name="groupd" xml:space="preserve">
-    <value>D组</value>
+    <value>群組D</value>
   </data>
   <data name="newCredit" xml:space="preserve">
     <value>新額度</value>
