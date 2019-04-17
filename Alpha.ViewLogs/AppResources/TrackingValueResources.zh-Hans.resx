@@ -190,7 +190,7 @@
     <value>写日志</value>
   </data>
   <data name="ErrMsg" xml:space="preserve">
-    <value>错误信息</value>
+    <value>错误讯息</value>
   </data>
   <data name="playerdiscount" xml:space="preserve">
     <value>玩家的折扣</value>
@@ -973,7 +973,7 @@
     <value>IsInternal</value>
   </data>
   <data name="ErrCode" xml:space="preserve">
-    <value>错误代码</value>
+    <value>错误码</value>
   </data>
   <data name="isa_v99spt_3" xml:space="preserve">
     <value>大小盘</value>
@@ -2569,10 +2569,10 @@
     <value>更新英国/爱尔兰赛马彩池最高/最低投注</value>
   </data>
   <data name="login_message_log" xml:space="preserve">
-    <value>会员登录日志无法提供。</value>
+    <value>无法取得会员登入记录。</value>
   </data>
   <data name="Domain" xml:space="preserve">
-    <value>网址</value>
+    <value>网域</value>
   </data>
   <data name="Platform" xml:space="preserve">
     <value>Platform</value>
@@ -3430,7 +3430,7 @@
     <value>显示旧数值</value>
   </data>
   <data name="nicknameOnly" xml:space="preserve">
-    <value>仅昵称</value>
+    <value>仅能使用昵称</value>
   </data>
   <data name="nickname" xml:space="preserve">
     <value>昵称</value>
