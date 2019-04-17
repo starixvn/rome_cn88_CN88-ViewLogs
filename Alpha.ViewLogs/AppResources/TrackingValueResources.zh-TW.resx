@@ -3706,7 +3706,7 @@
     <value>功能名稱</value>
   </data>
   <data name="IsForcedChangeSecurityCode" xml:space="preserve">
-    <value>強制更改保安碼</value>
+    <value>強迫變更安全代碼</value>
   </data>
   <data name="v255playerdiscount_1701" xml:space="preserve">
     <value>佣金</value>
