@@ -40,7 +40,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="AppResources\TrackingValueResources1.Designer.cs">
+    <Compile Include="AppResources\TrackingValueResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingValueResources.resx</DependentUpon>
@@ -246,9 +246,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>TrackingValueResources1.Designer.cs</LastGenOutput>
+      <LastGenOutput>TrackingValueResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-Hans.resx" />
     <EmbeddedResource Include="AppResources\TrackingValueResources.zh-TW.resx" />

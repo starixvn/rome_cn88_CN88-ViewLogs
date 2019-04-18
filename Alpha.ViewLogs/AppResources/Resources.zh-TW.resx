@@ -176,7 +176,7 @@
     <value>顯示舊數值</value>
   </data>
   <data name="LoginLogs_Warning" xml:space="preserve">
-    <value>會員登錄日志无法提供。</value>
+    <value>無法取得會員登入記錄。</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>用戶名</value>
@@ -257,7 +257,7 @@
     <value>内容</value>
   </data>
   <data name="Domain" xml:space="preserve">
-    <value>網址</value>
+    <value>網域</value>
   </data>
   <data name="Browser" xml:space="preserve">
     <value>瀏覽器</value>

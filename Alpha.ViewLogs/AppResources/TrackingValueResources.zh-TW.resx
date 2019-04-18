@@ -190,7 +190,7 @@
     <value>寫日志</value>
   </data>
   <data name="ErrMsg" xml:space="preserve">
-    <value>錯誤信息</value>
+    <value>錯誤訊息</value>
   </data>
   <data name="playerdiscount" xml:space="preserve">
     <value>玩家的折扣</value>
@@ -973,7 +973,7 @@
     <value>IsInternal</value>
   </data>
   <data name="ErrCode" xml:space="preserve">
-    <value>錯誤代碼</value>
+    <value>錯誤碼</value>
   </data>
   <data name="isa_v99spt_3" xml:space="preserve">
     <value>大小盤</value>
@@ -1693,16 +1693,16 @@
     <value>性別</value>
   </data>
   <data name="groupb" xml:space="preserve">
-    <value>B组</value>
+    <value>群組B</value>
   </data>
   <data name="groupc" xml:space="preserve">
-    <value>C组</value>
+    <value>群組C</value>
   </data>
   <data name="groupa" xml:space="preserve">
-    <value>A组</value>
+    <value>群組A</value>
   </data>
   <data name="groupd" xml:space="preserve">
-    <value>D组</value>
+    <value>群組D</value>
   </data>
   <data name="newCredit" xml:space="preserve">
     <value>新額度</value>
@@ -2569,10 +2569,10 @@
     <value>更新英國/愛爾蘭賽馬彩池最高/最低投注</value>
   </data>
   <data name="login_message_log" xml:space="preserve">
-    <value>會員登錄日志无法提供。</value>
+    <value>無法取得會員登入記錄。</value>
   </data>
   <data name="Domain" xml:space="preserve">
-    <value>網址</value>
+    <value>網域</value>
   </data>
   <data name="Platform" xml:space="preserve">
     <value>平臺</value>
@@ -3430,7 +3430,7 @@
     <value>顯示舊數值</value>
   </data>
   <data name="nicknameOnly" xml:space="preserve">
-    <value>僅暱稱</value>
+    <value>僅能使用昵稱</value>
   </data>
   <data name="nickname" xml:space="preserve">
     <value>暱稱</value>
@@ -3706,7 +3706,7 @@
     <value>功能名稱</value>
   </data>
   <data name="IsForcedChangeSecurityCode" xml:space="preserve">
-    <value>強制更改保安碼</value>
+    <value>強迫變更安全代碼</value>
   </data>
   <data name="v255playerdiscount_1701" xml:space="preserve">
     <value>佣金</value>
