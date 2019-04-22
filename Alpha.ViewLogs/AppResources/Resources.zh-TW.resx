@@ -199,7 +199,7 @@
     <value>無法取得會員登入記錄。</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>用戶名</value>
+    <value>帳戶</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>到</value>

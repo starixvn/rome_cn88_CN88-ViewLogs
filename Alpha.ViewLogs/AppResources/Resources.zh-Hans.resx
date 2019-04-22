@@ -199,7 +199,7 @@
     <value>无法取得会员登入记录。</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>用户名</value>
+    <value>帐户</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>至</value>
