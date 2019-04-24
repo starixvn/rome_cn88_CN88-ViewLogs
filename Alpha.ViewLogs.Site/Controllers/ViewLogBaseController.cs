@@ -24,9 +24,11 @@
         {
             base.OnAuthorization(filterContext);
 
-            if (UserSession.IsSubAcc && !UserSession.SubPageAccess.ViewLog)
+            var pageAccess = UserSession.SubPageAccess;
+
+            if (!pageAccess.ViewMemberInfo && !pageAccess.UpdateAccount)
             {
-                Response.Redirect(microSites.SiteMainPath(AppSettings.AccessDeniedPage));
+                filterContext.Result = new RedirectResult(microSites.SiteMainPath(AppSettings.AccessDeniedPage));
             }
         }
     }

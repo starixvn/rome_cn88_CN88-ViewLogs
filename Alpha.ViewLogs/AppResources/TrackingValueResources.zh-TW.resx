@@ -199,7 +199,7 @@
     <value>最低讓球</value>
   </data>
   <data name="username" xml:space="preserve">
-    <value>用戶名</value>
+    <value>帳戶</value>
   </data>
   <data name="a_v11mpt_1" xml:space="preserve">
     <value>亞洲盤</value>
@@ -3901,7 +3901,7 @@
     <value>總代理佔成數</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>名</value>
+    <value>名稱</value>
   </data>
   <data name="SuperPTCN88" xml:space="preserve">
     <value>超級代理佔成數</value>
@@ -3980,5 +3980,8 @@
   </data>
   <data name="GeneralInformation" xml:space="preserve">
     <value>一般資訊</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>權限</value>
   </data>
 </root>

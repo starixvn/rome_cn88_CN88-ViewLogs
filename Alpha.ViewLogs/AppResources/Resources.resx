@@ -334,7 +334,7 @@
     <value>Member information: Full Control</value>
   </data>
   <data name="PageAccess_B" xml:space="preserve">
-    <value>Member information: Update</value>
+    <value>Account Management - Edit &amp; View</value>
   </data>
   <data name="PageAccess_C" xml:space="preserve">
     <value>Transfer</value>
@@ -346,13 +346,13 @@
     <value>View Log</value>
   </data>
   <data name="PageAccess_H" xml:space="preserve">
-    <value>Member information: View</value>
+    <value>Account Management - View Only</value>
   </data>
   <data name="PageAccess_L" xml:space="preserve">
     <value>Bet Lists</value>
   </data>
   <data name="PageAccess_D" xml:space="preserve">
-    <value>Bets &amp; Forecast</value>
+    <value>Total Bets</value>
   </data>
   <data name="Possess" xml:space="preserve">
     <value>Possess</value>

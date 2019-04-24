@@ -8998,6 +8998,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Permissions.
+        /// </summary>
+        public static string Permissions {
+            get {
+                return ResourceManager.GetString("Permissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Personal Message.
         /// </summary>
         public static string PersonalMessage {
