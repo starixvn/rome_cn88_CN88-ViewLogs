@@ -15,11 +15,13 @@
         <div class="filter" id="report-form">
             <form class="form-inline" role="form">
                 <div class="form-group">
+                    <label class="only-mobile">Username or Name</label>
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
                 </div>
                 <div class="form-group">
+                    <label class="only-mobile">Type</label>
                     <select id="ddl-logactiontype">
                         @foreach (var logActionType in Model.LogActionTypes)
                         {

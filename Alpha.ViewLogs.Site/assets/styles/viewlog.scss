@@ -8,6 +8,7 @@ body {
 .page-viewlog {
     padding: 0;
 }
+
 .tab-box {
     padding-top: 15px;
     position: fixed;
@@ -17,20 +18,26 @@ body {
     height: 48px;
     z-index: 99999;
 }
+
 $sporttype-detail-bg: #d3d6db;
 $height-td: 28px;
 
-.nav.nav-tabs-style2{
+.nav.nav-tabs-style2 {
     background: #fff;
-    
 }
-.RptHeader{
+
+.RptHeader {
     background-color: #666;
     text-indent: 10px;
     height: 28px;
     color: #fff;
 }
+
 .filter {
+    .only-mobile {
+        display: none;
+    }
+
     .form-group {
         vertical-align: middle;
 
@@ -298,12 +305,109 @@ $height-td: 28px;
 }
 
 @media (max-device-width: 767px) {
-    .tab-box {
-        position: static;
+    body {
+        background-color: #fff;
+        font-size: 10.5px;
+        padding: 12px 0;
     }
 
-    .page-viewlog .tab-content {
-        margin-top: 0;
-        padding: 0 15px;
+    .tab-box {
+        position: static;
+        padding: 0;
+        height: auto;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .nav.nav-tabs > li > a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-viewlog {
+        .page-title {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .tab-content {
+            margin-top: 0;
+            padding: 0 12px;
+        }
+    }
+
+    .filter .form-group {
+        .only-mobile {
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        #txt-username, #ddl-logactiontype {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .monpickr-wrap-parent {
+            width: 100% !important;
+            float: none !important;
+            height: 30px !important;
+            margin-bottom: 15px;
+
+            .monpickr-wrap {
+                width: 100%;
+
+                .monpickr-selected-month, .monpickr {
+                    width: 100% !important;
+                    height: 30px !important;
+                }
+            }
+        }
+    }
+
+    .monpickr-label {
+        display: none;
+
+        &.separator {
+            display: inline-block;
+            float: none;
+            margin: 0;
+            height: 30px;
+            width: 50px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+    }
+
+    .daypickr-wrap-parent {
+        float: none !important;
+        display: inline-block;
+        vertical-align: middle;
+        width: calc((100% - 50px) / 2) !important;
+
+        .daypickr, .daypickr-wrap {
+            width: 100%;
+        }
+
+        .daypickr-dropdown {
+            max-height: 282px;
+        }
+
+        > div {
+            display: inline-block;
+            z-index: 1 !important;
+        }
+
+        .monpickr-arrows input.monpickr-input {
+            height: 30px !important;
+        }
+    }
+
+    .tblRpt {
+        margin-top: 15px;
     }
 }
