@@ -2,6 +2,6 @@
 {
     public interface BrowserHelper
     {
-        bool IsMobile(bool isOnlyTablet);
+        bool IsMobile();
     }
 }
