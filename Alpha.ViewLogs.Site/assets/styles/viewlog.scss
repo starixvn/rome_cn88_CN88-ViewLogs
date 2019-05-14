@@ -4,6 +4,10 @@ body {
     font-size: 13px;
     //padding-top: 14px;
 }
+
+.page-viewlog {
+    padding: 0;
+}
 .tab-box {
     padding-top: 15px;
     position: fixed;
@@ -293,3 +297,13 @@ $height-td: 28px;
     border-bottom: none;
 }
 
+@media (max-device-width: 767px) {
+    .tab-box {
+        position: static;
+    }
+
+    .page-viewlog .tab-content {
+        margin-top: 0;
+        padding: 0 15px;
+    }
+}
