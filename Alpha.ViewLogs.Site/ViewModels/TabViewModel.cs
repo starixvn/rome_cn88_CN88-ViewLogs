@@ -14,6 +14,6 @@
 
         public string SelectedTabName { get; }
 
-        public bool IsDevice => browserHelper.IsMobile();
+        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
     }
 }

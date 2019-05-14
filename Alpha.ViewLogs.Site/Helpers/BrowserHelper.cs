@@ -3,5 +3,7 @@
     public interface BrowserHelper
     {
         bool IsMobile();
+
+        bool IsTablet();
     }
 }
