@@ -515,6 +515,7 @@
     </Content>
     <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\filter-toggle.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
     <Content Include="assets\scripts\old-main.js" />

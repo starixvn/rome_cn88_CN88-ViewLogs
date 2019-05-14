@@ -38,6 +38,7 @@ var creditView = {
     },
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         creditView.elelments.btnSubmit = $("#btn-submit");
         creditView.elelments.ddlMonth = $("#ddlMonth");
@@ -92,6 +93,8 @@ var creditView = {
         creditView.pageNumber = viewModel.pageIndex;
         creditView.pageSize = viewModel.pageSize;
         creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
+        creditView.toggleHandler = new ToggleHandler($);
+        creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
     },
     initMonthPicker: function (viewModel: any) {
         creditView.elelments.ddlMonth.monPickr({

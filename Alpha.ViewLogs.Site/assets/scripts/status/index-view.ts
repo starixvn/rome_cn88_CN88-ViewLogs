@@ -43,6 +43,7 @@ var statusView = {
     showOldValuesCookieName: "",
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         statusView.elelments.btnSubmit = $("#btn-submit");
         statusView.elelments.ddlMonth = $("#ddlMonth");
@@ -105,6 +106,8 @@ var statusView = {
         statusView.pageSize = viewModel.pageSize;
 
         statusView.elelments.dataLog.stickyTableHeaders({ fixedOffset: statusView.elelments.navTabs });
+        statusView.toggleHandler = new ToggleHandler($);
+        statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
     },
     initMonthPicker: function (viewModel: any) {
         statusView.elelments.ddlMonth.monPickr({

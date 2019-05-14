@@ -37,6 +37,7 @@ var loginView = {
     },
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         loginView.elelments.btnSubmit = $("#btn-submit");
         loginView.elelments.ddlMonth = $("#ddlMonth");
@@ -91,6 +92,8 @@ var loginView = {
         loginView.pageNumber = viewModel.pageIndex;
         loginView.pageSize = viewModel.pageSize;
         loginView.elelments.dataLog.stickyTableHeaders({ fixedOffset: loginView.elelments.navTabs });
+        loginView.toggleHandler = new ToggleHandler($);
+        loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
     },
     initMonthPicker: function (viewModel: any) {
         loginView.elelments.ddlMonth.monPickr({
