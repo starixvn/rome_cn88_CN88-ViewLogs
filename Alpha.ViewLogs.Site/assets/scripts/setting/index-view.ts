@@ -115,7 +115,9 @@ var settingView = {
 
         settingView.elelments.dataLog.stickyTableHeaders({ fixedOffset: settingView.elelments.navTabs });
         settingView.toggleHandler = new ToggleHandler($);
-        settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        if ($(".icon-filter-down").length) {
+            settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        }
     },
     initMonthPicker: function (viewModel: any) {
         settingView.elelments.ddlMonth.monPickr({

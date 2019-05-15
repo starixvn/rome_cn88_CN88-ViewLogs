@@ -94,7 +94,10 @@ var creditView = {
         creditView.pageSize = viewModel.pageSize;
         creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
         creditView.toggleHandler = new ToggleHandler($);
-        creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+
+        if ($(".icon-filter-down").length) {
+            creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        }
     },
     initMonthPicker: function (viewModel: any) {
         creditView.elelments.ddlMonth.monPickr({

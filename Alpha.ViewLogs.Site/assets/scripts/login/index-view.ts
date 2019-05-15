@@ -93,7 +93,9 @@ var loginView = {
         loginView.pageSize = viewModel.pageSize;
         loginView.elelments.dataLog.stickyTableHeaders({ fixedOffset: loginView.elelments.navTabs });
         loginView.toggleHandler = new ToggleHandler($);
-        loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        if ($(".icon-filter-down").length) {
+            loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        }
     },
     initMonthPicker: function (viewModel: any) {
         loginView.elelments.ddlMonth.monPickr({

@@ -107,7 +107,9 @@ var statusView = {
 
         statusView.elelments.dataLog.stickyTableHeaders({ fixedOffset: statusView.elelments.navTabs });
         statusView.toggleHandler = new ToggleHandler($);
-        statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        if ($(".icon-filter-down").length) {
+            statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+        }
     },
     initMonthPicker: function (viewModel: any) {
         statusView.elelments.ddlMonth.monPickr({
