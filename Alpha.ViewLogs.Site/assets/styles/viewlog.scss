@@ -1,12 +1,13 @@
 ﻿@import "_mixins.scss";
+// Devices
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+$screen-device-lower1024: 1023px;
 
 body {
     font-size: 13px;
     //padding-top: 14px;
-}
-
-.page-viewlog {
-    padding: 0;
 }
 
 .tab-box {
@@ -109,7 +110,7 @@ $height-td: 28px;
     > tbody > tr > td {
         padding: 0 8px;
         border-bottom: 1px solid #ddd !important;
-        border-right: 1px solid #ddd !important;
+        //border-right: 1px solid #ddd !important;
 
         &:last-child {
             border-right: none !important;
@@ -259,6 +260,7 @@ $height-td: 28px;
 
 .tblRpt > tbody > tr > td .tblDesc {
     border-top: 1px solid #ddd;
+    height: 100%;
 
     &:first-child {
         border-top: none;
@@ -296,7 +298,7 @@ $height-td: 28px;
 
 .tbl-style2 > tbody > tr > td {
     padding: 8px;
-    border-right: 1px solid #e5e5e5;
+    //border-right: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -304,7 +306,7 @@ $height-td: 28px;
     border-bottom: none;
 }
 
-@media (max-device-width: 767px) {
+@media (max-device-width: $screen-device-lower768), (min-device-width: $screen-device-greater768) and (max-device-width: $screen-device-lower1024) and (orientation: landscape) {
     body {
         background-color: #fff;
         font-size: 10.5px;
@@ -327,6 +329,8 @@ $height-td: 28px;
     }
 
     .page-viewlog {
+        padding: 0;
+
         .page-title {
             margin-top: 10px;
             margin-bottom: 0;
@@ -404,10 +408,48 @@ $height-td: 28px;
 
         .monpickr-arrows input.monpickr-input {
             height: 30px !important;
+            font-size: 16px;
+        }
+    }
+
+    #content {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            width: 0px; /* Remove scrollbar space */
+            background: transparent; /* Optional: just make scrollbar invisible */
         }
     }
 
     .tblRpt {
         margin-top: 15px;
+        margin-bottom: 0;
+        border-collapse: unset;
+
+
+        .tblDesc {
+            //height: 100%;
+            table-layout: fixed;
+            border-collapse: unset;
+        }
     }
+
+    .tblRpt .tblDesc td.colW2,
+    .tblRpt .tblDesc td.colValue,
+    .tbl-sub-details td.colW2,
+    .tbl-sub-details td.colValue,
+    .tblRpt .tblDesc-ex td.colW2,
+    .tblRpt .tblDesc-ex td.colValue {
+        width: 100px;
+    }
+
+    .tblRpt .tblDesc td.colW1, 
+    .tblRpt .tblDesc td.colTitle, 
+    .tbl-sub-details td.colW1, 
+    .tbl-sub-details td.colTitle, 
+    .tblRpt .tblDesc-ex td.colW1, 
+    .tblRpt .tblDesc-ex td.colTitle {
+        width: 45px;
+    }
+    
 }
