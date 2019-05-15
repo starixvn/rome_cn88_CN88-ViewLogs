@@ -10,10 +10,12 @@
     public class LogViewModel
     {
         private readonly MicroSites microSites;
+        private readonly BrowserHelper browserHelper;
 
         public LogViewModel(
             LogParam logParam,
             int totalRecords,
+            BrowserHelper browserHelper,
             MicroSites microSites = null)
         {
             this.microSites = microSites ?? new MicroSitesImpl();
@@ -57,6 +59,7 @@
             Username = logParam.Username;
 
             ShowOldValuesCookieName = LogQuery.CookieShowOldValue;
+            this.browserHelper = browserHelper;
         }
 
         public bool HasViewLogPermission { get; set; }
@@ -122,5 +125,7 @@
         public string MaxReportDate { get; set; }
 
         public string Username { get; set; }
+
+        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
     }
 }

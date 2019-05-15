@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
+    using Helpers;
     using MediatR;
     using Models;
     using Models.Enumerations;
@@ -12,9 +13,12 @@
 
     public class LoginHandler : BaseHandler, IRequestHandler<IndexQuery, IndexViewModel>
     {
-        public LoginHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper) :
+        private readonly BrowserHelper browserHelper;
+
+        public LoginHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper, BrowserHelper browserHelper) :
             base(logService, logFormatter, dateTimeWrapper)
         {
+            this.browserHelper = browserHelper;
         }
 
         public IndexViewModel Handle(IndexQuery message)
@@ -22,7 +26,7 @@
             var logsParam = CreateLogParam(message);
             var pagingLogs = LogService.GetPagingLogs(logsParam);
 
-            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
+            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords, browserHelper);
 
             TransformLogs(pagingLogs, message, viewModel);
 

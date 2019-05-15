@@ -18,10 +18,6 @@
         {
             daysInWeekByCulture = new Dictionary<string, string[]>();
             daysInWeekByCulture.Add(LanguageCode.English, new string[] { "Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat" });
-            daysInWeekByCulture.Add(LanguageCode.Japanese, new string[] { "Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat" });
-            daysInWeekByCulture.Add(LanguageCode.Korean, new string[] { "일", "월", "화", "수요일", "목요일", "금", "토" });
-            daysInWeekByCulture.Add(LanguageCode.Thai, new string[] { "วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัส", "วันศุกร์", "วันเสาร์" });
-            daysInWeekByCulture.Add(LanguageCode.Vietnamese, new string[] { "Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7" });
             daysInWeekByCulture.Add(LanguageCode.ChineseSimplified, new string[] { "日", "一", "二", "三", "四", "五", "六" });
             daysInWeekByCulture.Add(LanguageCode.NewChineseSimplified, new string[] { "日", "一", "二", "三", "四", "五", "六" });
             daysInWeekByCulture.Add(LanguageCode.ChineseTraditional, new string[] { "日", "一", "二", "三", "四", "五", "六" });
@@ -127,10 +123,6 @@
         [TestCase(LanguageCode.ChineseTraditional)]
         [TestCase(LanguageCode.ChineseSimplified)]
         [TestCase(LanguageCode.NewChineseSimplified)]
-        [TestCase(LanguageCode.Japanese)]
-        [TestCase(LanguageCode.Thai)]
-        [TestCase(LanguageCode.Korean)]
-        [TestCase(LanguageCode.Vietnamese)]
         public void DaysInWeek_ByCultureName_ReturnsCorrectResources(string cultureName)
         {
             // Arrange

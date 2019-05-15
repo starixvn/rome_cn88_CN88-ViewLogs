@@ -35,7 +35,7 @@
 
             transformService = Substitute.For<TransformService>();
             trackingValueFormatter = Substitute.For<TrackingValueFormatter>();
-            settingHandler = new SettingHandler(LogService, LogFormatter, DateTimeWrapper, transformService, trackingValueFormatter);
+            settingHandler = new SettingHandler(LogService, LogFormatter, DateTimeWrapper, transformService, trackingValueFormatter, null);
         }
 
         [Test]
@@ -286,7 +286,7 @@
             LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageIndex == expectedPageIndex));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/0001", "0001-01-01")] // MinDateTime-MinDateTime
         [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
         [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
         [TestCase("10/1/2016", "10/01/2016")] // today-today
@@ -329,7 +329,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
             var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
 
             var validLogItemViewModels = ValidLogItemViewModels();
@@ -344,7 +344,7 @@
                 LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/0001", "0001-01-01")] // MinDateTime-MinDateTime
         [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
         [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
         [TestCase("10/1/2016", "10/01/2016")] // today-today
@@ -387,7 +387,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
             var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
             expectedLogViewModelForTesting.TotalRecords = 1;
             var validLogItemViewModels = ValidLogItemViewModels();
@@ -402,17 +402,13 @@
                 LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
-        [TestCase(LanguageCode.English)]
-        [TestCase(LanguageCode.ChineseTraditional)]
-        [TestCase(LanguageCode.ChineseSimplified)]
-        [TestCase(LanguageCode.NewChineseSimplified)]
-        [TestCase(LanguageCode.Japanese)]
-        [TestCase(LanguageCode.Thai)]
-        [TestCase(LanguageCode.Korean)]
-        [TestCase(LanguageCode.Vietnamese)]
-        [TestCase("")]
+        [TestCase(LanguageCode.English, "All Types")]
+        [TestCase(LanguageCode.ChineseTraditional, "所有類別")]
+        [TestCase(LanguageCode.ChineseSimplified, "所有类别")]
+        [TestCase(LanguageCode.NewChineseSimplified, "所有类别")]
+        [TestCase("", "All Types")]
         [SuppressMessage("StyleCop.CSharp.StylecopPlus.Rules", "SP2101:MethodMustNotContainMoreLinesThan", Justification = "Reviewed. Suppression is OK here.")]
-        public void HandleIndexQuery_HasTodayLogsByLanguage_ReturnsCorrectLogActionTypeViewModel(string language)
+        public void HandleIndexQuery_HasTodayLogsByLanguage_ReturnsCorrectLogActionTypeViewModel(string language, string allTypesText)
         {
             // Arrange
             var today = "10/1/2016";
@@ -455,6 +451,7 @@
                     Id = 1,
                     ChineseTraditionalName = ValidLogActionTypeName,
                     ChineseSimplifiedName = ValidLogActionTypeName,
+                    NewChineseSimplifiedName= ValidLogActionTypeName,
                     EnglishName = ValidLogActionTypeName,
                     VietnameseName = ValidLogActionTypeName,
                     JapaneseName = ValidLogActionTypeName,
@@ -466,7 +463,7 @@
 
             var expectedLogActionTypeViewModels = new List<LogActionTypeViewModel>()
             {
-                new LogActionTypeViewModel(-1, "All Types"),
+                new LogActionTypeViewModel(-1, allTypesText),
                 new LogActionTypeViewModel(1, ValidLogActionTypeName),
                 new LogActionTypeViewModel(0, null),
             };
@@ -487,7 +484,7 @@
                 new LogItemViewModel
                 {
                     LogId = 1,
-                    LogDate = "01/01/0001 12:00:00 AM",
+                    LogDate = "0001-01-01 00:00:00",
                     ActionId = 1,
                     ActionName = ValidLogActionName,
                     IP = ValidIP,
@@ -496,7 +493,7 @@
                 new LogItemViewModel
                 {
                     LogId = 2,
-                    LogDate = "01/01/0001 12:00:00 AM",
+                    LogDate = "0001-01-01 00:00:00",
                     ActionId = 2,
                     ActionName = ValidLogActionName,
                     IP = ValidIP,

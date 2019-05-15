@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Alpha.ViewLogs.Extensions;
     using Fanex.Common;
+    using Helpers;
     using MediatR;
     using Models;
     using Requests;
@@ -13,16 +14,19 @@
 
     public class CreditHandler : BaseHandler, IRequestHandler<IndexQuery, LogViewModel>
     {
-        public CreditHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper) :
+        private readonly BrowserHelper browserHelper;
+
+        public CreditHandler(LogService logService, LogFormatter logFormatter, IDateTime dateTimeWrapper, BrowserHelper browserHelper) :
             base(logService, logFormatter, dateTimeWrapper)
         {
+            this.browserHelper = browserHelper;
         }
 
         public LogViewModel Handle(IndexQuery message)
         {
             var logsParam = CreateLogParam(message);
             var pagingLogs = LogService.GetPagingLogs(logsParam);
-            var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords);
+            var viewModel = new LogViewModel(logsParam, pagingLogs.TotalRecords, browserHelper);
 
             TransformLogs(pagingLogs, message, viewModel);
 

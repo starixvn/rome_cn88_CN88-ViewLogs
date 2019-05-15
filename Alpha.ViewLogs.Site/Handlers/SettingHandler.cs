@@ -20,17 +20,20 @@
     {
         private readonly TrackingValueFormatter trackingValueFormatter;
         private readonly TransformService transformService;
+        private readonly BrowserHelper browserHelper;
 
         public SettingHandler(
             LogService logService,
             LogFormatter logFormatter,
             IDateTime dateTimeWrapper,
             TransformService transformService,
-            TrackingValueFormatter trackingValueFormatter) :
+            TrackingValueFormatter trackingValueFormatter,
+            BrowserHelper browserHelper) :
              base(logService, logFormatter, dateTimeWrapper)
         {
             this.trackingValueFormatter = trackingValueFormatter;
             this.transformService = transformService;
+            this.browserHelper = browserHelper;
         }
 
         public IndexViewModel Handle(IndexQuery message)
@@ -66,7 +69,7 @@
 
             var pagingLogs = LogService.GetPagingLogs(logsParam);
 
-            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords);
+            var viewModel = new IndexViewModel(logsParam, pagingLogs.TotalRecords, browserHelper);
             viewModel.LogActionTypes = BuildLogActionTypeViewModels(message);
             viewModel.ActionTypeId = message.ActionTypeId;
 

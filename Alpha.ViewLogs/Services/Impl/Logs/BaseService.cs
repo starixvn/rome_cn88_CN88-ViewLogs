@@ -16,8 +16,6 @@
     public abstract class BaseService
     {
         private const string LogActionCacheKey = "Alpha.ViewLogs.Setting.LogAction";
-        private const string LogActionTypesCacheKey = "Alpha.ViewLogs.Setting.LogActionTypes";
-        private const int OneHour = 1;
 
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
@@ -75,20 +73,6 @@
 
         public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            //var logActionTypes = ConfiguredCacheService.Get<IEnumerable<LogActionType>>(LogActionTypesCacheKey);
-
-            //if (logActionTypes != null
-            //    && logActionTypes.Any())
-            //{
-            //    return logActionTypes;
-            //}
-
-            //logActionTypes = dynamicRepository.Fetch<LogActionType>(new GetAllLogActionTypeCriteria());
-
-            //ConfiguredCacheService.Set(LogActionTypesCacheKey, logActionTypes, new CacheItemOptions { SlidingExpiration = TimeSpan.FromHours(OneHour) });
-
-            //return logActionTypes;
-
             IEnumerable<LogActionType> logActionTypes = new List<LogActionType>
             {
                 new LogActionType

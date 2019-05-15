@@ -9,7 +9,7 @@
     public class LogViewModelForTesting : LogViewModel
     {
         public LogViewModelForTesting(LogParam logParam, int totalRecords, MicroSites microSites) :
-            base(logParam, totalRecords, microSites)
+            base(logParam, totalRecords, null, microSites)
         {
         }
 
