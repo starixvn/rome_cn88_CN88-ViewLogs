@@ -40,6 +40,7 @@ var statusView = {
         navTabs: null,
         longMonthsInYear: null
     },
+    isSubmitCookieName: "IsSubmitCookie",
     showOldValuesCookieName: "",
     pageNumber: 0,
     pageSize: 0,
@@ -64,6 +65,7 @@ var statusView = {
             statusView.pageNumber = 0;
             statusView.pageSize = 0;
 
+            $.cookie(statusView.isSubmitCookieName, "1", { path: "/" });
             statusController.viewLogs();
         });
 
@@ -109,7 +111,11 @@ var statusView = {
         statusView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
-            statusView.toggleHandler.showFilter();
+            if ($.cookie(statusView.isSubmitCookieName) != "1") {
+                statusView.toggleHandler.showFilter();
+            }
+
+            $.cookie(statusView.isSubmitCookieName, "0", { path: "/" });
         }
     },
     initMonthPicker: function (viewModel: any) {

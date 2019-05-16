@@ -36,6 +36,7 @@ var creditView = {
         dataLog: null,
         navTabs: null
     },
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
     toggleHandler: null,
@@ -57,6 +58,7 @@ var creditView = {
         creditView.elelments.btnSubmit.click(function () {
             creditView.pageNumber = 0;
             creditView.pageSize = 0;
+            $.cookie(creditView.isSubmitCookieName, "1", { path: "/" });
 
             creditController.viewLogs();
         });
@@ -97,7 +99,11 @@ var creditView = {
 
         if ($(".icon-filter-down").length) {
             creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
-            creditView.toggleHandler.showFilter();
+            if ($.cookie(creditView.isSubmitCookieName) != "1") {
+                creditView.toggleHandler.showFilter();
+            }
+
+            $.cookie(creditView.isSubmitCookieName, "0", { path: "/" });
         }
     },
     initMonthPicker: function (viewModel: any) {

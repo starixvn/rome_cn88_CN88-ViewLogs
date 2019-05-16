@@ -35,6 +35,7 @@ var loginView = {
         dataLog: null,
         navTabs: null
     },
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
     toggleHandler: null,
@@ -57,6 +58,7 @@ var loginView = {
             loginView.pageNumber = 0;
             loginView.pageSize = 0;
 
+            $.cookie(loginView.isSubmitCookieName, "1", { path: "/" });
             loginController.viewLogs();
         });
 
@@ -95,7 +97,11 @@ var loginView = {
         loginView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
-            loginView.toggleHandler.showFilter();
+            if ($.cookie(loginView.isSubmitCookieName) != "1") {
+                loginView.toggleHandler.showFilter();
+            }
+
+            $.cookie(loginView.isSubmitCookieName, "0", { path: "/" });
         }
     },
     initMonthPicker: function (viewModel: any) {

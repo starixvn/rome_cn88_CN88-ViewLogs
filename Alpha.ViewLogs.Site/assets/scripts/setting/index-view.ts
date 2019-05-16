@@ -40,6 +40,7 @@ var settingView = {
         navTabs: null
     },
     showOldValuesCookieName: "",
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
     toggleHandler: null,
@@ -72,6 +73,7 @@ var settingView = {
             settingView.pageNumber = 0;
             settingView.pageSize = 0;
 
+            $.cookie(settingView.isSubmitCookieName, "1", { path: "/" });
             settingController.viewLogs();
         });
 
@@ -117,7 +119,11 @@ var settingView = {
         settingView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
-            settingView.toggleHandler.showFilter();
+            if ($.cookie(settingView.isSubmitCookieName) != "1") {
+                settingView.toggleHandler.showFilter();
+            }
+
+            $.cookie(settingView.isSubmitCookieName, "0", { path: "/" });
         }
     },
     initMonthPicker: function (viewModel: any) {
