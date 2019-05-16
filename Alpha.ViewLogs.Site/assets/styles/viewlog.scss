@@ -111,7 +111,6 @@ $height-td: 28px;
         padding: 0 8px;
         border-bottom: 1px solid #ddd !important;
         //border-right: 1px solid #ddd !important;
-
         &:last-child {
             border-right: none !important;
         }
@@ -367,6 +366,36 @@ $height-td: 28px;
                     width: 100% !important;
                     height: 30px !important;
                 }
+
+                .monpickr-dropdown {
+                    width: 100% !important;
+                    padding: 0;
+
+                    .month-wrap {
+                        padding: 0;
+                        width: 100%;
+                        border: 0;
+
+                        li {
+                            width: 100%;
+                            margin: 0;
+                        }
+
+                        .ui-state-active {
+                            background: #dbdbdb !important;
+                            border: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            .ui-monpickr li {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                &.year a {
+                    color: #3070b4;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -443,13 +472,12 @@ $height-td: 28px;
         width: 100px;
     }
 
-    .tblRpt .tblDesc td.colW1, 
-    .tblRpt .tblDesc td.colTitle, 
-    .tbl-sub-details td.colW1, 
-    .tbl-sub-details td.colTitle, 
-    .tblRpt .tblDesc-ex td.colW1, 
+    .tblRpt .tblDesc td.colW1,
+    .tblRpt .tblDesc td.colTitle,
+    .tbl-sub-details td.colW1,
+    .tbl-sub-details td.colTitle,
+    .tblRpt .tblDesc-ex td.colW1,
     .tblRpt .tblDesc-ex td.colTitle {
-        width: 45px;
+        width: 60px;
     }
-    
 }
