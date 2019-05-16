@@ -338,7 +338,20 @@ $height-td: 28px;
         .tab-content {
             margin-top: 0;
             padding: 0 12px;
+
+            .tab-pane {
+                position: relative;
+            }
         }
+    }
+
+    .form-group.check-box {      
+        margin-bottom: 0;
+
+        label {
+            margin-bottom: 0;
+        }
+        
     }
 
     .filter .form-group {
@@ -392,6 +405,7 @@ $height-td: 28px;
             .ui-monpickr li {
                 padding-top: 8px;
                 padding-bottom: 8px;
+
                 &.year a {
                     color: #3070b4;
                     font-weight: bold;
@@ -479,5 +493,9 @@ $height-td: 28px;
     .tblRpt .tblDesc-ex td.colW1,
     .tblRpt .tblDesc-ex td.colTitle {
         width: 60px;
+    }
+
+    .tbl-style2 thead th, .tbl-style2 tbody td, .tbl-style2 tfoot td {
+        height: 30px;
     }
 }
