@@ -30,13 +30,24 @@
                     <input type="button" class="btn-submit" id="btn-submit" value="@Resources.Submit">
                     <span id="icon-loading" class="hide block-icon-small"></span>
                 </div>
-                <div class="form-group">
-                    <label>
-                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
-                    </label>
-                </div>
+                @if (!Model.IsDevice)
+                {
+                    <div class="form-group">
+                        <label>
+                            <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                        </label>
+                    </div>
+                }
             </form>
         </div>
+        @if (Model.IsDevice)
+        {
+            <div class="form-group">
+                <label>
+                    <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                </label>
+            </div>
+        }
 
         <div id="content">
             <table id="DataLog" class="width-100per tblRpt tbl-style2">
