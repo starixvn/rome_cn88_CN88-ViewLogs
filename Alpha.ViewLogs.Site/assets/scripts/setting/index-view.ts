@@ -117,6 +117,7 @@ var settingView = {
         settingView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            settingView.toggleHandler.showFilter();
         }
     },
     initMonthPicker: function (viewModel: any) {

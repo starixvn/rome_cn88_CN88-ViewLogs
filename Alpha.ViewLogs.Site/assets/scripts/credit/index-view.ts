@@ -97,6 +97,7 @@ var creditView = {
 
         if ($(".icon-filter-down").length) {
             creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            creditView.toggleHandler.showFilter();
         }
     },
     initMonthPicker: function (viewModel: any) {

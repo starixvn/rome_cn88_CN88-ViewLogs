@@ -56,5 +56,20 @@ class ToggleHandler {
                     .addClass("icon-filter-down");
             }
         });
-    }
+    };
+
+    showFilter = () => {
+        let isCollapsed = this.$filterToggleIcon.hasClass("icon-filter-down");
+        if (!isCollapsed) {
+            return;
+        }
+
+        this.$sourceElement
+            .slideDown(200);
+        this.$targetElement
+            .slideUp(210);
+        this.$filterToggleIcon
+            .removeClass("icon-filter-down")
+            .addClass("icon-filter-up");
+    };
 }

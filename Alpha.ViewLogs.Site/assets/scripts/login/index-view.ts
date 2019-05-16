@@ -95,6 +95,7 @@ var loginView = {
         loginView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            loginView.toggleHandler.showFilter();
         }
     },
     initMonthPicker: function (viewModel: any) {

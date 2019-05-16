@@ -109,6 +109,7 @@ var statusView = {
         statusView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            statusView.toggleHandler.showFilter();
         }
     },
     initMonthPicker: function (viewModel: any) {
