@@ -305,12 +305,11 @@ $height-td: 28px;
     border-bottom: none;
 }
 
-@media (max-device-width: $screen-device-lower768), (min-device-width: $screen-device-greater768) and (max-device-width: $screen-device-lower1024) and (orientation: landscape) {
-    body {
-        background-color: #fff;
-        font-size: 10.5px;
-        padding: 0;
-    }
+// For Phone
+body.phone {
+    background-color: #fff;
+    font-size: 10.5px;
+    padding: 0;
 
     .tab-box {
         position: static;
