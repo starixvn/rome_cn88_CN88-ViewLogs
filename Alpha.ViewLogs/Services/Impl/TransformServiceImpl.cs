@@ -22,7 +22,8 @@
         public string TransformTrackingValue(
             string trackingValue,
             int logActionId,
-            TransformParam transformParam)
+            TransformParam transformParam,
+            bool isHideNickname = false)
         {
             if (transformParam == null ||
                 string.IsNullOrWhiteSpace(trackingValue)
@@ -39,13 +40,13 @@
             }
 
             // Need be reviewed code here, AssignParams should not in formatter class
-            logFormatter.Init(transformParam);
+            logFormatter.Init(transformParam, isHideNickname);
 
             var xsltArguments = new XsltArgumentList();
             xsltArguments.AddExtensionObject("urn:LogFormat", logFormatter);
 
             // Transform xml must be lower case
-            using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue.ToLower())))
+            using (MemoryStream stream = new MemoryStream(ASCIIEncoding.UTF8.GetBytes(trackingValue.ToLowerInvariant())))
             {
                 var document = new XPathDocument(stream);
                 using (var writer = new StringWriter())

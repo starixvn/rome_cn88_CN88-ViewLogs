@@ -3,14 +3,14 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
 
-  <xsl:template match="age_customerinsnickname">
+  <xsl:template match="cs_customerinsnickname">
     <table class="tblDesc">
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('nickname')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@username2" />
+          <xsl:value-of select="xslLogFormat:FormatNickName(@username2)" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />

@@ -16,7 +16,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('nickname')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@username2" />
+          <xsl:value-of select="xslLogFormat:FormatNickName(@username2)" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />

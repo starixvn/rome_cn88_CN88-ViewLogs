@@ -12,6 +12,8 @@
 
         public bool IsSubAcc { get; set; }
 
+        public int RoleId { get; set; }
+
         public override string GetSettingKey()
         {
             return "Age_CustomerSelCheckBelonging_ByUsername";

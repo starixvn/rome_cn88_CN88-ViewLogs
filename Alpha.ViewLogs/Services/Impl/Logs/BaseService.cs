@@ -12,6 +12,9 @@
     using Params;
     using AppResources;
     using System.Globalization;
+    using Sunplus.Agent.Model.Entities;
+    using Sunplus.Agent.Model.Base;
+    using System.Text.RegularExpressions;
 
     public abstract class BaseService
     {
@@ -20,12 +23,14 @@
         private readonly IDynamicRepository dynamicRepository;
         private readonly CustomerService customerService;
         private readonly LogDataAccess logDataAccess;
+        private readonly IUserSession session;
 
-        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess)
+        protected BaseService(IDynamicRepository dynamicRepository, CustomerService customerService, LogDataAccess logDataAccess, IUserSession session = null)
         {
             this.dynamicRepository = dynamicRepository;
             this.customerService = customerService;
             this.logDataAccess = logDataAccess;
+            this.session = session ?? new UserSessionExt();
         }
 
         protected LogDataAccess LogDataAccess
@@ -154,6 +159,12 @@
             pagingLogs.Logs = GetLogs(logParam);
             pagingLogs.TotalRecords = GetTotalLogs(logParam);
 
+            foreach (var log in pagingLogs.Logs)
+            {
+                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId);
+                log.IsHideNickname = isHideNickname;
+            }
+
             return pagingLogs;
         }
 
@@ -172,6 +183,22 @@
             var criteria = CreateGetTotalLogsCriteria(logParam);
 
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
+        }
+
+        private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
+            => IsSubAccViewMainAcc(isSubAccount, custId);
+
+        private bool IsSubAccViewMainAcc(bool isSubAccount, int custId)
+            => session.IsSubAcc && session.CustId == custId && !isSubAccount;
+
+        private static bool IsSubAccFromLog(Log log)
+            => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId)
+                && new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue);
+        
+        private enum NicknameActions
+        {
+            CreateMainAccNickname = 687,
+            CreateSubAccNickname = 690
         }
     }
 }
