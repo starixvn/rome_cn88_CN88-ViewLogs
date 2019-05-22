@@ -9,14 +9,16 @@
     using Helpers;
     using Models;
     using Params;
+    using Sunplus.Agent.Model.Entities;
 
     public class LoginServiceImpl : BaseService, LogService
     {
         public LoginServiceImpl(
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            LogDataAccess logDataAccess) :
-            base(dynamicRepository, customerService, logDataAccess)
+            LogDataAccess logDataAccess,
+            IUserSession session) :
+            base(dynamicRepository, customerService, logDataAccess, session)
         {
         }
 

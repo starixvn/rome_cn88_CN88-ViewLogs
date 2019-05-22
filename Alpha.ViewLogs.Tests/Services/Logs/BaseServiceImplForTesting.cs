@@ -8,14 +8,16 @@
     using ViewLogs.DataAccesses;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
+    using Sunplus.Agent.Model.Entities;
 
     public class BaseServiceForTesting : BaseService
     {
         public BaseServiceForTesting(
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            LogDataAccess logDataAccess) :
-            base(dynamicRepository, customerService, logDataAccess)
+            LogDataAccess logDataAccess,
+            IUserSession session) :
+            base(dynamicRepository, customerService, logDataAccess, session)
         {
         }
 

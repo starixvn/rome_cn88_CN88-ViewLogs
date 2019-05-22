@@ -8,14 +8,16 @@
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
+    using Sunplus.Agent.Model.Entities;
 
     public class SettingServiceImpl : BaseService, LogService
     {
         public SettingServiceImpl(
              IDynamicRepository dynamicRepository,
              CustomerService customerService,
-             LogDataAccess baseDataAccess) :
-            base(dynamicRepository, customerService, baseDataAccess)
+             LogDataAccess baseDataAccess,
+             IUserSession session) :
+            base(dynamicRepository, customerService, baseDataAccess, session)
         {
         }
 

@@ -12,6 +12,7 @@
     using ViewLogs.Models;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
+    using Sunplus.Agent.Model.Entities;
 
     public abstract class ConcreteLogServiceImplTests
     {
@@ -23,11 +24,14 @@
 
         protected LogDataAccess BaseDataAccess { get; set; }
 
+        protected IUserSession Session { get; set; }
+
         public virtual void SetUp()
         {
             DynamicRepository = Substitute.For<IDynamicRepository>();
             CustomerService = Substitute.For<CustomerService>();
             BaseDataAccess = Substitute.For<LogDataAccess>();
+            Session = Substitute.For<IUserSession>();
         }
 
         public virtual void GetPagingLogs_ValidDownline_ReturnsDataFromDataAccess()

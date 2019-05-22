@@ -12,6 +12,7 @@
     using ViewLogs.DataAccesses;
     using ViewLogs.Models;
     using ViewLogs.Services;
+    using Sunplus.Agent.Model.Entities;
 
     [TestFixture]
     public class BaseServiceTests
@@ -24,6 +25,7 @@
         private IDynamicRepository dynamicRepository;
         private CustomerService customerService;
         private LogDataAccess logDataAccess;
+        private IUserSession session;
 
         private Cache cacheForTesting;
 
@@ -36,8 +38,9 @@
             dynamicRepository = Substitute.For<IDynamicRepository>();
             customerService = Substitute.For<CustomerService>();
             logDataAccess = Substitute.For<LogDataAccess>();
+            session = Substitute.For<IUserSession>();
 
-            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess);
+            baseService = new BaseServiceForTesting(dynamicRepository, customerService, logDataAccess, session);
         }
 
         [Test]
