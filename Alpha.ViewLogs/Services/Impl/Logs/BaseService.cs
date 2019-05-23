@@ -192,7 +192,7 @@
             => session.IsSubAcc && session.CustId == custId && !isSubAccount;
 
         private bool IsUplineViewDownlineSubAcc(bool isSubAccount, int roleId)
-            => !session.IsSubAcc && isSubAccount && session.RoleId - roleId > 0;
+            => isSubAccount && session.RoleId - roleId > 0;
 
         private static bool IsSubAccFromLog(Log log)
             => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId)
