@@ -186,10 +186,13 @@
         }
 
         private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
-            => IsSubAccViewMainAcc(isSubAccount, custId);
+            => IsSubAccViewMainAcc(isSubAccount, custId) || IsUplineViewDownlineSubAcc(isSubAccount, roleId);
 
         private bool IsSubAccViewMainAcc(bool isSubAccount, int custId)
             => session.IsSubAcc && session.CustId == custId && !isSubAccount;
+
+        private bool IsUplineViewDownlineSubAcc(bool isSubAccount, int roleId)
+            => !session.IsSubAcc && isSubAccount && session.RoleId - roleId > 0;
 
         private static bool IsSubAccFromLog(Log log)
             => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId)
