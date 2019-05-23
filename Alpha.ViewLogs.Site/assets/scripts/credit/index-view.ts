@@ -94,7 +94,6 @@ var creditView = {
 
         creditView.pageNumber = viewModel.pageIndex;
         creditView.pageSize = viewModel.pageSize;
-        creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
         creditView.toggleHandler = new ToggleHandler($);
 
         if ($(".icon-filter-down").length) {

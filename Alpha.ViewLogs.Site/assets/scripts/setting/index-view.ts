@@ -115,7 +115,6 @@ var settingView = {
         settingView.pageNumber = viewModel.pageIndex;
         settingView.pageSize = viewModel.pageSize;
 
-        settingView.elelments.dataLog.stickyTableHeaders({ fixedOffset: settingView.elelments.navTabs });
         settingView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));

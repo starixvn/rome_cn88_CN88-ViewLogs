@@ -93,7 +93,6 @@ var loginView = {
 
         loginView.pageNumber = viewModel.pageIndex;
         loginView.pageSize = viewModel.pageSize;
-        loginView.elelments.dataLog.stickyTableHeaders({ fixedOffset: loginView.elelments.navTabs });
         loginView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));

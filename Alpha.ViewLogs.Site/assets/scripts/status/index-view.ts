@@ -107,7 +107,6 @@ var statusView = {
         statusView.pageNumber = viewModel.pageIndex;
         statusView.pageSize = viewModel.pageSize;
 
-        statusView.elelments.dataLog.stickyTableHeaders({ fixedOffset: statusView.elelments.navTabs });
         statusView.toggleHandler = new ToggleHandler($);
         if ($(".icon-filter-down").length) {
             statusView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
