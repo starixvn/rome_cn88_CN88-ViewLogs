@@ -83,7 +83,7 @@ var loginView = {
                 excludemember: false
             });
 
-        initAutoComplete($("#txt-username")[0], queryUsernameURL);
+        //initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         loginView.renderPager({
             totalRecords: viewModel.totalRecords,

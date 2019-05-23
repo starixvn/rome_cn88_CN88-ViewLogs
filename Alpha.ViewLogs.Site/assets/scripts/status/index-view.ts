@@ -96,7 +96,7 @@ var statusView = {
                 excludemember: false
             });
 
-        initAutoComplete($("#txt-username")[0], queryUsernameURL);
+        //initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         statusView.renderPager({
             totalRecords: viewModel.totalRecords,

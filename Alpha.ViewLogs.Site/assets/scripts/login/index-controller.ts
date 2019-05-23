@@ -17,7 +17,7 @@ var loginController = {
         tabController.viewLogsParams = loginView.getParams();
     },
     viewLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         loginView.showLoadingState();
 
         var viewLogsParams = loginView.getParams();
@@ -27,7 +27,7 @@ var loginController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         loginView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = loginView.pageNumber;

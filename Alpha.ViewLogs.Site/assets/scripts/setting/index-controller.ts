@@ -17,7 +17,7 @@ var settingController = {
         tabController.viewLogsParams = settingView.getParams();
     },
     viewLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         settingView.showLoadingState();
 
         var viewLogsParams = settingView.getParams();
@@ -27,7 +27,7 @@ var settingController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         settingView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = settingView.pageNumber;
