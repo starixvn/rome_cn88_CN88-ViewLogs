@@ -24,7 +24,7 @@
         {
             base.SetUp();
 
-            creditHandler = new CreditHandler(LogService, LogFormatter, DateTimeWrapper);
+            creditHandler = new CreditHandler(LogService, LogFormatter, DateTimeWrapper, null);
         }
 
         [Test]
@@ -214,7 +214,7 @@
             LogService.Received().GetPagingLogs(Arg.Is<LogParam>(logParam => logParam.PageIndex == expectedPageIndex));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/0001", "0001-01-01")] // MinDateTime-MinDateTime
         [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
         [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
         [TestCase("10/1/2016", "10/01/2016")] // today-today
@@ -257,7 +257,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
             var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
 
             var validLogItemViewModels = ValidLogItemViewModels();
@@ -272,7 +272,7 @@
                 LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
         }
 
-        [TestCase("1/1/0001", "01/01/0001")] // MinDateTime-MinDateTime
+        [TestCase("1/1/0001", "0001-01-01")] // MinDateTime-MinDateTime
         [TestCase("1/1/2014", "01/01/2014")] // LessThanMinSupportedDate-LessThanMinSupportedDate
         [TestCase("1/1/2015", "01/01/2015")] // BeginOfSupportedDate-BeginOfSupportedDate
         [TestCase("10/1/2016", "10/01/2016")] // today-today
@@ -315,7 +315,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
             var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
             expectedLogViewModelForTesting.TotalRecords = 1;
             var validLogItemViewModels = ValidLogItemViewModels();
@@ -337,7 +337,7 @@
                 new LogItemViewModel
                 {
                     LogId = 1,
-                    LogDate = "01/01/0001 12:00:00 AM",
+                    LogDate = "0001-01-01 00:00:00",
                     ActionId = 1,
                     ActionName = ValidLogActionName,
                     TrackingValue = "0",
@@ -347,7 +347,7 @@
                 new LogItemViewModel
                 {
                     LogId = 2,
-                    LogDate = "01/01/0001 12:00:00 AM",
+                    LogDate = "0001-01-01 00:00:00",
                     ActionId = 2,
                     ActionName = ValidLogActionName,
                     TrackingValue = "0",

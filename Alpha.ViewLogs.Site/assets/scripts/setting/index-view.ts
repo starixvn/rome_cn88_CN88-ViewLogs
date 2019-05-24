@@ -40,8 +40,10 @@ var settingView = {
         navTabs: null
     },
     showOldValuesCookieName: "",
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         settingView.elelments.ddlLogActionType = $("#ddl-logactiontype");
         settingView.elelments.btnSubmit = $("#btn-submit");
@@ -71,6 +73,7 @@ var settingView = {
             settingView.pageNumber = 0;
             settingView.pageSize = 0;
 
+            $.cookie(settingView.isSubmitCookieName, "1", { path: "/" });
             settingController.viewLogs();
         });
 
@@ -112,7 +115,15 @@ var settingView = {
         settingView.pageNumber = viewModel.pageIndex;
         settingView.pageSize = viewModel.pageSize;
 
-        settingView.elelments.dataLog.stickyTableHeaders({ fixedOffset: settingView.elelments.navTabs });
+        settingView.toggleHandler = new ToggleHandler($);
+        if ($(".icon-filter-down").length) {
+            settingView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            if ($.cookie(settingView.isSubmitCookieName) != "1") {
+                settingView.toggleHandler.showFilter();
+            }
+
+            $.cookie(settingView.isSubmitCookieName, "0", { path: "/" });
+        }
     },
     initMonthPicker: function (viewModel: any) {
         settingView.elelments.ddlMonth.monPickr({

@@ -1,9 +1,15 @@
 ﻿@import "_mixins.scss";
+// Devices
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+$screen-device-lower1024: 1023px;
 
 body {
     font-size: 13px;
     //padding-top: 14px;
 }
+
 .tab-box {
     padding-top: 15px;
     position: fixed;
@@ -13,20 +19,26 @@ body {
     height: 48px;
     z-index: 99999;
 }
+
 $sporttype-detail-bg: #d3d6db;
 $height-td: 28px;
 
-.nav.nav-tabs-style2{
+.nav.nav-tabs-style2 {
     background: #fff;
-    
 }
-.RptHeader{
+
+.RptHeader {
     background-color: #666;
     text-indent: 10px;
     height: 28px;
     color: #fff;
 }
+
 .filter {
+    .only-mobile {
+        display: none;
+    }
+
     .form-group {
         vertical-align: middle;
 
@@ -98,8 +110,7 @@ $height-td: 28px;
     > tbody > tr > td {
         padding: 0 8px;
         border-bottom: 1px solid #ddd !important;
-        border-right: 1px solid #ddd !important;
-
+        //border-right: 1px solid #ddd !important;
         &:last-child {
             border-right: none !important;
         }
@@ -248,6 +259,7 @@ $height-td: 28px;
 
 .tblRpt > tbody > tr > td .tblDesc {
     border-top: 1px solid #ddd;
+    height: 100%;
 
     &:first-child {
         border-top: none;
@@ -285,7 +297,7 @@ $height-td: 28px;
 
 .tbl-style2 > tbody > tr > td {
     padding: 8px;
-    border-right: 1px solid #e5e5e5;
+    //border-right: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -293,3 +305,212 @@ $height-td: 28px;
     border-bottom: none;
 }
 
+// For Phone
+body.phone {
+    background-color: #fff;
+    font-size: 10.5px;
+    padding: 0;
+
+    .tab-box {
+        position: static;
+        padding: 0;
+        height: auto;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .nav.nav-tabs > li > a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-viewlog {
+        padding: 0;
+
+        .page-title {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .tab-content {
+            margin-top: 0;
+            padding: 0 12px;
+
+            .tab-pane {
+                position: relative;
+            }
+        }
+    }
+
+    .form-group.check-box {      
+        margin-bottom: 0;
+
+        label {
+            margin-bottom: 0;
+        }
+        
+    }
+
+    .filter .form-group {
+        .only-mobile {
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        #txt-username, #ddl-logactiontype {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .monpickr-wrap-parent {
+            width: 100% !important;
+            float: none !important;
+            height: 30px !important;
+            margin-bottom: 15px;
+
+            .monpickr-wrap {
+                width: 100%;
+
+                .monpickr-selected-month, .monpickr {
+                    width: 100% !important;
+                    height: 30px !important;
+                }
+
+                .monpickr-dropdown {
+                    width: 100% !important;
+                    padding: 0;
+
+                    .month-wrap {
+                        padding: 0;
+                        width: 100%;
+                        border: 0;
+
+                        li {
+                            width: 100%;
+                            margin: 0;
+                        }
+
+                        .ui-state-active {
+                            background: #dbdbdb !important;
+                            border: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            .ui-monpickr li {
+                padding-top: 8px;
+                padding-bottom: 8px;
+
+                &.year a {
+                    color: #3070b4;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .monpickr-label {
+        display: none;
+
+        &.separator {
+            display: inline-block;
+            float: none;
+            margin: 0;
+            height: 30px;
+            width: 50px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+    }
+
+    .daypickr-wrap-parent {
+        float: none !important;
+        display: inline-block;
+        vertical-align: middle;
+        width: calc((100% - 50px) / 2) !important;
+
+        .daypickr, .daypickr-wrap {
+            width: 100%;
+        }
+
+        .daypickr-dropdown {
+            max-height: 282px;
+        }
+
+        > div {
+            display: inline-block;
+            z-index: 1 !important;
+        }
+
+        .monpickr-arrows input.monpickr-input {
+            height: 30px !important;
+            font-size: 16px;
+        }
+    }
+
+    #content {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            width: 0px; /* Remove scrollbar space */
+            background: transparent; /* Optional: just make scrollbar invisible */
+        }
+    }
+
+    .tblRpt {
+        margin-top: 15px;
+        margin-bottom: 0;
+        border-collapse: unset;
+
+
+        .tblDesc {
+            //height: 100%;
+            table-layout: fixed;
+            border-collapse: unset;
+        }
+    }
+
+    .tblRpt .tblDesc td.colW2,
+    .tblRpt .tblDesc td.colValue,
+    .tbl-sub-details td.colW2,
+    .tbl-sub-details td.colValue,
+    .tblRpt .tblDesc-ex td.colW2,
+    .tblRpt .tblDesc-ex td.colValue {
+        width: 120px;
+        word-break: break-all;
+    }
+
+    .tblRpt .tblDesc td.colW1,
+    .tblRpt .tblDesc td.colTitle,
+    .tbl-sub-details td.colW1,
+    .tbl-sub-details td.colTitle,
+    .tblRpt .tblDesc-ex td.colW1,
+    .tblRpt .tblDesc-ex td.colTitle {
+        width: 120px;
+    }
+
+    .tbl-style2 thead th, .tbl-style2 tbody td, .tbl-style2 tfoot td {
+        height: 30px;
+    }
+
+    #DataLog {
+        thead th {
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr td {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &.col-action {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}

@@ -77,23 +77,23 @@
         [TestCase("<div><subnode>content</subnode></div>", "<div><subnode>content</subnode></div>")]
         [TestCase("<div permissionAttribute=\"[A][B][H]\"></div>", "<div permissionAttribute=\"[Member information: Full Control]\"></div>")] // PemissionAbbriations
         [TestCase("<div permissionAttribute=\"[A][B]\"></div>", "<div permissionAttribute=\"[Member information: Full Control]\"></div>")] // PemissionAbbriations
-        [TestCase("<div permissionAttribute=\"[B][H]\"></div>", "<div permissionAttribute=\"[Member information: Update]\"></div>")] // PemissionAbbriations
+        [TestCase("<div permissionAttribute=\"[B][H]\"></div>", "<div permissionAttribute=\"[Account Management - Edit &amp;amp; View]\"></div>")] // PemissionAbbriations
         [TestCase("<div permissionAttribute=\"[A]\"></div>", "<div permissionAttribute=\"[Member information: Full Control]\"></div>")] // Single Permission
-        [TestCase("<div permissionAttribute=\"[B]\"></div>", "<div permissionAttribute=\"[Member information: Update]\"></div>")] // Single Permission
+        [TestCase("<div permissionAttribute=\"[B]\"></div>", "<div permissionAttribute=\"[Account Management - Edit &amp;amp; View]\"></div>")] // Single Permission
         [TestCase("<div permissionAttribute=\"[C]\"></div>", "<div permissionAttribute=\"[Transfer]\"></div>")] // Single Permission
         [TestCase("<div permissionAttribute=\"[G]\"></div>", "<div permissionAttribute=\"[View Log]\"></div>")] // Single Permission
-        [TestCase("<div permissionAttribute=\"[H]\"></div>", "<div permissionAttribute=\"[Member information: View]\"></div>")] // Single Permission
+        [TestCase("<div permissionAttribute=\"[H]\"></div>", "<div permissionAttribute=\"[Account Management - View Only]\"></div>")] // Single Permission
         [TestCase("<div permissionAttribute=\"[E]\"></div>", "<div permissionAttribute=\"[Reports]\"></div>")] // Single Permission
-        [TestCase("<div permissionAttribute=\"[D]\"></div>", "<div permissionAttribute=\"[Bets &amp;amp; Forecast]\"></div>")] // Single Permission
+        [TestCase("<div permissionAttribute=\"[D]\"></div>", "<div permissionAttribute=\"[Total Bets]\"></div>")] // Single Permission
         [TestCase(
             "<div permissionAttribute=\"[A][H][B]\"></div>",
-            "<div permissionAttribute=\"[Member information: Full Control][Member information: View][Member information: Update]\"></div>")] // Multi Permission
+            "<div permissionAttribute=\"[Member information: Full Control][Account Management - View Only][Account Management - Edit &amp;amp; View]\"></div>")] // Multi Permission
         [TestCase(
             "<div permissionAttribute=\"[B][A]\"></div>",
-            "<div permissionAttribute=\"[Member information: Update][Member information: Full Control]\"></div>")] // Multi Permission
+            "<div permissionAttribute=\"[Account Management - Edit &amp;amp; View][Member information: Full Control]\"></div>")] // Multi Permission
         [TestCase(
             "<div permissionAttribute=\"[H][B]\"></div>",
-            "<div permissionAttribute=\"[Member information: View][Member information: Update]\"></div>")] // Multi Permission
+            "<div permissionAttribute=\"[Account Management - View Only][Account Management - Edit &amp;amp; View]\"></div>")] // Multi Permission
         [TestCase("<div permissionAttribute=\"[a]\"></div>", "<div permissionAttribute=\"[Member information: Full Control]\"></div>")] // Lower Case Permission
         [TestCase(
             "<div permissionAttribute=\"[a][A]\"></div>",

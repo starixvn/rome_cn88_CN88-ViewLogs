@@ -82,6 +82,7 @@
                 logFormatter.ResourceManager = TrackingValueResources.ResourceManager;
             });
 
+            container.RegisterSingleton<BrowserHelper, BrowserHelperImpl>();
             container.Register<IUserSession, UserSessionExt>(Lifestyle.Scoped);
 
             container.Register<CustomerService, CustomerServiceImpl>(Lifestyle.Transient);

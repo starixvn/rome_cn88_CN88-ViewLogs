@@ -4,13 +4,22 @@
 @model IndexViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Resources.ViewLogLogin;
+    ViewBag.Title = Resources.ViewLog;
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
-        <div class="filter">
+        @if (Model.IsDevice)
+        {
+            <div class="page-title">
+                <div class="sub-title">
+                    <span class="icon-filter-down" id="filter-toggle-icon"></span>
+                </div>
+            </div>
+        }
+        <div class="filter" id="report-form">
             <form class="form-inline" role="form">
                 <div class="form-group  @(Model.IsAgent? "hide":string.Empty)">
+                    <label class="only-mobile">Username or Name</label>
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />

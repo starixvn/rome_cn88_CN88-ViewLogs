@@ -35,8 +35,10 @@ var loginView = {
         dataLog: null,
         navTabs: null
     },
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         loginView.elelments.btnSubmit = $("#btn-submit");
         loginView.elelments.ddlMonth = $("#ddlMonth");
@@ -56,6 +58,7 @@ var loginView = {
             loginView.pageNumber = 0;
             loginView.pageSize = 0;
 
+            $.cookie(loginView.isSubmitCookieName, "1", { path: "/" });
             loginController.viewLogs();
         });
 
@@ -90,7 +93,15 @@ var loginView = {
 
         loginView.pageNumber = viewModel.pageIndex;
         loginView.pageSize = viewModel.pageSize;
-        loginView.elelments.dataLog.stickyTableHeaders({ fixedOffset: loginView.elelments.navTabs });
+        loginView.toggleHandler = new ToggleHandler($);
+        if ($(".icon-filter-down").length) {
+            loginView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            if ($.cookie(loginView.isSubmitCookieName) != "1") {
+                loginView.toggleHandler.showFilter();
+            }
+
+            $.cookie(loginView.isSubmitCookieName, "0", { path: "/" });
+        }
     },
     initMonthPicker: function (viewModel: any) {
         loginView.elelments.ddlMonth.monPickr({

@@ -515,6 +515,7 @@
     </Content>
     <TypeScriptCompile Include="assets\scripts\credit\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\credit\index-view.ts" />
+    <TypeScriptCompile Include="assets\scripts\filter-toggle.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-controller.ts" />
     <TypeScriptCompile Include="assets\scripts\login\index-view.ts" />
     <Content Include="assets\scripts\old-main.js" />
@@ -577,6 +578,8 @@
     <Compile Include="Handlers\SettingHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
+    <Compile Include="Helpers\BrowserHelper.cs" />
+    <Compile Include="Helpers\BrowserHelperImpl.cs" />
     <Compile Include="Helpers\MicroSites.cs" />
     <Compile Include="Helpers\StaticResources\AssetScripts.cs" />
     <Compile Include="Helpers\StaticResources\AssetStyles.cs" />

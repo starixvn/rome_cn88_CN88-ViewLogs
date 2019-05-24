@@ -15,7 +15,7 @@
 
     @RenderSection("Styles", required: false)
 </head>
-<body>
+<body @(Html.Raw(Alpha.ViewLogs.Site.Helpers.BrowserManager.BuildMobileHtmlClass()))>
     <div class="container-fluid page-viewlog">
         @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
         @RenderBody()

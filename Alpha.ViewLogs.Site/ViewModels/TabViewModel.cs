@@ -1,12 +1,19 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
+    using Helpers;
+
     public class TabViewModel
     {
-        public TabViewModel(string selectedTabName)
+        private readonly BrowserHelper browserHelper;
+
+        public TabViewModel(string selectedTabName, BrowserHelper browserHelper)
         {
             SelectedTabName = selectedTabName;
+            this.browserHelper = browserHelper;
         }
 
         public string SelectedTabName { get; }
+
+        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
     }
 }

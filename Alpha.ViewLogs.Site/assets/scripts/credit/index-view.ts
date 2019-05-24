@@ -36,8 +36,10 @@ var creditView = {
         dataLog: null,
         navTabs: null
     },
+    isSubmitCookieName: "IsSubmitCookie",
     pageNumber: 0,
     pageSize: 0,
+    toggleHandler: null,
     cacheElements: function () {
         creditView.elelments.btnSubmit = $("#btn-submit");
         creditView.elelments.ddlMonth = $("#ddlMonth");
@@ -56,6 +58,7 @@ var creditView = {
         creditView.elelments.btnSubmit.click(function () {
             creditView.pageNumber = 0;
             creditView.pageSize = 0;
+            $.cookie(creditView.isSubmitCookieName, "1", { path: "/" });
 
             creditController.viewLogs();
         });
@@ -91,7 +94,16 @@ var creditView = {
 
         creditView.pageNumber = viewModel.pageIndex;
         creditView.pageSize = viewModel.pageSize;
-        creditView.elelments.dataLog.stickyTableHeaders({ fixedOffset: creditView.elelments.navTabs });
+        creditView.toggleHandler = new ToggleHandler($);
+
+        if ($(".icon-filter-down").length) {
+            creditView.toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "content"));
+            if ($.cookie(creditView.isSubmitCookieName) != "1") {
+                creditView.toggleHandler.showFilter();
+            }
+
+            $.cookie(creditView.isSubmitCookieName, "0", { path: "/" });
+        }
     },
     initMonthPicker: function (viewModel: any) {
         creditView.elelments.ddlMonth.monPickr({

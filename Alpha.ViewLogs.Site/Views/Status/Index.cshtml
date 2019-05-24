@@ -3,13 +3,22 @@
 @model LogViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Resources.ViewLogStatus;
+    ViewBag.Title = Resources.ViewLog;
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
-        <div class="filter">
+        @if (Model.IsDevice)
+        {
+            <div class="page-title">
+                <div class="sub-title">
+                    <span class="icon-filter-down" id="filter-toggle-icon"></span>
+                </div>
+            </div>
+        }
+        <div class="filter" id="report-form">
             <form class="form-inline" role="form">
                 <div class="form-group">
+                    <label class="only-mobile">Username or Name</label>
                     <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
@@ -21,13 +30,24 @@
                     <input type="button" class="btn-submit" id="btn-submit" value="@Resources.Submit">
                     <span id="icon-loading" class="hide block-icon-small"></span>
                 </div>
-                <div class="form-group">
-                    <label>
-                        <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
-                    </label>
-                </div>
+                @if (!Model.IsDevice)
+                {
+                    <div class="form-group">
+                        <label>
+                            <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                        </label>
+                    </div>
+                }
             </form>
         </div>
+        @if (Model.IsDevice)
+        {
+            <div class="form-group check-box">
+                <label>
+                    <input id="chk-oldvalues" name="chk-oldvalues" type="checkbox" value="0" @(Model.ShowOldValue ? "checked" : "") />@Resources.ShowOldValues
+                </label>
+            </div>
+        }
 
         <div id="content">
             <table id="DataLog" class="width-100per tblRpt tbl-style2">
