@@ -411,6 +411,10 @@
             => sportType == 9999;
 
         public string FormatNickName(string nickname)
-            => isHideNickname ? string.Empty : nickname;
+            => isHideNickname ? string.Empty : ReplacePrefixNickname(nickname ?? string.Empty);
+
+        private static string ReplacePrefixNickname(string nickname)
+            => nickname.StartsWith("cn88$", StringComparison.OrdinalIgnoreCase) ?
+                nickname.Substring(5) : nickname;
     }
 }
