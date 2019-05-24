@@ -161,7 +161,7 @@
 
             foreach (var log in pagingLogs.Logs)
             {
-                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId);
+                var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId, SubAccNameFromLog(log));
                 log.IsHideNickname = isHideNickname;
             }
 
@@ -185,19 +185,39 @@
             return LogDataAccess.GetTotalRecordsOfLogs(criteria);
         }
 
-        private bool IsHideNickName(bool isSubAccount, int roleId, int custId)
-            => IsSubAccViewMainAcc(isSubAccount, custId) || IsUplineViewDownlineSubAcc(isSubAccount, roleId);
+        private bool IsHideNickName(bool isSubAccount, int roleId, int custId, string subUsername)
+            => IsSubAccViewMainAcc(isSubAccount, custId)
+                || IsUplineViewDownlineSubAcc(isSubAccount, roleId)
+                || IsSubAccViewOtherSubAcc(isSubAccount, subUsername);
 
         private bool IsSubAccViewMainAcc(bool isSubAccount, int custId)
             => session.IsSubAcc && session.CustId == custId && !isSubAccount;
+
+        private bool IsSubAccViewOtherSubAcc(bool isSubAccount, string subUsername)
+            => session.IsSubAcc && isSubAccount && !session.SubUserName.Equals(subUsername, StringComparison.OrdinalIgnoreCase);
 
         private bool IsUplineViewDownlineSubAcc(bool isSubAccount, int roleId)
             => isSubAccount && session.RoleId - roleId > 0;
 
         private static bool IsSubAccFromLog(Log log)
             => Enum.GetValues(typeof(NicknameActions)).Cast<int>().Any(actionId => actionId == log.ActionId)
-                && new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue);
-        
+                && (new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue)
+                    || new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue));
+
+        private static string SubAccNameFromLog(Log log)
+        { 
+            var subAccName = new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)")
+                .Match(log.TrackingValue).Groups[1].Value;
+            
+            subAccName = !string.IsNullOrWhiteSpace(subAccName) ? subAccName :
+                new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)")
+                    .Match(log.TrackingValue).Groups[1].Value;
+
+            subAccName = subAccName ?? string.Empty;
+
+            return subAccName.Replace("\"", string.Empty);
+        }
+
         private enum NicknameActions
         {
             CreateMainAccNickname = 687,
