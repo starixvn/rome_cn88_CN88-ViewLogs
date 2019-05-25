@@ -207,11 +207,11 @@
         private static string SubAccNameFromLog(Log log)
         { 
             var subAccName = new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)")
-                .Match(log.TrackingValue).Groups[1].Value;
+                .Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
             
             subAccName = !string.IsNullOrWhiteSpace(subAccName) ? subAccName :
                 new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)")
-                    .Match(log.TrackingValue).Groups[1].Value;
+                    .Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
 
             subAccName = subAccName ?? string.Empty;
 
