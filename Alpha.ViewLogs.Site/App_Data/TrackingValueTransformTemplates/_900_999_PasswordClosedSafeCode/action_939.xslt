@@ -7,12 +7,17 @@
     <table class="tblDesc">
       <tr>
         <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@subaccount" />
+        </td>
+        <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
         <td class="colW1"></td><td class="colW2"></td>
       </tr>
 
