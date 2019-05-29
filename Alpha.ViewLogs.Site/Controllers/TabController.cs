@@ -7,7 +7,7 @@
 
     public class TabController : Controller
     {
-        private BrowserHelper browserHelper;
+        private readonly BrowserHelper browserHelper;
 
         public TabController()
         {

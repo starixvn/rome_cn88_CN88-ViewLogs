@@ -104,7 +104,7 @@ var settingView = {
                 excludemember: false
             });
 
-        initAutoComplete($("#txt-username")[0], queryUsernameURL);
+        //initAutoComplete($("#txt-username")[0], queryUsernameURL);
 
         settingView.renderPager({
             totalRecords: viewModel.totalRecords,

@@ -33,5 +33,7 @@
         public string IP { get; set; }
 
         public string Details { get; set; }
+
+        public bool IsHideNickname { get; set; }
     }
 }

@@ -17,7 +17,7 @@ var statusController = {
         tabController.viewLogsParams = statusView.getParams();
     },
     viewLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         statusView.showLoadingState();
 
         var viewLogsParams = statusView.getParams();
@@ -27,7 +27,7 @@ var statusController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         statusView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = statusView.pageNumber;

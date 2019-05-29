@@ -18,7 +18,7 @@ var creditController = {
         tabController.viewLogsParams = creditView.getParams();
     },
     viewLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         creditView.showLoadingState();
 
         var viewLogsParams = creditView.getParams();
@@ -28,7 +28,7 @@ var creditController = {
         window.location.href = url;
     },
     pageLogs: function () {
-        setVisible("hidden");
+        //setVisible("hidden");
         creditView.showLoadingState();
 
         tabController.viewLogsParams.PageIndex = creditView.pageNumber;

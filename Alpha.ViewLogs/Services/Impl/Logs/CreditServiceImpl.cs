@@ -6,14 +6,16 @@
     using Fanex.Data.Repository;
     using Helpers;
     using Params;
+    using Sunplus.Agent.Model.Entities;
 
     public class CreditServiceImpl : BaseService, LogService
     {
         public CreditServiceImpl(
             IDynamicRepository dynamicRepository,
             CustomerService customerService,
-            LogDataAccess baseDataAccess) :
-            base(dynamicRepository, customerService, baseDataAccess)
+            LogDataAccess baseDataAccess,
+            IUserSession session) :
+            base(dynamicRepository, customerService, baseDataAccess, session)
         {
         }
 

@@ -4,7 +4,7 @@
 
     public interface LogFormatter
     {
-        void Init(TransformParam transformParam);
+        void Init(TransformParam transformParam, bool isHideNickname = false);
 
         string FormatIP(string ip);
 
@@ -64,5 +64,7 @@
         string GetCN88BettypeName(int sporttype, int bettype, string isLive);
 
         string GetCN88SportName(int sporttype, int actionId = 0);
+
+        string FormatNickName(string nickname);
     }
 }

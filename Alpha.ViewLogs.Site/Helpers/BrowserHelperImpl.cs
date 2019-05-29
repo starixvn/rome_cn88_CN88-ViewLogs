@@ -15,7 +15,7 @@
         {
             if (HttpContext.Current.Request != null && HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"] != null)
             {
-                var u = HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"].ToString();
+                var u = HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"];
 
                 if (u.Length < 4)
                 {
@@ -35,7 +35,7 @@
         {
             if (HttpContext.Current.Request != null && HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"] != null)
             {
-                var u = HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"].ToString();
+                var u = HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"];
 
                 if (u.Length < 4)
                 {
