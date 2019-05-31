@@ -20,7 +20,7 @@
             <form class="form-inline" role="form">
                 <div class="form-group  @(Model.IsAgent? "hide":string.Empty)">
                     <label class="only-mobile">Username or Name</label>
-                    <input type="text" id="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
+                    <input type="text" id="txt-username" class="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />
                 </div>
