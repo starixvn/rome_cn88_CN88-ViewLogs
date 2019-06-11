@@ -19,7 +19,7 @@ namespace Alpha.ViewLogs.AppResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TrackingValueResources {
@@ -1987,6 +1987,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
+        public static string Active {
+            get {
+                return ResourceManager.GetString("Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add from.
         /// </summary>
         public static string addFrom {
@@ -3576,6 +3585,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string important {
             get {
                 return ResourceManager.GetString("important", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inactive.
+        /// </summary>
+        public static string Inactive {
+            get {
+                return ResourceManager.GetString("Inactive", resourceCulture);
             }
         }
         
@@ -11748,6 +11766,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string viewlog {
             get {
                 return ResourceManager.GetString("viewlog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Only.
+        /// </summary>
+        public static string ViewOnly {
+            get {
+                return ResourceManager.GetString("ViewOnly", resourceCulture);
             }
         }
         
