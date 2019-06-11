@@ -38,6 +38,7 @@
                 UplineId = logQuery.UplineId,
                 SubAccId = logQuery.SubAccId,
                 RoleId = logQuery.RoleId,
+                ActorId = logQuery.ActorId,
                 FromDate = fromDate,
                 ToDate = toDate,
                 Username = logQuery.Username,

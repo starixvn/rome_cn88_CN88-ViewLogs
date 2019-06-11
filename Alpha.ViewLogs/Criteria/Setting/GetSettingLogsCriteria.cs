@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Setting
 {
     using System;
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetSettingLogsCriteria : CriteriaBase
@@ -8,6 +9,7 @@
         public GetSettingLogsCriteria(
             int custId,
             string custName,
+            int actorId,
             int actionTypeId,
             DateTime fromDate,
             DateTime toDate,
@@ -17,6 +19,7 @@
         {
             CustId = custId;
             CustName = custName;
+            ActorId = actorId;
             ActionTypeId = actionTypeId;
             FromDate = fromDate;
             ToDate = toDate;
@@ -28,6 +31,9 @@
         public int CustId { get; }
 
         public string CustName { get; }
+
+        [SpParam(SqlParamName = "LoginUserId")]
+        public int ActorId { get; }
 
         public int ActionTypeId { get; }
 
@@ -43,7 +49,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_RunSPSel";
+            return "CS_UserLog_RunSPSel";
         }
 
         public override bool IsValid()

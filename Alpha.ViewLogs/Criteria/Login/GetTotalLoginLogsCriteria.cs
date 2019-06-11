@@ -34,7 +34,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_LoginSelTotalRecords";
+            return "CS_UserLog_LoginSelTotalRecords";
         }
 
         public override bool IsValid()

@@ -1,6 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Criteria.Status
 {
     using System;
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetStatusLogsCriteria : CriteriaBase
@@ -8,6 +9,7 @@
         public GetStatusLogsCriteria(
             int custId,
             string custName,
+            int actorId,
             int actionTypeId,
             DateTime fromDate,
             DateTime toDate,
@@ -17,8 +19,8 @@
         {
             CustId = custId;
             CustName = custName;
+            ActorId = actorId;
             ActionTypeId = actionTypeId;
-
             FromDate = fromDate;
             ToDate = toDate;
             IsInternal = isInternal;
@@ -29,6 +31,9 @@
         public int CustId { get; set; }
 
         public string CustName { get; set; }
+
+        [SpParam(SqlParamName = "LoginUserId")]
+        public int ActorId { get; }
 
         public int ActionTypeId { get; set; }
 
@@ -44,7 +49,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_RunSPSel";
+            return "CS_UserLog_RunSPSel";
         }
 
         public override bool IsValid()

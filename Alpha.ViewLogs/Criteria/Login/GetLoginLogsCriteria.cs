@@ -42,7 +42,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_LoginSel";
+            return "CS_UserLog_LoginSel";
         }
 
         public override bool IsValid()
