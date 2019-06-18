@@ -311,6 +311,21 @@ body.phone {
     font-size: 10.5px;
     padding: 0;
 
+    .txt-username::-webkit-input-placeholder {
+         color: transparent;
+    }
+    .txt-username:-moz-placeholder { /* Firefox 18- */
+             color: transparent;
+    }
+
+    .txt-username::-moz-placeholder {  /* Firefox 19+ */
+             color: transparent;
+    }
+
+    .txt-username:-ms-input-placeholder {  
+             color: transparent;
+    }
+
     .tab-box {
         position: static;
         padding: 0;
