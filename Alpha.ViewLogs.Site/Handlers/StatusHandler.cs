@@ -72,7 +72,11 @@
                 }
 
                 var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam);
+                var htmlTrackingValue = transformService.TransformTrackingValue(
+                    formattedTrackingValue, 
+                    log.ActionId, 
+                    transformParam, 
+                    isHideSubAcc: log.UserId.Equals(0));
 
                 logItems.Add(
                     new LogItemViewModel

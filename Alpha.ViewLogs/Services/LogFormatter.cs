@@ -4,7 +4,7 @@
 
     public interface LogFormatter
     {
-        void Init(TransformParam transformParam, bool isHideNickname = false);
+        void Init(TransformParam transformParam, bool isHideNickname = false, bool isHideSubAcc = false);
 
         string FormatIP(string ip);
 
