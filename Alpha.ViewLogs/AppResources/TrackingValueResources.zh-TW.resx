@@ -3985,12 +3985,12 @@
     <value>權限</value>
   </data>
   <data name="Active" xml:space="preserve">
-    <value>Active</value>
+    <value>已啟用</value>
   </data>
   <data name="Inactive" xml:space="preserve">
-    <value>Inactive</value>
+    <value>已失效</value>
   </data>
   <data name="ViewOnly" xml:space="preserve">
-    <value>View Only</value>
+    <value>僅供檢視</value>
   </data>
 </root>
