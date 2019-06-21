@@ -71,7 +71,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Web, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.1.0-AccountStatus-02\lib\net461\CN88.Web.dll</HintPath>
+      <HintPath>..\packages\CN88.Web.1.0.1.0-AccountStatus-03\lib\net461\CN88.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
       <HintPath>..\packages\CouchbaseNetClient.1.2.6.3-beta1\lib\net40\Couchbase.dll</HintPath>
@@ -330,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SPNames\Dev\DBCust.CustDB.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Dev\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Internal\DBCust.CustDB.BODBDownlineNetView.xml" />
     <Content Include="App_Data\SPNames\Internal\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Internal\DBAGE.bodb02.BODBDownlineNet.xml" />
@@ -341,6 +343,7 @@
     <Content Include="App_Data\SPNames\Dev\DBLOG.bodb_CustomerLog.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\SPNames\Internal\DBONUSER.ON_USER.BODBDownlineNetView.xml" />
     <Content Include="App_Data\SPNames\Local\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Local\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Local\DBCust.IPDB.xml">
@@ -349,20 +352,24 @@
     <Content Include="App_Data\SPNames\Local\DBLOG.bodb_CustomerLog.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\SPNames\Local\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBAGE.bodb02.BODBDownlineNet.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\SPNames\Pro\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\Pro\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\SIT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
