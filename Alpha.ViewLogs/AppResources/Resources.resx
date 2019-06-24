@@ -369,4 +369,7 @@
   <data name="ipInfo" xml:space="preserve">
     <value>IP information</value>
   </data>
+  <data name="Upline" xml:space="preserve">
+    <value>Upline</value>
+  </data>
 </root>

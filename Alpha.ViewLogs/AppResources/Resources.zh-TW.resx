@@ -348,4 +348,7 @@
   <data name="ipInfo" xml:space="preserve">
     <value>IP資訊</value>
   </data>
+  <data name="Upline" xml:space="preserve">
+    <value>上線</value>
+  </data>
 </root>
