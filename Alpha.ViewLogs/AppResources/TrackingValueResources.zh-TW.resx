@@ -3993,4 +3993,7 @@
   <data name="ViewOnly" xml:space="preserve">
     <value>僅供檢視</value>
   </data>
+  <data name="AccountStatus" xml:space="preserve">
+    <value>帳戶狀態</value>
+  </data>
 </root>

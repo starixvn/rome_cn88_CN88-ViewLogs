@@ -6,7 +6,7 @@
     <table class="tblDesc">
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('status')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('AccountStatus')" />
         </td>
         <td  class="colW2">
           <xsl:value-of select="@status" />

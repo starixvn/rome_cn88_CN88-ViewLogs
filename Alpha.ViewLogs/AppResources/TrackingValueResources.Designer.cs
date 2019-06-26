@@ -1969,6 +1969,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Status.
+        /// </summary>
+        public static string AccountStatus {
+            get {
+                return ResourceManager.GetString("AccountStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string actionDesc {
