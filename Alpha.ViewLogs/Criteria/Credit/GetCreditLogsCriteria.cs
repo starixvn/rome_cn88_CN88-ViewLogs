@@ -39,7 +39,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_CreditSel";
+            return "CS_UserLog_CreditSel";
         }
 
         public override bool IsValid()

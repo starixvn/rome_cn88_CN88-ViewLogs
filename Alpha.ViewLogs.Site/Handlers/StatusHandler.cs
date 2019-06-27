@@ -1,7 +1,9 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
+    using System;
     using System.Collections.Generic;
     using System.Web;
+    using AppResources;
     using Helpers;
     using MediatR;
     using Models;
@@ -72,7 +74,11 @@
                 }
 
                 var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
-                var htmlTrackingValue = transformService.TransformTrackingValue(formattedTrackingValue, log.ActionId, transformParam);
+                var htmlTrackingValue = transformService.TransformTrackingValue(
+                    formattedTrackingValue, 
+                    log.ActionId, 
+                    transformParam, 
+                    isHideSubAcc: log.UserId.Equals(0));
 
                 logItems.Add(
                     new LogItemViewModel
@@ -87,7 +93,7 @@
                         LogId = log.LogId,
                         SPName = log.StoreProcedureName,
                         UserId = log.UserId,
-                        Username = log.Username,
+                        Username = TransformUsername(log.UserId, log.Username),
                         TrackingValue = HttpUtility.HtmlDecode(htmlTrackingValue),
                         IP = LogFormatter.FormatIP(log.IP)
                     });
@@ -95,5 +101,8 @@
 
             viewModel.LogItems = logItems;
         }
+
+        private static string TransformUsername(int userId, string username)
+            => userId == 0 && username.Equals("upline", StringComparison.OrdinalIgnoreCase) ? Resources.Upline : username;
     }
 }

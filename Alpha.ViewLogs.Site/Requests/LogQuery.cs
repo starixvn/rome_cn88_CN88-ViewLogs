@@ -61,6 +61,7 @@
             limitedDateToShowInfo = currentUserSession.GetProperty<DateTime>(SessionKey.CustomerDateLimit);
 
             RoleId = currentUserSession.RoleId;
+            ActorId = currentUserSession.CustId;
             HasViewLogPermission = currentUserSession.SubPageAccess != null && currentUserSession.SubPageAccess.ViewLog;
             Language = currentUserSession.Language;
             IsInternal = false;
@@ -83,6 +84,8 @@
         public int UplineId { get; set; }
 
         public byte RoleId { get; set; }
+
+        public int ActorId { get; set; }
 
         public int SubAccId { get; set; }
 

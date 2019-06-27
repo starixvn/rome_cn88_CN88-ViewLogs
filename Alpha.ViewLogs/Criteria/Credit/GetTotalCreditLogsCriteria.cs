@@ -27,7 +27,7 @@
 
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_CreditSelTotalRecords";
+            return "CS_UserLog_CreditSelTotalRecords";
         }
 
         public override bool IsValid()

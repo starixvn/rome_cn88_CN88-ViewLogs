@@ -34,6 +34,7 @@
             return new GetStatusLogsCriteria(
                 logParam.CustId,
                 logParam.Username,
+                logParam.ActorId,
                 ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),

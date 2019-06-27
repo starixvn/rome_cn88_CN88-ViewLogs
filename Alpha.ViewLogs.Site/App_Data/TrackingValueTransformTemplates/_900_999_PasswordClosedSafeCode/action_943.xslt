@@ -3,37 +3,39 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
 
-  <xsl:template match="cs_custsubunlock">
+  <xsl:template match="r">
     <table class="tblDesc">
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('CheckedSecurityCode')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@subaccname" />
+          <xsl:value-of select="@checkedsecuritycode" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('FunctionName')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@errcode" />
+          <xsl:value-of select="@functionname" />
         </td>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@errmsg" />
+          <xsl:value-of select="@language" />
         </td>
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
     </table>
 

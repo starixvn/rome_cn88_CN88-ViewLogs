@@ -27,6 +27,7 @@
         private bool isShowMyanmarOdds;
         private bool isShowPokerGames;
         private bool isHideNickname;
+        private bool isHideSubAcc;
 
         private static readonly IDictionary<int, string> CN88Sporttype = new Dictionary<int, string>
          {
@@ -76,7 +77,7 @@
         /// Need be reviewed code here, AssignParams should not in formatter class
         /// </summary>
         /// <param name="transformParam"></param>
-        public void Init(TransformParam transformParam, bool isHideNickname = false)
+        public void Init(TransformParam transformParam, bool isHideNickname = false, bool isHideSubAcc = false)
         {
             if (transformParam == null)
             {
@@ -90,6 +91,7 @@
             isShowMyanmarOdds = transformParam.IsShowMyanmarOdds;
             isShowPokerGames = transformParam.IsShowPokerGames;
             this.isHideNickname = isHideNickname;
+            this.isHideSubAcc = isHideSubAcc;
         }
 
         public string FormatIP(string ip)
@@ -416,5 +418,7 @@
         private static string ReplacePrefixNickname(string nickname)
             => nickname.StartsWith("cn88$", StringComparison.OrdinalIgnoreCase) ?
                 nickname.Substring(5) : nickname;
+
+        public string FormatSubAccName(string subAccName) => this.isHideSubAcc ? string.Empty : subAccName;
     }
 }

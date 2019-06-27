@@ -1,9 +1,11 @@
 ﻿namespace Alpha.ViewLogs.Site.Helpers
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using System.Xml;
+    using Alpha.ViewLogs.AppResources;
     using Alpha.ViewLogs.Models;
     using ViewLogs.Constants;
     using ViewLogs.Helpers;
@@ -61,8 +63,8 @@
                 var oldAttribute = oldAttributes[newAttribute.Name];
                 var oldValue = oldAttribute == null ? newValue : oldAttribute.Value;
 
-                newValue = StandardizeAttributeValue(newValue);
-                oldValue = StandardizeAttributeValue(oldValue);
+                newValue = StandardizeAttributeValue(newValue, newAttribute.Name);
+                oldValue = StandardizeAttributeValue(oldValue, newAttribute.Name);
 
                 var isAttributeNeedBeFormatted = (!string.IsNullOrWhiteSpace(newValue) || !string.IsNullOrWhiteSpace(oldValue)) &&
                     !ignoreFormatAttributes.Contains(newAttribute.Name.ToLower()) &&
@@ -104,11 +106,16 @@
             return attrValue.Contains("[") && attrValue.Contains("]");
         }
 
-        private static string StandardizeAttributeValue(string attrValue)
+        private static string StandardizeAttributeValue(string attrValue, string attributeName)
         {
             if (string.IsNullOrWhiteSpace(attrValue))
             {
                 return attrValue;
+            }
+
+            if (attributeName == "Status")
+            {
+                return TrackingValueResources.ResourceManager.GetString(attrValue);
             }
 
             var standardizedAttributeValue = attrValue;

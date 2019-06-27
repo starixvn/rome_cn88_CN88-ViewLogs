@@ -4,6 +4,11 @@
 
     public interface TransformService
     {
-        string TransformTrackingValue(string trackingValue, int logActionId, TransformParam transformParam, bool isHideNickname = false);
+        string TransformTrackingValue(
+            string trackingValue, 
+            int logActionId, 
+            TransformParam transformParam, 
+            bool isHideNickname = false,
+            bool isHideSubAcc = false);
     }
 }

@@ -70,8 +70,8 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="CN88.Web, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.0.9\lib\net461\CN88.Web.dll</HintPath>
+    <Reference Include="CN88.Web, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CN88.Web.1.0.1.0\lib\net461\CN88.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
@@ -108,7 +108,6 @@
     </Reference>
     <Reference Include="Fanex.Data, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Data.3.0.2\lib\net461\Fanex.Data.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Data.CrossCutting.WrappingException, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Data.CrossCutting.WrappingException.1.0.0.3\lib\net461\Fanex.Data.CrossCutting.WrappingException.dll</HintPath>
@@ -331,6 +330,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SPNames\Dev\DBCust.CustDB.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Dev\DBONUSER.ON_USER.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Internal\DBCust.CustDB.BODBDownlineNetView.xml" />
     <Content Include="App_Data\SPNames\Internal\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Internal\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Internal\DBLOG.bodb_CustomerLog.xml" />
@@ -341,24 +343,33 @@
     <Content Include="App_Data\SPNames\Dev\DBLOG.bodb_CustomerLog.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\SPNames\Internal\DBONUSER.ON_USER.BODBDownlineNetView.xml" />
     <Content Include="App_Data\SPNames\Local\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\Local\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Local\DBCust.IPDB.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\SPNames\Local\DBLOG.bodb_CustomerLog.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\SPNames\Local\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBAGE.bodb02.BODBDownlineNet.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\SPNames\Pro\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\Pro\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\SIT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\SIT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBAGE.bodb02.BODBDownlineNet.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\UAT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_101.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_102.xslt" />
@@ -415,6 +426,16 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165000.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165001.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165002.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165005.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165006.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_941.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_942.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_943.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_944.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165010.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165004.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160005.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160007.xslt" />
@@ -458,7 +479,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_682.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_683.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_684.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_691.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165011.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_690.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_939.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_940.xslt" />

@@ -343,9 +343,12 @@
     <value>检视状态记录</value>
   </data>
   <data name="Pager_DisplayItems" xml:space="preserve">
-    <value>显示{0}到{1}，共{2}笔</value>
+    <value>显示{from}到{to}，共{total}笔</value>
   </data>
   <data name="ipInfo" xml:space="preserve">
     <value>IP信息</value>
+  </data>
+  <data name="Upline" xml:space="preserve">
+    <value>上线</value>
   </data>
 </root>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions SiteId="105" SiteName="View Logs">
+  <Function Name="Account Status">
+    <Setting Key="CS_CustomerStatusSel" SpName="CS_CustomerStatusSel_uat2" DbName="DBCust.CustDB.BODBDownlineNet" Plain="0" />
+  </Function>
+</Functions>
