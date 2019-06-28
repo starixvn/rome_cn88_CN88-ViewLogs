@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Functions SiteId="105" SiteName="View Logs">
   <Function Name="View Logs">
-    <Setting Key="CS_UserLog_RunSPSel" SpName="CS_UserLog_RunSPSel_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
+    <Setting Key="CS_UserLog_RunSPSel" SpName="CS_UserLog_RunSPSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="Username" ObjectProperty="Username" />
@@ -16,7 +16,7 @@
       <Mapping DataField="CustName" ObjectProperty="CustName" />
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
     </Setting>
-    <Setting Key="CS_UserLog_CreditSel" SpName="CS_UserLog_CreditSel_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
+    <Setting Key="CS_UserLog_CreditSel" SpName="CS_UserLog_CreditSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="CustID" ObjectProperty="CustId" />
@@ -32,7 +32,7 @@
       <Mapping DataField="Username" ObjectProperty="Username" />
       <Mapping DataField="ActionName" ObjectProperty="ActionName" />
     </Setting>
-    <Setting Key="CS_UserLog_LoginSel" SpName="CS_UserLog_LoginSel_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
+    <Setting Key="CS_UserLog_LoginSel" SpName="CS_UserLog_LoginSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet">
       <Mapping DataField="LogID" ObjectProperty="LogId" />
       <Mapping DataField="UserID" ObjectProperty="UserId" />
       <Mapping DataField="Username" ObjectProperty="Username" />
@@ -46,9 +46,9 @@
       <Mapping DataField="Browser" ObjectProperty="Browser" />
       <Mapping DataField="Domain" ObjectProperty="Domain" />
     </Setting>
-    <Setting Key="CS_UserLog_RunSPSelTotalRecords" SpName="CS_UserLog_RunSPSelTotalRecords_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
-    <Setting Key="CS_UserLog_CreditSelTotalRecords" SpName="CS_UserLog_CreditSelTotalRecords_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
-    <Setting Key="CS_UserLog_CreditSelTotalRecords" SpName="CS_UserLog_CreditSelTotalRecords_UAT2" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="CS_UserLog_RunSPSelTotalRecords" SpName="CS_UserLog_RunSPSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="CS_UserLog_CreditSelTotalRecords" SpName="CS_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
+    <Setting Key="CS_UserLog_CreditSelTotalRecords" SpName="CS_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
       <Mapping DataField="ActionTypeID" ObjectProperty="Id" />
       <Mapping DataField="ActionTypeNameEN" ObjectProperty="EnglishName" />
