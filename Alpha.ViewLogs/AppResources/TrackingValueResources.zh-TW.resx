@@ -3430,10 +3430,10 @@
     <value>顯示舊數值</value>
   </data>
   <data name="nicknameOnly" xml:space="preserve">
-    <value>僅能使用昵稱</value>
+    <value>僅能使用登入賬號</value>
   </data>
   <data name="nickname" xml:space="preserve">
-    <value>暱稱</value>
+    <value>登入賬號</value>
   </data>
   <data name="v161spt_88" xml:space="preserve">
     <value>勇士</value>
