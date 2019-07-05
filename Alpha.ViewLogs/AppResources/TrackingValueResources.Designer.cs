@@ -2518,7 +2518,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to 1X2, In-play 1X2.
         /// </summary>
         public static string CN88Basketball1X2 {
             get {
@@ -2590,7 +2590,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to Moneyline, 1X2, In-Play Moneyline, In-Play 1X2.
         /// </summary>
         public static string CN88OtherSporst1X2 {
             get {
@@ -2644,7 +2644,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to 1X2, In-play 1X2.
         /// </summary>
         public static string CN88Soccer1X2 {
             get {

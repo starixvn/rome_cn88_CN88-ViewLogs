@@ -3928,7 +3928,7 @@
     <value>其他玩法</value>
   </data>
   <data name="CN88OtherSporst1X2" xml:space="preserve">
-    <value>标准盘, 滚球标准盘</value>
+    <value>胜负盘, 独赢盘, 滚球胜负盘, 滚球独赢盘</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
     <value>让球, 大小, 单双</value>
