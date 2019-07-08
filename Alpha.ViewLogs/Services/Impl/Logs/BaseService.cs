@@ -15,6 +15,7 @@
     using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Base;
     using System.Text.RegularExpressions;
+    using Helpers;
 
     public abstract class BaseService
     {
@@ -163,6 +164,8 @@
             {
                 var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId, SubAccNameFromLog(log));
                 log.IsHideNickname = isHideNickname;
+                
+                //log.Details = PatternMatchingHelper.Replace(log.DoingEncoded);
             }
 
             return pagingLogs;

@@ -50,7 +50,7 @@
             RefDataTypeContainer
                 .ConnectTo(new Uri(AppSettings.RemoteRefURL))
                 .FromApplication("Alpha.ViewLogs.Site")
-				.RegisterSupportedLanguages("en-US", "zh-Hans", "zh-TW");
+                .RegisterSupportedLanguages("en-US", "zh-Hans", "zh-TW");
         }
 
         protected void Application_Error(object sender, EventArgs e)
