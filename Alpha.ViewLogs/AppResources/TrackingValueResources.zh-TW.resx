@@ -580,7 +580,7 @@
     <value>現場上半場大小</value>
   </data>
   <data name="suspended" xml:space="preserve">
-    <value>暂停</value>
+    <value>禁止登入</value>
   </data>
   <data name="maxcredit" xml:space="preserve">
     <value>最高額度</value>
@@ -3985,13 +3985,13 @@
     <value>權限</value>
   </data>
   <data name="Active" xml:space="preserve">
-    <value>已啟用</value>
+    <value>啟用</value>
   </data>
   <data name="Inactive" xml:space="preserve">
-    <value>已失效</value>
+    <value>停用</value>
   </data>
   <data name="ViewOnly" xml:space="preserve">
-    <value>僅供檢視</value>
+    <value>只能看帳</value>
   </data>
   <data name="AccountStatus" xml:space="preserve">
     <value>帳戶狀態</value>
