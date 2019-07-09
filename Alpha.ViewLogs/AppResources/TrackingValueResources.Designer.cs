@@ -2743,7 +2743,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Credit.
+        ///   Looks up a localized string similar to Credits.
         /// </summary>
         public static string credit {
             get {
