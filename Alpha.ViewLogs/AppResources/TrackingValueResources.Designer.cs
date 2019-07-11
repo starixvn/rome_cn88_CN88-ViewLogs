@@ -19,7 +19,7 @@ namespace Alpha.ViewLogs.AppResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TrackingValueResources {
@@ -2518,7 +2518,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to 1X2, In-play 1X2.
         /// </summary>
         public static string CN88Basketball1X2 {
             get {
@@ -2563,7 +2563,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keno, Lottery.
+        ///   Looks up a localized string similar to RNG Keno, Lottery.
         /// </summary>
         public static string CN88KenoLottery {
             get {
@@ -2590,7 +2590,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to Moneyline, 1X2, In-Play Moneyline, In-Play 1X2.
         /// </summary>
         public static string CN88OtherSporst1X2 {
             get {
@@ -2644,7 +2644,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 X 2, In-play 1 X 2.
+        ///   Looks up a localized string similar to 1X2, In-play 1X2.
         /// </summary>
         public static string CN88Soccer1X2 {
             get {
@@ -2743,7 +2743,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Credit.
+        ///   Looks up a localized string similar to Credits.
         /// </summary>
         public static string credit {
             get {

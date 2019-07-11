@@ -1792,7 +1792,7 @@
     <value>Live Hdp</value>
   </data>
   <data name="credit" xml:space="preserve">
-    <value>Credit</value>
+    <value>Credits</value>
   </data>
   <data name="isa_v8smpt_20" xml:space="preserve">
     <value>Moneyline</value>
@@ -3967,7 +3967,7 @@
     <value>Basketball</value>
   </data>
   <data name="CN88Basketball1X2" xml:space="preserve">
-    <value>1 X 2, In-play 1 X 2</value>
+    <value>1X2, In-play 1X2</value>
   </data>
   <data name="CN88BasketballHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
@@ -3979,7 +3979,7 @@
     <value>Other Bet Types</value>
   </data>
   <data name="CN88OtherSporst1X2" xml:space="preserve">
-    <value>1 X 2, In-play 1 X 2</value>
+    <value>Moneyline, 1X2, In-Play Moneyline, In-Play 1X2</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
@@ -4000,7 +4000,7 @@
     <value>Sportsbook</value>
   </data>
   <data name="CN88Soccer1X2" xml:space="preserve">
-    <value>1 X 2, In-play 1 X 2</value>
+    <value>1X2, In-play 1X2</value>
   </data>
   <data name="CN88SoccerHandicap" xml:space="preserve">
     <value>Handicap, Over/Under, Odd/Even</value>
@@ -4018,7 +4018,7 @@
     <value>Number Game, Happy 5</value>
   </data>
   <data name="CN88KenoLottery" xml:space="preserve">
-    <value>Keno, Lottery</value>
+    <value>RNG Keno, Lottery</value>
   </data>
   <data name="CN88VirtualSports" xml:space="preserve">
     <value>Virtual Sports</value>

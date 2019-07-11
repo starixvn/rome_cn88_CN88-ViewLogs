@@ -580,7 +580,7 @@
     <value>現場上半場大小</value>
   </data>
   <data name="suspended" xml:space="preserve">
-    <value>暂停</value>
+    <value>禁止登入</value>
   </data>
   <data name="maxcredit" xml:space="preserve">
     <value>最高額度</value>
@@ -3430,10 +3430,10 @@
     <value>顯示舊數值</value>
   </data>
   <data name="nicknameOnly" xml:space="preserve">
-    <value>僅能使用昵稱</value>
+    <value>僅能使用登入賬號</value>
   </data>
   <data name="nickname" xml:space="preserve">
-    <value>暱稱</value>
+    <value>登入賬號</value>
   </data>
   <data name="v161spt_88" xml:space="preserve">
     <value>勇士</value>
@@ -3928,7 +3928,7 @@
     <value>新寶其他</value>
   </data>
   <data name="CN88OtherSporst1X2" xml:space="preserve">
-    <value>標準盤, 滾球標準盤</value>
+    <value>勝負盤, 獨贏盤, 滾球勝負盤, 滾球獨贏盤</value>
   </data>
   <data name="CN88OtherSporstHandicap" xml:space="preserve">
     <value>讓球, 大小, 單雙</value>
@@ -3985,13 +3985,13 @@
     <value>權限</value>
   </data>
   <data name="Active" xml:space="preserve">
-    <value>已啟用</value>
+    <value>啟用</value>
   </data>
   <data name="Inactive" xml:space="preserve">
-    <value>已失效</value>
+    <value>停用</value>
   </data>
   <data name="ViewOnly" xml:space="preserve">
-    <value>僅供檢視</value>
+    <value>只能看帳</value>
   </data>
   <data name="AccountStatus" xml:space="preserve">
     <value>帳戶狀態</value>
