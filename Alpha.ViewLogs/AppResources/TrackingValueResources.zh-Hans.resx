@@ -3996,4 +3996,7 @@
   <data name="AccountStatus" xml:space="preserve">
     <value>帐户状态</value>
   </data>
+  <data name="group" xml:space="preserve">
+    <value>群组</value>
+  </data>
 </root>
