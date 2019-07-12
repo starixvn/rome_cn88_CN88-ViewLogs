@@ -3490,7 +3490,7 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Group.
+        ///   Looks up a localized string similar to Spread Group.
         /// </summary>
         public static string group {
             get {
