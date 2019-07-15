@@ -2,20 +2,20 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
+    using System.Text.RegularExpressions;
+    using AppResources;
     using Constants;
     using Criteria;
     using DataAccesses;
     using Fanex.Caching;
     using Fanex.Data.Repository;
+    using Helpers;
     using Models;
     using Params;
-    using AppResources;
-    using System.Globalization;
-    using Sunplus.Agent.Model.Entities;
     using Sunplus.Agent.Model.Base;
-    using System.Text.RegularExpressions;
-    using Helpers;
+    using Sunplus.Agent.Model.Entities;
 
     public abstract class BaseService
     {
@@ -164,8 +164,7 @@
             {
                 var isHideNickname = IsHideNickName(IsSubAccFromLog(log), downlineInfo.RoleId, downlineInfo.CustId, SubAccNameFromLog(log));
                 log.IsHideNickname = isHideNickname;
-                
-                //log.Details = PatternMatchingHelper.Replace(log.DoingEncoded);
+                log.Details = PatternMatchingHelper.Replace(log.Details);
             }
 
             return pagingLogs;

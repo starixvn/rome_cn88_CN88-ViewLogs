@@ -35,10 +35,10 @@
     <CodeAnalysisRuleSet>Alpha.ViewLogs.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AppResources\DoingEncodedResources.Designer.cs">
+    <Compile Include="AppResources\DetailsResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DoingEncodedResources.resx</DependentUpon>
+      <DependentUpon>DetailsResources.resx</DependentUpon>
     </Compile>
     <Compile Include="AppResources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -242,12 +242,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppResources\DoingEncodedResources.resx">
+    <EmbeddedResource Include="AppResources\DetailsResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DoingEncodedResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>DetailsResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources\DoingEncodedResources.zh-Hanz.resx" />
-    <EmbeddedResource Include="AppResources\DoingEncodedResources.zh-TW.resx" />
+    <EmbeddedResource Include="AppResources\DetailsResources.zh-Hans.resx" />
+    <EmbeddedResource Include="AppResources\DetailsResources.zh-TW.resx" />
     <EmbeddedResource Include="AppResources\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

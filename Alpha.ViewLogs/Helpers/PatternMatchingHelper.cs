@@ -6,7 +6,7 @@
 
     public static class PatternMatchingHelper
     {
-        private static readonly ResourceManager Resource = new ResourceManager(typeof(DoingEncodedResources));
+        private static readonly ResourceManager Resource = new ResourceManager(typeof(DetailsResources));
         private static readonly Regex CompiledRegex = new Regex(@"\{(.+?)\}", RegexOptions.Compiled);
 
         public static string Replace(string text)
