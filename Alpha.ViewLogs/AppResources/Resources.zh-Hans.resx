@@ -142,7 +142,7 @@
     <value>转账</value>
   </data>
   <data name="ViewLog" xml:space="preserve">
-    <value>察看日志</value>
+    <value>查看记录</value>
   </data>
   <data name="Daily" xml:space="preserve">
     <value>每天</value>
@@ -304,7 +304,7 @@
     <value>报告</value>
   </data>
   <data name="PageAccess_G" xml:space="preserve">
-    <value>察看日志</value>
+    <value>查看记录</value>
   </data>
   <data name="PageAccess_H" xml:space="preserve">
     <value>账户管理 - 只能看帐</value>
