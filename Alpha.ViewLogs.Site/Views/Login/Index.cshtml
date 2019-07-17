@@ -19,7 +19,7 @@
         <div class="filter" id="report-form">
             <form class="form-inline" role="form">
                 <div class="form-group  @(Model.IsAgent? "hide":string.Empty)">
-                    <label class="only-mobile">Username or Name</label>
+                    <label class="only-mobile">@Resources.UsernameOrFirstLastName</label>
                     <input type="text" id="txt-username" class="txt-username" placeholder="@Resources.UsernameOrFirstLastName"
                            value="@(string.IsNullOrWhiteSpace(Model.Username) ? string.Empty : Model.Username)"
                            autocomplete="off" />

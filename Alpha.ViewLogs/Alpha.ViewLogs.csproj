@@ -35,6 +35,11 @@
     <CodeAnalysisRuleSet>Alpha.ViewLogs.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppResources\DetailsResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailsResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="AppResources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +76,7 @@
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\IDateTime.cs" />
     <Compile Include="Helpers\Impl\DateTimeWrap.cs" />
+    <Compile Include="Helpers\PatternMatchingHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Models\CN88SportBettype.cs" />
     <Compile Include="Models\Log.cs" />
@@ -236,6 +242,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AppResources\DetailsResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DetailsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources\DetailsResources.zh-Hans.resx" />
+    <EmbeddedResource Include="AppResources\DetailsResources.zh-TW.resx" />
     <EmbeddedResource Include="AppResources\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

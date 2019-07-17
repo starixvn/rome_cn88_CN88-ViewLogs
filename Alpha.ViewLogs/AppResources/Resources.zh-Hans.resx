@@ -351,4 +351,7 @@
   <data name="Upline" xml:space="preserve">
     <value>上线</value>
   </data>
+  <data name="Type" xml:space="preserve">
+    <value>类别</value>
+  </data>
 </root>
