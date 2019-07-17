@@ -148,7 +148,7 @@
     <value>信用额度已更新</value>
   </data>
   <data name="CreditUpdatedBySubAcc" xml:space="preserve">
-    <value>Credit updated by Sub Account</value>
+    <value>信用额度已由子帐号更新</value>
   </data>
   <data name="Failure" xml:space="preserve">
     <value>失败</value>
@@ -202,7 +202,7 @@
     <value>总代理</value>
   </data>
   <data name="Member" xml:space="preserve">
-    <value>Member</value>
+    <value>会员</value>
   </data>
   <data name="SMA" xml:space="preserve">
     <value>股东</value>
