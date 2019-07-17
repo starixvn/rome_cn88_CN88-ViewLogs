@@ -372,4 +372,7 @@
   <data name="Upline" xml:space="preserve">
     <value>Upline</value>
   </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
 </root>
