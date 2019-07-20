@@ -147,7 +147,7 @@
                 return pagingLogs;
             }
 
-            var downlineInfo = customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
+            var downlineInfo = customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, logParam.SubAccId);
 
             // If search username is not belong to searcher, then return
             if (downlineInfo.CustId == 0)

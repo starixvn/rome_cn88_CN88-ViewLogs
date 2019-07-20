@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Functions SiteId="105" SiteName="View Logs">
   <Function Name="Customer information">
-    <Setting Key="Age_CustomerSelCheckBelonging_ByUsername" SpName="Age_CustomerSelCheckBelonging_ByUsername" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
+    <Setting Key="CS_CustomerSelCheckBelonging_ByUsername" SpName="CS_CustomerSelCheckBelonging_ByUsername" DbName="DBAGE.bodb02.BODBDownlineNet" Plain="0" />
   </Function>
 
   <Function Name="AlphaAuth">
