@@ -1,7 +1,7 @@
 ﻿namespace Alpha.ViewLogs.Site.Handlers
 {
     using System.Collections.Generic;
-    using Helpers;
+    using CN88.Web.Helpers;
     using MediatR;
     using Models;
     using Models.Enumerations;

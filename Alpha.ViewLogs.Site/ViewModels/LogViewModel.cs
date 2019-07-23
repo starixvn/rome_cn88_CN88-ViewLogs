@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using CN88.Web.Helpers;
     using Helpers;
     using Models.Enumerations;
     using Params;
@@ -126,6 +127,6 @@
 
         public string Username { get; set; }
 
-        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
+        public bool IsDevice => browserHelper.IsMobileTablet() && !browserHelper.IsMobileTablet(true);
     }
 }
