@@ -69,6 +69,7 @@
             IsShowMyanmarOdds = isShowMyanmarOdds ?? UserPermission.IsShowMyanmarOdds;
             IsShowPokerGames = isShowPokerGames ?? UserPermission.HasPermissionOnProduct(ProductIdConstants.PokerGames);
             PreviousUsername = Username;
+            SubAccId = currentUserSession.SubAccId;
         }
 
         public string PreviousUsername { get; set; }
