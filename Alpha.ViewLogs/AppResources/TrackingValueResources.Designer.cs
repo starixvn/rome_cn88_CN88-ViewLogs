@@ -2005,6 +2005,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Added Account.
+        /// </summary>
+        public static string AddedAccount {
+            get {
+                return ResourceManager.GetString("AddedAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add from.
         /// </summary>
         public static string addFrom {
@@ -9205,6 +9214,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Removed Account.
+        /// </summary>
+        public static string RemovedAccount {
+            get {
+                return ResourceManager.GetString("RemovedAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Return error code.
         /// </summary>
         public static string returnErrCode {
@@ -9255,6 +9273,15 @@ namespace Alpha.ViewLogs.AppResources {
         public static string search {
             get {
                 return ResourceManager.GetString("search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select all.
+        /// </summary>
+        public static string SelectAll {
+            get {
+                return ResourceManager.GetString("SelectAll", resourceCulture);
             }
         }
         

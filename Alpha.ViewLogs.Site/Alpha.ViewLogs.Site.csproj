@@ -431,6 +431,8 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_691.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_693.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_160011.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_160010.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_941.xslt" />
