@@ -8773,6 +8773,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Managed Account.
+        /// </summary>
+        public static string NewManagedAccount {
+            get {
+                return ResourceManager.GetString("NewManagedAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New Master ID.
         /// </summary>
         public static string newMasterId {

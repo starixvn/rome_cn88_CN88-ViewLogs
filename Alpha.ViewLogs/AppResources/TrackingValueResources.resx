@@ -4056,4 +4056,7 @@
   <data name="RemovedAccount" xml:space="preserve">
     <value>Removed Account</value>
   </data>
+  <data name="NewManagedAccount" xml:space="preserve">
+    <value>New Managed Account</value>
+  </data>
 </root>
