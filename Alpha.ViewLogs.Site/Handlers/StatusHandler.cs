@@ -104,6 +104,6 @@
         }
 
         private static string TransformUsername(int userId, string username)
-            => userId == 0 && username.Equals("upline", StringComparison.OrdinalIgnoreCase) ? Resources.Upline : username;
+            => userId == 0 && "upline".Equals(username, StringComparison.OrdinalIgnoreCase) ? Resources.Upline : username;
     }
 }
