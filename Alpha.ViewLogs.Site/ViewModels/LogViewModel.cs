@@ -127,6 +127,6 @@
 
         public string Username { get; set; }
 
-        public bool IsDevice => browserHelper.IsMobileTablet() && !browserHelper.IsMobileTablet(true);
+        public bool IsDevice => browserHelper.IsMobile();
     }
 }
