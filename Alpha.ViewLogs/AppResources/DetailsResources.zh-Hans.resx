@@ -166,7 +166,7 @@
     <value>失败(未授权访问)</value>
   </data>
   <data name="FailureNotHeadline" xml:space="preserve">
-    <value>失败 (非股东)</value>
+    <value>失败 (非总监)</value>
   </data>
   <data name="FailurePasswordProblem" xml:space="preserve">
     <value>失败 (密码出错)</value>
