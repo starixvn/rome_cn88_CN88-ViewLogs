@@ -4008,4 +4008,7 @@
   <data name="SelectAll" xml:space="preserve">
     <value>全选</value>
   </data>
+  <data name="NewManagedAccount" xml:space="preserve">
+    <value>新管理账户</value>
+  </data>
 </root>
