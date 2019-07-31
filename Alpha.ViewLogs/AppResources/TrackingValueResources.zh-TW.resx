@@ -3999,4 +3999,13 @@
   <data name="group" xml:space="preserve">
     <value>盤口種類</value>
   </data>
+  <data name="AddedAccount" xml:space="preserve">
+    <value>已新增的帳戶</value>
+  </data>
+  <data name="RemovedAccount" xml:space="preserve">
+    <value>已移除的帳戶</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>全選</value>
+  </data>
 </root>
