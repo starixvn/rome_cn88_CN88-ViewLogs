@@ -64,14 +64,14 @@
         {
             // Arrange
             LogParam logParam = new LogParam();
-            var downlineInfo = new CustomerInfo(0, false);
-            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(downlineInfo);
+            var downlineInfo = new CustomerInfo(0);
+            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, 0).Returns(downlineInfo);
 
             // Act 
             baseService.GetPagingLogs(logParam);
 
             // Assert
-            customerService.Received().GetDownlineInfoByUsername(logParam.Username, logParam.UplineId);
+            customerService.Received().GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, 0);
         }
 
         [Test]
@@ -80,9 +80,9 @@
             // Arrange
             LogParam logParam = new LogParam();
 
-            var invalidDownlineInfo = new CustomerInfo(0, false);
+            var invalidDownlineInfo = new CustomerInfo(0);
 
-            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(invalidDownlineInfo);
+            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, 0).Returns(invalidDownlineInfo);
 
             var emptyPagingLogs = new PagingLogs<Log>();
 
@@ -104,9 +104,9 @@
                 Language = LanguageCode.English
             };
 
-            var validDownlineInfo = new CustomerInfo(1, false);
+            var validDownlineInfo = new CustomerInfo(1);
 
-            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(validDownlineInfo);
+            customerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, 0).Returns(validDownlineInfo);
 
             var logs = new List<Log>
             {

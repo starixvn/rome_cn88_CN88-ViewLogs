@@ -4,6 +4,7 @@
     using System.Reflection;
     using System.Web.Mvc;
     using AppResources;
+    using CN88.Web.Helpers;
     using Controllers;
     using DataAccesses;
     using DataAccesses.Impl;

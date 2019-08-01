@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Web;
     using AppResources;
+    using CN88.Web.Helpers;
     using Helpers;
     using MediatR;
     using Models;
@@ -75,9 +76,9 @@
 
                 var formattedTrackingValue = trackingValueFormatter.GetFormattedDiffTrackingValue(log, message.IsShowOldValue);
                 var htmlTrackingValue = transformService.TransformTrackingValue(
-                    formattedTrackingValue, 
-                    log.ActionId, 
-                    transformParam, 
+                    formattedTrackingValue,
+                    log.ActionId,
+                    transformParam,
                     isHideSubAcc: log.UserId.Equals(0));
 
                 logItems.Add(
@@ -103,6 +104,6 @@
         }
 
         private static string TransformUsername(int userId, string username)
-            => userId == 0 && username.Equals("upline", StringComparison.OrdinalIgnoreCase) ? Resources.Upline : username;
+            => userId == 0 && "upline".Equals(username, StringComparison.OrdinalIgnoreCase) ? Resources.Upline : username;
     }
 }

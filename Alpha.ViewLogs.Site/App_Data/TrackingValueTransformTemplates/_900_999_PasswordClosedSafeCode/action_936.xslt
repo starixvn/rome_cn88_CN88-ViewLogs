@@ -13,19 +13,25 @@
                     <xsl:value-of select="@isforcedchangesecuritycode" />
                 </td>
                 <td class="colW1">
+                  <xsl:value-of select="xslLogFormat:GetLogResource('SubAccount')" />
+                </td>
+                <td class="colW2">
+                  <xsl:value-of select="@subaccount" />
+                </td>
+                <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
                 </td>
                 <td class="colW2">
                     <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
                 </td>
-                <td class="colW1">
-                    <xsl:value-of select="xslLogFormat:GetLogResource('errCode')" />
-                </td>
-                <td class="colW2">
-                    <xsl:value-of select="@errcode" />
-                </td>
             </tr>
             <tr>
+                <td class="colW1">
+                  <xsl:value-of select="xslLogFormat:GetLogResource('errCode')" />
+                </td>
+                <td class="colW2">
+                  <xsl:value-of select="@errcode" />
+                </td>
                 <td class="colW1">
                     <xsl:value-of select="xslLogFormat:GetLogResource('errMsg')" />
                 </td>
@@ -33,7 +39,6 @@
                     <xsl:value-of select="@errmsg" />
                 </td>
                 <td class="colW1"></td><td class="colW2"></td>
-              <td class="colW1"></td><td class="colW2"></td>
             </tr>
         </table>
     </xsl:template>

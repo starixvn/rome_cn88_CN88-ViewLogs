@@ -42,9 +42,9 @@
                 Language = LanguageCode.English
             };
 
-            var validDownlineInfo = new CustomerInfo(1, false);
+            var validDownlineInfo = new CustomerInfo(1);
 
-            CustomerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId).Returns(validDownlineInfo);
+            CustomerService.GetDownlineInfoByUsername(logParam.Username, logParam.UplineId, 0).Returns(validDownlineInfo);
 
             var logs = new List<Log>
             {

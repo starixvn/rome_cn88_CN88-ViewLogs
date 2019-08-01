@@ -4,6 +4,6 @@
 
     public interface CustomerService
     {
-        CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId);
+        CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId, int subAccountId);
     }
 }

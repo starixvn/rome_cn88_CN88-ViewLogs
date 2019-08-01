@@ -5,8 +5,7 @@
 
     public class CustomerInfoForTesting : CustomerInfo
     {
-        public CustomerInfoForTesting(int custId, bool isSubAcc) :
-            base(custId, isSubAcc)
+        public CustomerInfoForTesting(int custId) : base(custId)
         {
         }
 
@@ -17,22 +16,21 @@
                 return null;
             }
 
-            return new CustomerInfoForTesting(customerInfo.CustId, customerInfo.IsSubAcc);
+            return new CustomerInfoForTesting(customerInfo.CustId);
         }
 
         public override bool Equals(object obj)
         {
             var compareObject = (CustomerInfo)obj;
 
-            var isEqual = CustId == compareObject.CustId &&
-                IsSubAcc == compareObject.IsSubAcc;
+            var isEqual = CustId == compareObject.CustId;
 
             return isEqual;
         }
 
         public override int GetHashCode()
         {
-            return CustId.GetHashCode() ^ IsSubAcc.GetHashCode();
+            return CustId.GetHashCode();
         }
 
         public override string ToString()
@@ -40,7 +38,6 @@
             var result = new StringBuilder();
 
             result.AppendLine("CustId: " + CustId);
-            result.AppendLine("IsSubAcc: " + IsSubAcc);
             result.AppendLine(base.ToString());
 
             return result.ToString();

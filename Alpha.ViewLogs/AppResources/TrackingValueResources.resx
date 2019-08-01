@@ -4047,4 +4047,16 @@
   <data name="group" xml:space="preserve">
     <value>Spread Group</value>
   </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="AddedAccount" xml:space="preserve">
+    <value>Added Account</value>
+  </data>
+  <data name="RemovedAccount" xml:space="preserve">
+    <value>Removed Account</value>
+  </data>
+  <data name="NewManagedAccount" xml:space="preserve">
+    <value>New Managed Account</value>
+  </data>
 </root>

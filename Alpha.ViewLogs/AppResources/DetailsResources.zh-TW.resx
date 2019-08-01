@@ -166,7 +166,7 @@
     <value>失敗 (未授權訪問)</value>
   </data>
   <data name="FailureNotHeadline" xml:space="preserve">
-    <value>失敗(非股東)</value>
+    <value>失敗 (非總監)</value>
   </data>
   <data name="FailurePasswordProblem" xml:space="preserve">
     <value>失敗 (密碼出錯)</value>
@@ -184,7 +184,7 @@
     <value>失敗 (禁止用戶登入)</value>
   </data>
   <data name="Headline" xml:space="preserve">
-    <value>大股東</value>
+    <value>總監</value>
   </data>
   <data name="KickOutSessionChanged" xml:space="preserve">
     <value>強制登出：登入裝置已變更</value>

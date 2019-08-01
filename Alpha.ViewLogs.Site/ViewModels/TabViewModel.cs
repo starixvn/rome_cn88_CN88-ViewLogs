@@ -1,6 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.ViewModels
 {
-    using Helpers;
+    using CN88.Web.Helpers;
 
     public class TabViewModel
     {
@@ -14,6 +14,6 @@
 
         public string SelectedTabName { get; }
 
-        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
+        public bool IsDevice => browserHelper.IsMobile();
     }
 }

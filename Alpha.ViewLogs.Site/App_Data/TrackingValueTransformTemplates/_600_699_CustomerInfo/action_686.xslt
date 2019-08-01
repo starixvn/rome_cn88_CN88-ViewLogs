@@ -35,7 +35,7 @@
       </tr>
       <tr>
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('loginIP')" />
+          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
         </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@loginip)" />

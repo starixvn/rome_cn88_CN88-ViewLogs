@@ -13,17 +13,18 @@
             this.dynamicRepository = dynamicRepository;
         }
 
-        public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId)
+        public CustomerInfo GetDownlineInfoByUsername(string downlineUsername, int uplineId, int subAccountId)
         {
             var criteria = new GetCustInfoByUsernameCommand
             {
                 Username = downlineUsername,
-                UplineId = uplineId
+                UplineId = uplineId,
+                SubAccountId = subAccountId
             };
 
             dynamicRepository.Execute(criteria);
 
-            var customerInfo = new CustomerInfo(criteria.CustId, criteria.IsSubAcc, criteria.RoleId, criteria.SubAccountId);
+            var customerInfo = new CustomerInfo(criteria.CustId, criteria.RoleId, criteria.SubAccountId);
 
             return customerInfo;
         }

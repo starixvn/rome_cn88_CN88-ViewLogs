@@ -1,8 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using CN88.Web.Helpers;
     using Constants;
-    using Helpers;
     using ViewModels;
 
     public class TabController : Controller

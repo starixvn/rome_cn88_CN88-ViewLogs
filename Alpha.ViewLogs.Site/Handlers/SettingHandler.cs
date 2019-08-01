@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Web;
     using AppResources;
+    using CN88.Web.Helpers;
     using Fanex.Common;
     using Helpers;
     using MediatR;
