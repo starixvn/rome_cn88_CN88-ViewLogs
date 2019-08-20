@@ -9,7 +9,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('AccountStatus')" />
         </td>
         <td  class="colW2">
-          <xsl:value-of select="@status" />
+          <xsl:value-of select="@status" /> fgsdgsd
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />

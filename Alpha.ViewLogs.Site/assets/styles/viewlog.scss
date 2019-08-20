@@ -312,18 +312,19 @@ body.phone {
     padding: 0;
 
     .txt-username::-webkit-input-placeholder {
-         color: transparent;
+        color: transparent;
     }
+
     .txt-username:-moz-placeholder { /* Firefox 18- */
-             color: transparent;
+        color: transparent;
     }
 
-    .txt-username::-moz-placeholder {  /* Firefox 19+ */
-             color: transparent;
+    .txt-username::-moz-placeholder { /* Firefox 19+ */
+        color: transparent;
     }
 
-    .txt-username:-ms-input-placeholder {  
-             color: transparent;
+    .txt-username:-ms-input-placeholder {
+        color: transparent;
     }
 
     .tab-box {
@@ -359,13 +360,12 @@ body.phone {
         }
     }
 
-    .form-group.check-box {      
+    .form-group.check-box {
         margin-bottom: 0;
 
         label {
             margin-bottom: 0;
         }
-        
     }
 
     .filter .form-group {
@@ -481,17 +481,23 @@ body.phone {
     .tblRpt {
         margin-top: 15px;
         margin-bottom: 0;
-        border-collapse: unset;
 
 
         .tblDesc {
             //height: 100%;
-            table-layout: fixed;
-            border-collapse: unset;
+            /*table-layout: fixed;
+            border-collapse: unset;*/
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .col-action {
+            width: 120px;
         }
     }
-
-    .tblRpt .tblDesc td.colW2,
+    /*.tblRpt .tblDesc td.colW2,
     .tblRpt .tblDesc td.colValue,
     .tbl-sub-details td.colW2,
     .tbl-sub-details td.colValue,
@@ -526,6 +532,50 @@ body.phone {
                 padding-top: 8px;
                 padding-bottom: 8px;
             }
+        }
+    }*/
+    .tblDesc {
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            min-height: 36px;
+        }
+
+        .action-name td,
+        .product-by-sport > td {
+            width: 100%;
+            border-bottom: none !important;
+        }
+
+        .colW1, .colW2 {
+            display: flex;
+            flex-basis: 50%;
+            float: left;
+            align-items: center;
+            border-bottom: 1px solid #D2D2D2;
+            min-height: 36px;
+        }
+
+        tr:first-child td.colW1,
+        tr:first-child td.colW2,
+        tr:last-child td.colW1,
+        tr:last-child td.colW2 {
+            border-bottom: 1px solid #D2D2D2 !important;
+        }
+
+        .colW2 {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        tbody tr:first-child:nth-last-child(1) td {
+            height: auto !important;
+        }
+
+        .tblDesc {
         }
     }
 }

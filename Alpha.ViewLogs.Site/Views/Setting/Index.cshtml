@@ -62,7 +62,7 @@
             <table id="DataLog" class="width-100per tblRpt tbl-style2">
                 <thead>
                     <tr class="RptHeader">
-                        <th>@Resources.Action</th>
+                        <th class="col-action">@Resources.Action</th>
                         <th>@Resources.Details</th>
                     </tr>
 
@@ -81,7 +81,7 @@
                             <br />
                             <span class="logid">#@logItem.LogId</span>
                         </td>
-                        <td>@Html.Raw(logItem.TrackingValue)</td>
+                        <td class="no-padding">@Html.Raw(logItem.TrackingValue)</td>
                     </tr>
                         }
                     }
