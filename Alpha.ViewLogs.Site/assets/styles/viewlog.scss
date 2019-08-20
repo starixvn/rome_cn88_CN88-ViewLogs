@@ -482,19 +482,13 @@ body.phone {
         margin-top: 15px;
         margin-bottom: 0;
 
-
-        .tblDesc {
-            //height: 100%;
-            /*table-layout: fixed;
-            border-collapse: unset;*/
-        }
-
         .no-padding {
             padding: 0;
         }
 
         .col-action {
             width: 120px;
+            vertical-align: top;
         }
     }
     /*.tblRpt .tblDesc td.colW2,
@@ -545,9 +539,14 @@ body.phone {
         }
 
         .action-name td,
-        .product-by-sport > td {
+        .product-by-sport > td,
+        .headerSportTypeDetail td {
             width: 100%;
             border-bottom: none !important;
+        }
+
+        .headerSportTypeDetail td {
+            line-height: 18px;
         }
 
         .colW1, .colW2 {
@@ -573,9 +572,6 @@ body.phone {
 
         tbody tr:first-child:nth-last-child(1) td {
             height: auto !important;
-        }
-
-        .tblDesc {
         }
     }
 }
