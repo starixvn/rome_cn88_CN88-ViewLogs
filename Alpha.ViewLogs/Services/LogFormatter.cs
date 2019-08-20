@@ -66,5 +66,7 @@
         string GetCN88SportName(int sporttype, int actionId = 0);
 
         string FormatNickName(string nickname);
+
+        string FormatProblemAccountReviewStatus(string value);
     }
 }

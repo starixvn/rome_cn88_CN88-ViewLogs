@@ -410,6 +410,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_149997.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31610.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31609.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31608.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_119999.xslt">
       <SubType>Designer</SubType>
     </Content>
