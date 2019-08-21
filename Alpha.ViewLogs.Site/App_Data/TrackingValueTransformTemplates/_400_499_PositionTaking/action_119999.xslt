@@ -3,10 +3,14 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:key name="product-by-sport" match="c" use="@sport" />
+  <xsl:variable name="is-mobile" select="xslLogFormat:IsMobile()" />
+
   <xsl:template match="r">
     <table class="tblDesc">
       <tr class="action-name">
-        <td colspan="6"><xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" /></td>
+        <td colspan="6">
+          <xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" />
+        </td>
       </tr>
       <tr>
         <td class="colW1">
@@ -21,10 +25,10 @@
         <td  class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1">
-        </td>
-        <td class="colW2">
-        </td>
+        <xsl:if test="is-mobile ='true'">
+          <td class="colW1"></td>
+          <td class="colW2"></td>
+        </xsl:if>
       </tr>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
         <tr class="action-name" onclick="slideToggle(this);">
@@ -50,10 +54,10 @@
                     <td class="colW2">
                       <xsl:value-of select="@agentpossess" />
                     </td>
-                    <td class="colW1">
-                    </td>
-                    <td class="colW2">
-                    </td>
+                    <xsl:if test="is-mobile ='true'">
+                      <td class="colW1"></td>
+                      <td class="colW2"></td>
+                    </xsl:if>
                   </tr>
                 </xsl:for-each>
               </table>

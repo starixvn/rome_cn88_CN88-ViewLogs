@@ -1,30 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:ms="urn:schemas-microsoft-com:xslt"
                 xmlns:dt="urn:schemas-microsoft-com:datatypes"
                 xmlns:xslLogFormat="urn:LogFormat">
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
+  <xsl:variable name="is-mobile" select="xslLogFormat:IsMobile()" />
 
   <xsl:template match="acc_customerupduserinfo">
     <table class="tblDesc">
       <tr>
-
         <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('fname')" /></td>
+          <xsl:value-of select="xslLogFormat:GetLogResource('fname')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@fname" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('lname')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('lname')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@lname" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@subaccname" />
         </td>
-      </tr>       
+      </tr>
       <tr>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('phone')" />
@@ -32,14 +37,18 @@
         <td class="colW2">
           <xsl:value-of select="@phone" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('mphone')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('mphone')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@mphone" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('fax')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('fax')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@fax" />
-        </td>       
+        </td>
       </tr>
       <tr>
         <td class="colW1">
@@ -54,42 +63,48 @@
         <td class="colW2">
           <xsl:value-of select="@language" />
         </td>
-        <td class="colW1"></td><td class="colW2"></td>
+        <td class="colW1"></td>
+        <td class="colW2"></td>
       </tr>
       <tr>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('IP')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@errcode" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
+        </td>
         <td class="colW2">
           <xsl:value-of select="@errmsg" />
-        </td>        
+        </td>
       </tr>
-
       <xsl:choose>
-        <xsl:when test="$IsInternal = 0">
-
-        </xsl:when>
+        <xsl:when test="$IsInternal = 0"></xsl:when>
         <xsl:otherwise>
           <tr>
-            <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('SubAccID')" /></td>
+            <td class="colW1">
+              <xsl:value-of select="xslLogFormat:GetLogResource('SubAccID')" />
+            </td>
             <td class="colW2">
               <xsl:value-of select="@subaccid" />
             </td>
-            <td class="colW1"></td>
-            <td class="colW2">
-            </td>
-            <td class="colW1"></td><td class="colW2"></td>
+            <xsl:if test="is-mobile ='true'">
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+              <td class="colW1"></td>
+              <td class="colW2"></td>
+            </xsl:if>
           </tr>
         </xsl:otherwise>
       </xsl:choose>
-
     </table>
   </xsl:template>
-
 </xsl:stylesheet>

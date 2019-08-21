@@ -4,7 +4,7 @@
   <xsl:output method="html" indent="no" />
   <xsl:key name="product-by-sport" match="c" use="@sport" />
   <xsl:variable name="is-mobile" select="xslLogFormat:IsMobile()" />
-  
+
   <xsl:template match="r">
     <table class="tblDesc">
       <tr class="action-name">
@@ -57,7 +57,7 @@
                         </td>
                         <xsl:if test="is-mobile ='true'">
                           <td class="colW1"></td>
-                          <td  class="colW2"></td>
+                          <td class="colW2"></td>
                           <td class="colW1"></td>
                           <td class="colW2"></td>
                         </xsl:if>

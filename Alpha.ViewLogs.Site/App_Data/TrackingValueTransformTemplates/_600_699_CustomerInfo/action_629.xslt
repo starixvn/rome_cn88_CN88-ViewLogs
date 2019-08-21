@@ -5,91 +5,107 @@
 
   <xsl:template match="acc_customerinsmember_clonesetting_mag">
     <table class="tblDesc">
-        <tr>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('fname')" /></td>
-        <td class="colW2">
-            <xsl:value-of select="@fname" />
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('fname')" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('lname')" /></td>
         <td class="colW2">
-            <xsl:value-of select="@lname" />
+          <xsl:value-of select="@fname" />
         </td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('username')" /></td>
-        <td class="colW2">
-            <xsl:value-of select="@username" />
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('lname')" />
         </td>
-        </tr>
-        <tr>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('phone')" /></td>
         <td class="colW2">
-            <xsl:value-of select="@phone" />
+          <xsl:value-of select="@lname" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('username')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@username" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('phone')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@phone" />
         </td>
 
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('mphone')" /></td>
-        <td class="colW2">
-            <xsl:value-of select="@mphone" />
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('mphone')" />
         </td>
-
-		<td class="colW1">
-			<xsl:value-of select="xslLogFormat:GetLogResource('fax')" />
-		</td>
-		<td class="colW2">
-			<xsl:value-of select="@fax" />
-		</td>
-        </tr>
-        <tr>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('credit')" /></td>
         <td class="colW2">
-            <xsl:value-of select="@credit" />
+          <xsl:value-of select="@mphone" />
         </td>
-		<td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')" />
-		</td>
-		<td class="colW2">
-			<xsl:value-of select="@maxcredit" />
-		</td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('copiedFromUsername')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('fax')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@fax" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('credit')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@credit" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('maxcredit')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="@maxcredit" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('copiedFromUsername')" />
+        </td>
         <td class="colW2" >
-            <xsl:value-of select="@copiedfomusername" />
+          <xsl:value-of select="@copiedfomusername" />
         </td>
-        </tr>
-        <tr>
-		<td class="colW1">
-			<xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
-		</td>
-		<td class="colW2">
-			<xsl:value-of select="@language" />
-		</td>
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" /></td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('Language')" />
+        </td>
         <td class="colW2">
-            <xsl:value-of select="@subaccname" />
+          <xsl:value-of select="@language" />
         </td>
-
-        <td class="colW1"><xsl:value-of select="xslLogFormat:GetLogResource('IP')" /></td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
+        </td>
         <td class="colW2">
-            <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+          <xsl:value-of select="@subaccname" />
         </td>
-			
-        </tr>
-		<tr>
-			<td class="colW1">
-				<xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
-			</td>
-			<td class="colW2">
-				<xsl:value-of select="xslLogFormat:FormatErrCode(@errcode)" />
-			</td>
-			<td class="colW1">
-				<xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
-			</td>
-			<td class="colW2">
-				<xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
-			</td>
-      <td class="colW1">
-        <xsl:value-of select="xslLogFormat:GetLogResource('Platform')" />
-      </td>
-      <td class="colW2">
-        <xsl:value-of select="xslLogFormat:GetPlatformOfSearchAndCopyFunction(@systemid)" />
-      </td>
-		</tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+        </td>
+      </tr>
+      <tr>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ErrCode')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:FormatErrCode(@errcode)" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('ErrMsg')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:FormatErrMsg(@errmsg)" />
+        </td>
+        <td class="colW1">
+          <xsl:value-of select="xslLogFormat:GetLogResource('Platform')" />
+        </td>
+        <td class="colW2">
+          <xsl:value-of select="xslLogFormat:GetPlatformOfSearchAndCopyFunction(@systemid)" />
+        </td>
+      </tr>
     </table>
   </xsl:template>
 </xsl:stylesheet>

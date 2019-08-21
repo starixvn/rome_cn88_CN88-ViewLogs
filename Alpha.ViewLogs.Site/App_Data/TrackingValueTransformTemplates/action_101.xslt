@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
+  <xsl:variable name="is-mobile" select="xslLogFormat:IsMobile()" />
 
   <xsl:template match="acc_customerinsmember_sag">
     <xsl:choose>
@@ -21,7 +22,6 @@
               <td class="colW2">
                 <xsl:value-of select="@lname" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('username')" />
               </td>
@@ -63,7 +63,6 @@
               <td class="colW2">
                 <xsl:value-of select="@address" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('city')" />
               </td>
@@ -84,7 +83,6 @@
               <td class="colW2">
                 <xsl:value-of select="@country" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('postal')" />
               </td>
@@ -105,7 +103,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minb" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxb')" />
               </td>
@@ -126,7 +123,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv2" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv2')" />
               </td>
@@ -147,7 +143,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv3" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv3')" />
               </td>
@@ -168,7 +163,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv5" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv5')" />
               </td>
@@ -189,7 +183,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv8" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv8')" />
               </td>
@@ -251,7 +244,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv99" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv99')" />
               </td>
@@ -292,7 +284,6 @@
               <td class="colW2">
                 <xsl:value-of select="@groupc" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('groupd')" />
               </td>
@@ -313,7 +304,6 @@
               <td class="colW2">
                 <xsl:value-of select="@discount1x2" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
               </td>
@@ -334,21 +324,16 @@
               <td class="colW2">
                 <xsl:value-of select="@suspended" />
               </td>
-              <td class="colW1">
-                
-              </td>
-              <td class="colW2">
-                
-              </td>
+              <xsl:if test="is-mobile ='true'">
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+              </xsl:if>
             </tr>
             <tr>
-              <td class="colW1">
-                
-              </td>
-              <td class="colW2">
-                
-              </td>
-
+              <xsl:if test="is-mobile ='true'">
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+              </xsl:if>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('disableautompt')" />
               </td>
@@ -382,11 +367,8 @@
                 <xsl:value-of select="@best-odds" />
               </td>
             </tr>
-
             <xsl:choose>
-              <xsl:when test="$IsInternal = 0">
-
-              </xsl:when>
+              <xsl:when test="$IsInternal = 0"></xsl:when>
               <xsl:otherwise>
                 <tr>
                   <td class="colW1">
@@ -410,9 +392,6 @@
                 </tr>
               </xsl:otherwise>
             </xsl:choose>
-
-
-
           </table>
         </xsl:if>
         <xsl:if test="xslLogFormat:IsShowMyanmarOdds() = 'True'">
@@ -493,7 +472,6 @@
               <td class="colW2">
                 <xsl:value-of select="@country" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('postal')" />
               </td>
@@ -514,7 +492,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minb" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxb')" />
               </td>
@@ -535,7 +512,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv2" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv2')" />
               </td>
@@ -556,7 +532,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv3" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv3')" />
               </td>
@@ -577,7 +552,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv5" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv5')" />
               </td>
@@ -639,7 +613,6 @@
               <td class="colW2">
                 <xsl:value-of select="@minbv11" />
               </td>
-
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('maxbv11')" />
               </td>
@@ -708,7 +681,6 @@
                 <xsl:value-of select="@discountmyanmarodds" />
               </td>
             </tr>
-            
             <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
@@ -729,8 +701,7 @@
                 <xsl:value-of select="@suspended" />
               </td>
             </tr>
-            <tr>              
-
+            <tr>
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('disableautompt')" />
               </td>
@@ -751,7 +722,6 @@
               </td>
             </tr>
             <tr>
-              
               <td class="colW1">
                 <xsl:value-of select="xslLogFormat:GetLogResource('errmsg')" />
               </td>
@@ -764,15 +734,14 @@
               <td class="colW2">
                 <xsl:value-of select="@best-odds" />
               </td>
-              <td class="colW1">
-              </td>
-              <td class="colW2">
-              </td>
+              <xsl:if test="is-mobile ='true'">
+                <td class="colW1"></td>
+                <td class="colW2"></td>
+              </xsl:if>
             </tr>
 
             <xsl:choose>
               <xsl:when test="$IsInternal = 0">
-
               </xsl:when>
               <xsl:otherwise>
                 <tr>
@@ -884,17 +853,14 @@
                       <td class="colW2">
                         <xsl:value-of select="@spt_10" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('slivept_1')" />
                       </td>
@@ -922,15 +888,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@slivept_8" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -956,7 +919,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2spt_3" />
                       </td>
-
                     </tr>
                     <tr >
                       <td class="colW1">
@@ -985,14 +947,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1026,14 +986,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v3spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1061,22 +1019,18 @@
                       </td>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v5spt_20')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@v5spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1102,7 +1056,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v8spt_20" />
                       </td>
-
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1128,7 +1081,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v10spt_3" />
                       </td>
-
                     </tr>
                     <tr>
                       <td class="colW1">
@@ -1137,14 +1089,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v10spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1164,10 +1114,10 @@
                       <td class="colW2">
                         <xsl:value-of select="@v11spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1193,7 +1143,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v99spt_3" />
                       </td>
-
                     </tr>
                     <tr >
                       <td class="colW1">
@@ -1202,20 +1151,17 @@
                       <td class="colW2">
                         <xsl:value-of select="@v99spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                   </table>
                 </div>
               </td>
             </tr>
-
           </xsl:for-each>
 
           <xsl:for-each select="au">
@@ -1326,10 +1272,10 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_slivept_8" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1355,7 +1301,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v2spt_3" />
                       </td>
-
                     </tr>
                     <tr >
                       <td class="colW1">
@@ -1384,14 +1329,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v2spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1425,14 +1368,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v3spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1440,7 +1381,6 @@
                       </td>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v5spt_1')" />
                       </td>
@@ -1467,14 +1407,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v5spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1482,15 +1420,12 @@
                       </td>
                     </tr>
                     <tr >
-
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v8spt_1')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@a_v8spt_1" />
                       </td>
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v8spt_3')" />
                       </td>
@@ -1530,21 +1465,18 @@
                       </td>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('a_v10spt_20')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@a_v10spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1564,11 +1496,10 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v11spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1594,7 +1525,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v99spt_3" />
                       </td>
-
                     </tr>
                     <tr>
                       <td class="colW1">
@@ -1603,14 +1533,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@a_v99spt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                   </table>
                 </div>
@@ -1726,12 +1654,10 @@
                       <td class="colW2">
                         <xsl:value-of select="@mlivept_8" />
                       </td>
-
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1757,7 +1683,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2mpt_3" />
                       </td>
-
                     </tr>
                     <tr >
                       <td class="colW1">
@@ -1778,7 +1703,6 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2mpt_9" />
                       </td>
-
                     </tr>
                     <tr>
                       <td class="colW1">
@@ -1787,14 +1711,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v2mpt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1828,14 +1750,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v3mpt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1869,14 +1789,12 @@
                       <td class="colW2">
                         <xsl:value-of select="@v5mpt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1946,10 +1864,10 @@
                       <td class="colW2">
                         <xsl:value-of select="@v11mpt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                     <tr class="headerSportTypeDetail">
                       <td colspan="6">
@@ -1957,7 +1875,6 @@
                       </td>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v99mpt_1')" />
                       </td>
@@ -1978,30 +1895,24 @@
                       </td>
                     </tr>
                     <tr >
-
                       <td class="colW1">
                         <xsl:value-of select="xslLogFormat:GetLogResource('v99mpt_20')" />
                       </td>
                       <td class="colW2">
                         <xsl:value-of select="@v99mpt_20" />
                       </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
-                      <td class="colW1"></td>
-                      <td class="colW2">
-
-                      </td>
+                      <xsl:if test="is-mobile ='true'">
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                        <td class="colW1"></td>
+                        <td class="colW2"></td>
+                      </xsl:if>
                     </tr>
                   </table>
                 </div>
               </td>
             </tr>
-
-
           </xsl:for-each>
-
         </table>
       </xsl:otherwise>
     </xsl:choose>
