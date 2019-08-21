@@ -9,6 +9,7 @@
     using System.Xml.Linq;
     using Alpha.ViewLogs.Models;
     using AppResources;
+    using CN88.Web.Helpers;
     using Constants;
     using Fanex.Common;
     using Helpers;
@@ -19,6 +20,7 @@
     {
         private readonly ViewLogIPService ipService;
         private readonly RemotingRefWrapper remotingRef;
+        private readonly BrowserHelper browserHelper;
 
         private Dictionary<string, bool> custStatuses;
         private Dictionary<string, int> resourcesByBetTypeCacheRef;
@@ -65,10 +67,12 @@
 
         public LogFormatterImpl(
             ViewLogIPService ipService,
-            RemotingRefWrapper remotingRef)
+            RemotingRefWrapper remotingRef,
+            BrowserHelper browserHelper)
         {
             this.ipService = ipService;
             this.remotingRef = remotingRef;
+            this.browserHelper = browserHelper;
         }
 
         public ResourceManager ResourceManager { get; set; }
@@ -420,5 +424,7 @@
                 nickname.Substring(5) : nickname;
 
         public string FormatSubAccName(string subAccName) => this.isHideSubAcc ? string.Empty : subAccName;
+
+        public bool IsMobile() => browserHelper.IsMobileOrTablet();
     }
 }

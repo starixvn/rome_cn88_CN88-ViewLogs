@@ -6,6 +6,7 @@
     using System.Resources;
     using System.Threading;
     using System.Xml;
+    using CN88.Web.Helpers;
     using Constants;
     using NSubstitute;
     using NUnit.Framework;
@@ -25,6 +26,7 @@
         private ViewLogIPService ipService;
         private RemotingRefWrapper remotingRef;
         private LogFormatterImpl logFormatter;
+        private BrowserHelper browserHelper;
 
         private Dictionary<string, bool> sportBetTypeVisibilities;
 
@@ -36,8 +38,9 @@
 
             ipService = Substitute.For<ViewLogIPService>();
             remotingRef = Substitute.For<RemotingRefWrapper>();
+            browserHelper = Substitute.For<BrowserHelper>();
 
-            logFormatter = new LogFormatterImpl(ipService, remotingRef);
+            logFormatter = new LogFormatterImpl(ipService, remotingRef, browserHelper);
             logFormatter.Init(null);
 
             sportBetTypeVisibilities = new Dictionary<string, bool>();
