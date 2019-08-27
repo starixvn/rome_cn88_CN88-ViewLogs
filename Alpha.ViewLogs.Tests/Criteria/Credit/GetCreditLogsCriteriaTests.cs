@@ -19,7 +19,7 @@
                 true,
                 1,
                 1);
-            var expectedSettingKey = "Acc_UserLog_CreditSel";
+            var expectedSettingKey = "CS_UserLog_CreditSel";
 
             // Act
             var actualSettingKey = getCreditLogsCriteria.GetSettingKey();
@@ -76,7 +76,7 @@
                 1,
                 "CustName",
                 DateTime.Now,
-                DateTime.Now,                
+                DateTime.Now,
                 true,
                 1,
                 1);
