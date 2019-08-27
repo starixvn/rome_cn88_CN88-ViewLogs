@@ -36,7 +36,7 @@
             <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, 105000)" />
           </td>
         </tr>
-        <tr>
+        <tr class="product-by-sport">
           <td colspan="6">
             <div style="display:block;">
               <table  class="tblDesc" >
