@@ -93,6 +93,10 @@ $height-td: 28px;
         width: 25%;
     }
 
+    .more-info-detail {
+        text-align: right !important;
+    }
+
     &.tblRpt-bordered > tbody > tr > td {
         border: 1px solid #ca9d48 !important;
         height: 25px;

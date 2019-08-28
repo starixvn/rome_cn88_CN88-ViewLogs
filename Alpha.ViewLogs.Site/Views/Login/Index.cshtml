@@ -44,9 +44,16 @@
                     <tr class="RptHeader">
                         <th>@Resources.Action</th>
                         <th>@Resources.Details</th>
-                        <th>@Resources.Domain</th>
-                        <th>@Resources.Browser</th>
-                        <th>@Resources.IP/@Resources.Country</th>
+                        @if (!Model.IsDevice)
+                        {
+                            <th>@Resources.Domain</th>
+                            <th>@Resources.Browser</th>
+                            <th>@Resources.IP/@Resources.Country</th>
+                        }
+                        else
+                        {
+                            <th>&nbsp;</th>
+                        }
                     </tr>
 
                 </thead>
@@ -64,14 +71,34 @@
                                     <br />
                                     <span class="logid">#@logItem.LogId</span>
                                 </td>
-                                <td>@logItem.Details</td>
-                                <td>@logItem.Domain</td>
-                                <td>@logItem.Browser</td>
-                                <td align="center">
-                                    @Html.Raw(logItem.IP)
-                                    <br />
-                                    @Html.Raw(logItem.Country)
+                                <td>
+                                    @logItem.Details
+                                    @if (Model.IsDevice)
+                                    {
+                                        <div id="show_login_info_@logItem.LogId">
+                                            click
+                                            <div class="hide more-info-detail">
+                                                <span>@logItem.Domain</span><br />
+                                                <span>@logItem.Browser</span><br />
+                                                <span align="center">
+                                                    @Html.Raw(logItem.IP)
+                                                    <br />
+                                                    @Html.Raw(logItem.Country)
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
                                 </td>
+                                @if (!Model.IsDevice)
+                                {
+                                    <td>@logItem.Domain</td>
+                                    <td>@logItem.Browser</td>
+                                    <td align="center">
+                                        @Html.Raw(logItem.IP)
+                                        <br />
+                                        @Html.Raw(logItem.Country)
+                                    </td>
+                                }
                             </tr>
                         }
                     }

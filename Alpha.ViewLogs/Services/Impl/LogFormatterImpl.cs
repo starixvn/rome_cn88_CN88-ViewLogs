@@ -425,6 +425,6 @@
 
         public string FormatSubAccName(string subAccName) => this.isHideSubAcc ? string.Empty : subAccName;
 
-        public bool IsMobile() => browserHelper.IsMobileOrTablet();
+        public bool ShowEmptyCell() => !browserHelper.IsMobile();
     }
 }

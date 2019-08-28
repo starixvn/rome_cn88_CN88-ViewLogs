@@ -67,6 +67,6 @@
 
         string FormatNickName(string nickname);
 
-        bool IsMobile();
+        bool ShowEmptyCell();
     }
 }

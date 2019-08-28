@@ -3,7 +3,7 @@
   <xsl:param name="IsInternal" select="0"></xsl:param>
   <xsl:output method="html" indent="no" />
   <xsl:key name="product-by-sport" match="c" use="@sport" />
-  <xsl:variable name="is-mobile" select="xslLogFormat:IsMobile()" />
+  <xsl:variable name="is-show-empty-cell" select="xslLogFormat:ShowEmptyCell()" />
 
   <xsl:template match="r">
     <table class="tblDesc">
@@ -25,7 +25,7 @@
         <td  class="colW2">
           <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
         </td>
-        <xsl:if test="is-mobile ='true'">
+        <xsl:if test="$is-show-empty-cell">
           <td class="colW1"></td>
           <td class="colW2"></td>
         </xsl:if>
@@ -53,7 +53,7 @@
                     <td class="colW2">
                       <xsl:value-of select="@comm" />
                     </td>
-                    <xsl:if test="is-mobile ='true'">
+                    <xsl:if test="$is-show-empty-cell">
                       <td class="colW1"></td>
                       <td  class="colW2"></td>
                       <td class="colW1"></td>

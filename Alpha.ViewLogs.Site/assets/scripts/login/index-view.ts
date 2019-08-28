@@ -54,6 +54,11 @@ var loginView = {
 
         loginView.initMonthPicker(viewModel);
 
+        $('div[id^="show_login_info_"]').click(function () {
+            let firstDiv = $(this).find("div").first();
+            firstDiv.hasClass("hide") ? firstDiv.removeClass("hide") : firstDiv.addClass("hide");
+        });
+
         loginView.elelments.btnSubmit.click(function () {
             loginView.pageNumber = 0;
             loginView.pageSize = 0;
