@@ -427,6 +427,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165005.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165006.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165007.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\update_status.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165008.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_692.xslt" />
