@@ -5,7 +5,7 @@
   <xsl:key name="product-by-sport" match="c" use="@sport" />
   <xsl:variable name="is-show-empty-cell" select="xslLogFormat:ShowEmptyCell()" />
 
-  <xsl:template match="r">
+  <xsl:template match="r"> 
     <table class="tblDesc">
       <tr class="action-name">
         <td colspan="6">
