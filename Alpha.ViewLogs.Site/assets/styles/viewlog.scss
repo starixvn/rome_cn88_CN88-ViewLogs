@@ -132,6 +132,10 @@ $height-td: 28px;
         border-bottom: none !important;
     }
 
+    tbody td:only-child {
+        width: 100%;
+    }
+
     td.colW1, td.colTitle {
         background-color: #f3f3f3 !important;
         text-align: left;
