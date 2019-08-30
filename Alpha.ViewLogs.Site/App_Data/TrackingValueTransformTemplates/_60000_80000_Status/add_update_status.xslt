@@ -1,27 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
+  <xsl:import href="../helper.xslt" />
   <xsl:template name="addOrUpdateStatus">
     <table class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('AccountStatus')" />
-        </td>
-        <td  class="colW2">
-          <xsl:value-of select="@status" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatSubAccName(@subacc)" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-      </tr>
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'AccountStatus'" />
+        <xsl:with-param name="firstValue" select="@status" />
+
+        <xsl:with-param name="secondKey" select="'subaccname'" />
+        <xsl:with-param name="secondValue" select="xslLogFormat:FormatSubAccName(@subacc)" />
+
+        <xsl:with-param name="thirdKey" select="'IP'" />
+        <xsl:with-param name="thirdValue" select="xslLogFormat:FormatIP(@ip)" />
+      </xsl:call-template>
     </table>
   </xsl:template>
 </xsl:stylesheet>

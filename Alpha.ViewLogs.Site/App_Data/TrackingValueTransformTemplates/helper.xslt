@@ -2,6 +2,27 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
   <xsl:variable name="isShowEmptyRow" select="xslLogFormat:ShowEmptyCell()" />
 
+  <xsl:template name="renderIP">
+    <table class="tblDesc">
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'SubAccount'" />
+        <xsl:with-param name="firstValue" select="@subaccount" />
+      </xsl:call-template>
+    </table>
+  </xsl:template>
+  
+  <xsl:template name="renderSubaccAndIP">
+    <table class="tblDesc">
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'SubAccount'" />
+        <xsl:with-param name="firstValue" select="@subaccount" />
+
+        <xsl:with-param name="secondKey" select="'IP'" />
+        <xsl:with-param name="secondValue" select="xslLogFormat:FormatIP(@ip)" />
+      </xsl:call-template>
+    </table>
+  </xsl:template>
+  
   <xsl:template name="renderRow">
     <xsl:param name="firstKey"/>
     <xsl:param name="firstValue"/>
