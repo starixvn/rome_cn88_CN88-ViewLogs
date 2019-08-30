@@ -43,5 +43,20 @@
       </td>
     </xsl:if>
   </xsl:template>
+
+  <xsl:template name="renderGeneralInformationRows">
+    <tr class="action-name">
+      <td colspan="6">
+        <xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" />
+      </td>
+    </tr>
+    <xsl:call-template name="renderRow">
+      <xsl:with-param name="firstKey" select="'subaccname'" />
+      <xsl:with-param name="firstValue" select="@subacc" />
+
+      <xsl:with-param name="secondKey" select="'IP'" />
+      <xsl:with-param name="secondValue" select="@ip" />
+    </xsl:call-template>
+  </xsl:template>
   
 </xsl:stylesheet>

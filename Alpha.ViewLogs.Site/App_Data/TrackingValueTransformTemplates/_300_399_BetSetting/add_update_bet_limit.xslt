@@ -6,19 +6,7 @@
   <xsl:template name="addOrUpdateBetLimit">
     <xsl:param name="actionId"/>
     <table class="tblDesc">
-      <tr class="action-name">
-        <td colspan="6">
-          <xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" />
-        </td>
-      </tr>
-      <xsl:call-template name="renderRow">
-        <xsl:with-param name="firstKey" select="'subaccname'" />
-        <xsl:with-param name="firstValue" select="@subacc" />
-
-        <xsl:with-param name="secondKey" select="'IP'" />
-        <xsl:with-param name="secondValue" select="@ip" />
-      </xsl:call-template>
-      
+      <xsl:call-template name="renderGeneralInformationRows"/>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
         <tr class="action-name" onclick="slideToggle(this);">
           <td colspan="6">
