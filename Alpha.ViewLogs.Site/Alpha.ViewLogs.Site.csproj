@@ -372,6 +372,7 @@
     <Content Include="App_Data\SPNames\UAT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\helper.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_135000.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -388,6 +389,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_139998.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\add_bet_limit.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_149999.xslt">
@@ -445,7 +449,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160005.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160006.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160003.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160003.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160002.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160001.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_604.xslt" />

@@ -11,30 +11,30 @@
 
     <xsl:param name="thirdKey" select="''"/>
     <xsl:param name="thirdValue"/>
-
+    
     <tr>
-      <xsl:call-template name="pairKeyValueCells">
+      <xsl:call-template name="renderPairKeyValueCells">
         <xsl:with-param name="key" select="$firstKey" />
         <xsl:with-param name="value" select="$firstValue" />
       </xsl:call-template>
 
-      <xsl:call-template name="pairKeyValueCells">
+      <xsl:call-template name="renderPairKeyValueCells">
         <xsl:with-param name="key" select="$secondKey" />
         <xsl:with-param name="value" select="$secondValue" />
       </xsl:call-template>
 
-      <xsl:call-template name="pairKeyValueCells">
+      <xsl:call-template name="renderPairKeyValueCells">
         <xsl:with-param name="key" select="$thirdKey" />
         <xsl:with-param name="value" select="$thirdValue" />
       </xsl:call-template>
     </tr>
   </xsl:template>
 
-  <xsl:template name="pairKeyValueCells">
+  <xsl:template name="renderPairKeyValueCells">
     <xsl:param name="key"/>
     <xsl:param name="value"/>
     
-    <xsl:if test="$key != ''">
+    <xsl:if test="$isShowEmptyRow or $key != ''">
       <td class="colW1">
         <xsl:value-of select="xslLogFormat:GetLogResource($key)" />
       </td>
