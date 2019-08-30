@@ -16,7 +16,7 @@
         <tr>
           <td colspan="6">
             <div style="display:block;">
-              <table  class="tblDesc" >
+              <table class="tblDesc" >
                 <xsl:for-each select="key('product-by-sport', @sport)">
                   <tr class="headerSportTypeDetail">
                     <td colspan="6">
