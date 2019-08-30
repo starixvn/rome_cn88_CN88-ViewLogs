@@ -8,21 +8,15 @@
     <table class="tblDesc">
       <xsl:call-template name="renderGeneralInformationRows"/>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
-        <tr class="action-name" onclick="slideToggle(this);">
-          <td colspan="6">
-            <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, $actionId)" />
-          </td>
-        </tr>
+        <xsl:call-template name="renderSportNameRow">
+          <xsl:with-param name="actionId" select="$actionId" />
+        </xsl:call-template>
         <tr>
           <td colspan="6">
             <div style="display:block;">
               <table class="tblDesc" >
                 <xsl:for-each select="key('product-by-sport', @sport)">
-                  <tr class="headerSportTypeDetail">
-                    <td colspan="6">
-                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
-                    </td>
-                  </tr>
+                  <xsl:call-template name="renderBettypeRow"/>
                   <xsl:call-template name="renderRow">
                     <xsl:with-param name="firstKey" select="'MaxBet'" />
                     <xsl:with-param name="firstValue" select="xslLogFormat:FormatDecimal(@max, 'N0')" />

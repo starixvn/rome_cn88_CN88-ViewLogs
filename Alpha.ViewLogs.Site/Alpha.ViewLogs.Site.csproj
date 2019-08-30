@@ -382,6 +382,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_125000.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\add_update_commission.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_139997.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -391,7 +394,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_139998.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\add_bet_limit.xslt">
+    <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\add_update_bet_limit.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_149999.xslt">
@@ -410,6 +413,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_149997.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\add_update_possess.xslt">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_119999.xslt">
@@ -432,8 +438,11 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165006.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165007.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\update_status.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165008.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\update_general_information.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\add_general_information.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_692.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_691.xslt" />

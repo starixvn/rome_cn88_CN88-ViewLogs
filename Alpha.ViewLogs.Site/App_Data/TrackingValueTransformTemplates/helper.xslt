@@ -58,5 +58,21 @@
       <xsl:with-param name="secondValue" select="@ip" />
     </xsl:call-template>
   </xsl:template>
-  
+
+  <xsl:template name="renderSportNameRow">
+    <xsl:param name="actionId" select="'0'"/>
+    <tr class="action-name" onclick="slideToggle(this);">
+      <td colspan="6">
+        <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, $actionId)" />
+      </td>
+    </tr>
+  </xsl:template>
+
+  <xsl:template name="renderBettypeRow">
+    <tr class="headerSportTypeDetail">
+      <td colspan="6">
+        <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
+      </td>
+    </tr>
+  </xsl:template>
 </xsl:stylesheet>

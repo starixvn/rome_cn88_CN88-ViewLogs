@@ -9,11 +9,9 @@
     <table class="tblDesc">
       <xsl:call-template name="renderGeneralInformationRows"/>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
-        <tr class="action-name" onclick="slideToggle(this);">
-          <td colspan="6">
-            <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, $actionId)" />
-          </td>
-        </tr>
+        <xsl:call-template name="renderSportNameRow">
+          <xsl:with-param name="actionId" select="$actionId" />
+        </xsl:call-template>
         <tr class="product-by-sport">
           <td colspan="6">
             <div style="display:block;">

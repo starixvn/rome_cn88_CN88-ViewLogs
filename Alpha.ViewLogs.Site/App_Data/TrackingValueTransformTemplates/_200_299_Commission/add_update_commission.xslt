@@ -7,21 +7,13 @@
     <table class="tblDesc">
       <xsl:call-template name="renderGeneralInformationRows"/>
       <xsl:for-each select="c[generate-id() = generate-id(key('product-by-sport', @sport)[1])]">
-        <tr class="action-name" onclick="slideToggle(this);">
-          <td colspan="6">
-            <xsl:value-of select="xslLogFormat:GetCN88SportName(@sport, 0)" />
-          </td>
-        </tr>
+        <xsl:call-template name="renderSportNameRow"/>
         <tr class="product-by-sport">
           <td colspan="6">
             <div style="display:block;">
               <table  class="tblDesc" >
                 <xsl:for-each select="key('product-by-sport', @sport)">
-                  <tr class="headerSportTypeDetail">
-                    <td colspan="6">
-                      <xsl:value-of select="xslLogFormat:GetCN88BettypeName(@sport, @bt, @inplay)" />
-                    </td>
-                  </tr>
+                  <xsl:call-template name="renderBettypeRow"/>
                   <xsl:choose>
                     <xsl:when test="@comm">
                       <xsl:call-template name="renderRow">
