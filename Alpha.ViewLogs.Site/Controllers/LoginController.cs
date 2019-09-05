@@ -1,7 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
-    using Helpers;
     using MediatR;
     using Models.Enumerations;
     using Requests.Login;
@@ -11,10 +10,8 @@
     {
         private readonly IMediator mediator;
 
-        public LoginController(
-            IUserSession userSession,
-            IMediator mediator,
-            MicroSites microSites) : base(userSession, microSites)
+        public LoginController(IUserSession userSession, IMediator mediator)
+            : base(userSession)
         {
             this.mediator = mediator;
         }

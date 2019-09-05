@@ -3,28 +3,26 @@
     using System.Linq;
     using System.Text;
     using Params;
-    using Site.Helpers;
     using ViewModels;
 
     public class LogViewModelForTesting : LogViewModel
     {
-        public LogViewModelForTesting(LogParam logParam, int totalRecords, MicroSites microSites) :
-            base(logParam, totalRecords, null, microSites)
+        public LogViewModelForTesting(LogParam logParam, int totalRecords) :
+            base(logParam, totalRecords, null)
         {
         }
 
         public static LogViewModelForTesting FromLogViewModel(
             LogViewModel logViewModel,
             LogParam logParam,
-            int totalRecords,
-            MicroSites microSites)
+            int totalRecords)
         {
             if (logViewModel == null)
             {
                 return null;
             }
 
-            var logViewModelForTesting = new LogViewModelForTesting(logParam, totalRecords, microSites);
+            var logViewModelForTesting = new LogViewModelForTesting(logParam, totalRecords);
             logViewModelForTesting.HasViewLogPermission = logViewModel.HasViewLogPermission;
             logViewModelForTesting.IsSubAccount = logViewModel.IsSubAccount;
             logViewModelForTesting.RoleId = logViewModel.RoleId;

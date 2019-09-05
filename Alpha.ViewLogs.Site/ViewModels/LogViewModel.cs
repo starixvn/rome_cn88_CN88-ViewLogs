@@ -3,24 +3,19 @@
     using System.Collections.Generic;
     using System.Linq;
     using CN88.Web.Helpers;
-    using Helpers;
     using Models.Enumerations;
     using Params;
     using Requests;
 
     public class LogViewModel
     {
-        private readonly MicroSites microSites;
         private readonly BrowserHelper browserHelper;
 
         public LogViewModel(
             LogParam logParam,
             int totalRecords,
-            BrowserHelper browserHelper,
-            MicroSites microSites = null)
+            BrowserHelper browserHelper)
         {
-            this.microSites = microSites ?? new MicroSitesImpl();
-
             if (logParam == null)
             {
                 return;
@@ -79,21 +74,9 @@
 
         public string ShowOldValuesCookieName { get; set; }
 
-        public string UsernameAutoSuggestionPath
-        {
-            get
-            {
-                return microSites.SiteMainPath("~/Suggestion/Index");
-            }
-        }
+        public string UsernameAutoSuggestionPath => MicroSites.MainUrl("~/Suggestion/Index");
 
-        public string ViewIPInfoPath
-        {
-            get
-            {
-                return microSites.OldMainPath("~/_IPInfo/IpInfo.aspx");
-            }
-        }
+        public string ViewIPInfoPath => MicroSites.MainUrl("~/_IPInfo/IpInfo.aspx");
 
         public string ActionTypeId { get; set; }
 
