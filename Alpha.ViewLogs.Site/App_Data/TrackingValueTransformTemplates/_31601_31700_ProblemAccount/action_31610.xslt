@@ -16,7 +16,7 @@
           <xsl:value-of select="xslLogFormat:GetLogResource('SubAccName')" />
         </td>
         <td class="colW2">
-          <xsl:value-of select="@alldownline" />
+          <xsl:value-of select="@subacc" />
         </td>
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
