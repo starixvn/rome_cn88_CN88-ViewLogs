@@ -1,30 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
-  <xsl:param name="IsInternal" select="0"></xsl:param>
+  <xsl:import href="../helper.xslt" />
   <xsl:output method="html" indent="no" />
 
   <xsl:template match="r">
     <table class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('subaccount')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@subaccount" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@language" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-      </tr>
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'subaccount'" />
+        <xsl:with-param name="firstValue" select="@subaccount" />
+
+        <xsl:with-param name="secondKey" select="'language'" />
+        <xsl:with-param name="secondValue" select="@language" />
+
+        <xsl:with-param name="thirdKey" select="'ip'" />
+        <xsl:with-param name="thirdValue" select="@ip" />
+      </xsl:call-template>
     </table>
   </xsl:template>
 </xsl:stylesheet>

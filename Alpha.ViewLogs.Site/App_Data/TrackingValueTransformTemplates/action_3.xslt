@@ -30,7 +30,7 @@
         <td class="colW1">
           <xsl:value-of select="xslLogFormat:GetLogResource('Postal')" />
         </td>
-        <td class="colW2">
+        <td class="colW2">u
           <xsl:value-of select="@postal" />
         </td>
         <td class="colW1">

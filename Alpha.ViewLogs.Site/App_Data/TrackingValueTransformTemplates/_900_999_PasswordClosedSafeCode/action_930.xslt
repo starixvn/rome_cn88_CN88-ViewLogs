@@ -1,49 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
-  <xsl:param name="IsInternal" select="0"></xsl:param>
+  <xsl:import href="../helper.xslt" />
   <xsl:output method="html" indent="no" />
-  <xsl:variable name="is-show-empty-cell" select="xslLogFormat:ShowEmptyCell()" />
 
   <xsl:template match="age_otp_customerstatusupdafterverifiedotp">
     <table class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('SubAccount')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@subaccount" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('checkedotp')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@checkedotp"/>
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('FunctionName')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@functionname" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('language')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@language)" />
-        </td>
-        <xsl:if test="$is-show-empty-cell">
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-        </xsl:if>
-      </tr>
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'SubAccount'" />
+        <xsl:with-param name="firstValue" select="@subaccount" />
+
+        <xsl:with-param name="secondKey" select="'checkedotp'" />
+        <xsl:with-param name="secondValue" select="@checkedotp" />
+
+        <xsl:with-param name="thirdKey" select="'FunctionName'" />
+        <xsl:with-param name="thirdValue" select="@functionname" />
+      </xsl:call-template>
+
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'ip'" />
+        <xsl:with-param name="firstValue" select="@ip" />
+
+        <xsl:with-param name="secondKey" select="'language'" />
+        <xsl:with-param name="secondValue" select="@language" />
+      </xsl:call-template>
     </table>
   </xsl:template>
 </xsl:stylesheet>

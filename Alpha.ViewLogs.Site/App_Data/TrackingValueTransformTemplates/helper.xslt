@@ -5,8 +5,8 @@
   <xsl:template name="renderIP">
     <table class="tblDesc">
       <xsl:call-template name="renderRow">
-        <xsl:with-param name="firstKey" select="'SubAccount'" />
-        <xsl:with-param name="firstValue" select="@subaccount" />
+        <xsl:with-param name="firstKey" select="'ip'" />
+        <xsl:with-param name="firstValue" select="@ip" />
       </xsl:call-template>
     </table>
   </xsl:template>

@@ -1,45 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
-  <xsl:param name="IsInternal" select="0"></xsl:param>
+  <xsl:import href="../helper.xslt" />
   <xsl:output method="html" indent="no" />
-  <xsl:variable name="is-show-empty-cell" select="boolean(xslLogFormat:ShowEmptyCell())" />
 
   <xsl:template match="cs_customer_securitycode_upd">
     <table class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IsForcedChangeSecurityCode')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@isforcedchangesecuritycode" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('ip')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('errCode')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@errcode" />
-        </td>
-      </tr>
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('errMsg')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@errmsg" />
-        </td>
-        <xsl:if test="$is-show-empty-cell">
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-        </xsl:if>
-      </tr>
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'IsForcedChangeSecurityCode'" />
+        <xsl:with-param name="firstValue" select="@isforcedchangesecuritycode" />
+
+        <xsl:with-param name="secondKey" select="'ip'" />
+        <xsl:with-param name="secondValue" select="@ip" />
+
+        <xsl:with-param name="thirdKey" select="'errCode'" />
+        <xsl:with-param name="thirdValue" select="@errcode" />
+      </xsl:call-template>
+
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'errMsg'" />
+        <xsl:with-param name="firstValue" select="@errMsg" />
+      </xsl:call-template>
     </table>
   </xsl:template>
 </xsl:stylesheet>

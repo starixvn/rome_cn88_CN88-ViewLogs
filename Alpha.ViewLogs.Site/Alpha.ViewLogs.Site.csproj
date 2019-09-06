@@ -437,7 +437,7 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165005.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165006.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165007.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\update_status.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\add_update_status.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165009.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -463,7 +463,9 @@
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160002.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160001.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_604.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_604.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_605.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_606.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_607.xslt" />
