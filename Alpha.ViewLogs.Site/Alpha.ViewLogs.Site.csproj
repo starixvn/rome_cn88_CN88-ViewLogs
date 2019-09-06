@@ -516,7 +516,6 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_935.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_924.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_930.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_931.xslt" />
     <Content Include="assets\bundles\credit.js" />
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
