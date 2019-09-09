@@ -35,7 +35,7 @@
             <xsl:with-param name="firstValue" select="@subacc" />
 
             <xsl:with-param name="secondKey" select="'IP'" />
-            <xsl:with-param name="secondValue" select="@ip" />
+            <xsl:with-param name="secondValue" select="xslLogFormat:FormatIP(@ip)" />
           </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>

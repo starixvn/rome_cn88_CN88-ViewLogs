@@ -12,7 +12,7 @@
         <xsl:with-param name="secondValue" select="@subacc" />
 
         <xsl:with-param name="thirdKey" select="'IP'" />
-        <xsl:with-param name="thirdValue" select="@ip" />
+        <xsl:with-param name="thirdValue" select="xslLogFormat:FormatIP(@ip)" />
       </xsl:call-template>
     </table>
   </xsl:template>

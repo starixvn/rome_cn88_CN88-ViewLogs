@@ -1,29 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xslLogFormat="urn:LogFormat">
-  <xsl:param name="IsInternal" select="0"></xsl:param>
+  <xsl:import href="../helper.xslt" />
   <xsl:output method="html" indent="no" />
-  <xsl:variable name="is-show-empty-cell" select="xslLogFormat:ShowEmptyCell()" />
 
   <xsl:template match="r">
     <table class="tblDesc">
-      <tr>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('Username')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="@subacc" />
-        </td>
-        <td class="colW1">
-          <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
-        </td>
-        <td class="colW2">
-          <xsl:value-of select="xslLogFormat:FormatIP(@loginip)" />
-        </td>
-        <xsl:if test="$is-show-empty-cell">
-          <td class="colW1"></td>
-          <td class="colW2"></td>
-        </xsl:if>
-      </tr>
+      <xsl:call-template name="renderRow">
+        <xsl:with-param name="firstKey" select="'Username'" />
+        <xsl:with-param name="firstValue" select="@subacc" />
+
+        <xsl:with-param name="secondKey" select="'IP'" />
+        <xsl:with-param name="secondValue" select="xslLogFormat:FormatIP(@ip)" />
+      </xsl:call-template>
     </table>
   </xsl:template>
 </xsl:stylesheet>
