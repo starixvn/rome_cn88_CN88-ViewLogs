@@ -370,8 +370,6 @@
     <Content Include="App_Data\SPNames\UAT\DBCust.IPDB.xml" />
     <Content Include="App_Data\SPNames\UAT\DBLOG.bodb_CustomerLog.xml" />
     <Content Include="App_Data\SPNames\UAT\DBONUSER.ON_USER.BODBDownlineNet.xml" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_1.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\action_3.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\helper.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_200_299_Commission\action_135000.xslt">
       <SubType>Designer</SubType>
@@ -463,59 +461,22 @@
     </Content>
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160002.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_160001.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_604.xslt">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_605.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_606.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_607.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_608.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_609.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_686.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_610.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_611.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_685.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_612.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_613.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_614.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_615.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_616.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_617.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_687.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_622.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_627.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_647.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_60000_80000_Status\action_165011.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_600_699_CustomerInfo\action_690.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_939.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_940.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_938.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_937.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_900.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_901.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_902.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_903.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_904.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_905.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_906.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_907.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_908.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_910.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_911.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_914.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_916.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_917.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_918.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_919.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_920.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_921.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_922.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_936.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_935.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_924.xslt" />
-    <Content Include="App_Data\TrackingValueTransformTemplates\_900_999_PasswordClosedSafeCode\action_930.xslt" />
     <Content Include="assets\bundles\credit.js" />
     <Content Include="assets\bundles\credit.min.js">
       <DependentUpon>credit.js</DependentUpon>
