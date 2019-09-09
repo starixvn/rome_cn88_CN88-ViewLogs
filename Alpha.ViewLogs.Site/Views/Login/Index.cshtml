@@ -44,62 +44,36 @@
                     <tr class="RptHeader">
                         <th>@Resources.Action</th>
                         <th>@Resources.Details</th>
-                        @if (!Model.IsDevice)
-                        {
-                            <th>@Resources.Domain</th>
-                            <th>@Resources.Browser</th>
-                            <th>@Resources.IP/@Resources.Country</th>
-                        }
-                        else
-                        {
-                            <th>&nbsp;</th>
-                        }
+                        <th data-stack-column="true">@Resources.Domain</th>
+                        <th data-stack-column="true">@Resources.Browser</th>
+                        <th data-stack-column="true">@Resources.IP/@Resources.Country</th>
                     </tr>
-
                 </thead>
                 <tbody>
                     @if (Model.HasLogs)
                     {
                         foreach (LoginLogItemViewModel logItem in Model.LogItems)
                         {
-                            <tr>
-                                <td class="col-action">
-                                    <span class="action-name">@Html.Raw(logItem.ActionName)</span>
-                                    <br />
-                                    <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
-                                    <span class="log-date">@Html.Raw(logItem.LogDate)</span>
-                                    <br />
-                                    <span class="logid">#@logItem.LogId</span>
-                                </td>
-                                <td>
-                                    @logItem.Details
-                                    @if (Model.IsDevice)
-                                    {
-                                        <div id="show_login_info_@logItem.LogId">
-                                            click
-                                            <div class="hide more-info-detail">
-                                                <span>@logItem.Domain</span><br />
-                                                <span>@logItem.Browser</span><br />
-                                                <span align="center">
-                                                    @Html.Raw(logItem.IP)
-                                                    <br />
-                                                    @Html.Raw(logItem.Country)
-                                                </span>
-                                            </div>
-                                        </div>
-                                    }
-                                </td>
-                                @if (!Model.IsDevice)
-                                {
-                                    <td>@logItem.Domain</td>
-                                    <td>@logItem.Browser</td>
-                                    <td align="center">
-                                        @Html.Raw(logItem.IP)
-                                        <br />
-                                        @Html.Raw(logItem.Country)
-                                    </td>
-                                }
-                            </tr>
+                    <tr>
+                        <td class="col-action">
+                            <span class="action-name">@Html.Raw(logItem.ActionName)</span>
+                            <br />
+                            <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
+                            <span class="log-date">@Html.Raw(logItem.LogDate)</span>
+                            <br />
+                            <span class="logid">#@logItem.LogId</span>
+                        </td>
+                        <td>
+                            @logItem.Details
+                        </td>
+                        <td>@logItem.Domain</td>
+                        <td>@logItem.Browser</td>
+                        <td align="center">
+                            @Html.Raw(logItem.IP)
+                            <br />
+                            @Html.Raw(logItem.Country)
+                        </td>
+                    </tr>
                         }
                     }
                     else
@@ -130,6 +104,7 @@
 @Html.Hidden("Page", Resources.Page)
 @Html.Hidden("of", Resources.of)
 @Html.Hidden("Pager_DisplayItems", Resources.Pager_DisplayItems)
+@Html.Hidden("IsDevice", Model.IsDevice)
 
 @section Scripts
 {

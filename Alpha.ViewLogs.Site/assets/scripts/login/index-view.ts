@@ -82,14 +82,6 @@ var loginView = {
             }
         });
 
-        var queryUsernameURL = alphaViewLogs.urls.queryUsername + "?" +
-            $.param({
-                issub: 0,
-                excludemember: false
-            });
-
-        //initAutoComplete($("#txt-username")[0], queryUsernameURL);
-
         loginView.renderPager({
             totalRecords: viewModel.totalRecords,
             pageSize: viewModel.pageSize,
@@ -106,6 +98,10 @@ var loginView = {
             }
 
             $.cookie(loginView.isSubmitCookieName, "0", { path: "/" });
+        }
+
+        if ($('#IsDevice').val() == "True") {
+            $("#DataLog").stacktable();
         }
     },
     initMonthPicker: function (viewModel: any) {
