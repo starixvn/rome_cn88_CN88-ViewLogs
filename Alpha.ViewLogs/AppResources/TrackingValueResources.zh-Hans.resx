@@ -4011,4 +4011,16 @@
   <data name="NewManagedAccount" xml:space="preserve">
     <value>新管理账户</value>
   </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>是否影响所有下线</value>
+  </data>
+  <data name="ReviewStatus" xml:space="preserve">
+    <value>审查状态</value>
+  </data>
+  <data name="Reviewed" xml:space="preserve">
+    <value>已审查</value>
+  </data>
+  <data name="NotReviewed" xml:space="preserve">
+    <value>未审查</value>
+  </data>
 </root>

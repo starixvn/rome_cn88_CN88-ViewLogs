@@ -108,6 +108,13 @@
                     ChineseTraditionalName = GetFilterLogAction("GeneralInfo", "zh-TW"),
                     NewChineseSimplifiedName = GetFilterLogAction("GeneralInfo", "zh-Hans"),
                     EnglishName = GetFilterLogAction("GeneralInfo", "en-US")
+                },
+                new LogActionType
+                {
+                    Id=6,
+                    ChineseTraditionalName = GetFilterLogAction("ProblemAccount", "zh-TW"),
+                    NewChineseSimplifiedName = GetFilterLogAction("ProblemAccount", "zh-Hans"),
+                    EnglishName = GetFilterLogAction("ProblemAccount", "en-US")
                 }
             };
 
@@ -207,10 +214,10 @@
                     || new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)").IsMatch(log.TrackingValue));
 
         private static string SubAccNameFromLog(Log log)
-        { 
+        {
             var subAccName = new Regex($"(?:SubAccName=)(?<paramValue>[^&|^\\s]+)")
                 .Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
-            
+
             subAccName = !string.IsNullOrWhiteSpace(subAccName) ? subAccName :
                 new Regex($"(?:SubAccount=)(?<paramValue>[^&|^\\s]+)")
                     .Match(log.TrackingValue ?? string.Empty).Groups[1].Value;
