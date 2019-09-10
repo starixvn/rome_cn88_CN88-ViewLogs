@@ -573,6 +573,10 @@ body.phone {
             border-bottom: 1px solid #D2D2D2 !important;
         }
 
+        tr:last-child td:nth-last-child(-n+2) {
+            border-bottom: none !important;
+        }
+
         .colW2 {
             flex-direction: column;
             justify-content: center;
