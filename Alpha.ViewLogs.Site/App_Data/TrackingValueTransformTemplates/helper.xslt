@@ -71,13 +71,24 @@
         <xsl:value-of select="xslLogFormat:GetLogResource('GeneralInformation')" />
       </td>
     </tr>
-    <xsl:call-template name="renderRow">
-      <xsl:with-param name="firstKey" select="'subaccname'" />
-      <xsl:with-param name="firstValue" select="@subacc" />
-
-      <xsl:with-param name="secondKey" select="'IP'" />
-      <xsl:with-param name="secondValue" select="@ip" />
-    </xsl:call-template>
+    <tr class="general-information">
+      <td class="colW1">
+        <xsl:value-of select="xslLogFormat:GetLogResource('subaccname')" />
+      </td>
+      <td class="colW2">
+        <xsl:value-of select="@subacc" />
+      </td>
+      <td class="colW1">
+        <xsl:value-of select="xslLogFormat:GetLogResource('IP')" />
+      </td>
+      <td class="colW2">
+        <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
+      </td>
+      <xsl:if test="isShowEmptyRow ='true'">
+        <td class="colW1"></td>
+        <td class="colW2"></td>
+      </xsl:if>
+    </tr>
   </xsl:template>
 
   <xsl:template name="renderSportNameRow">

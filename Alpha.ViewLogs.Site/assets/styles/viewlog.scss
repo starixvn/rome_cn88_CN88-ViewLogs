@@ -147,6 +147,10 @@ $height-td: 28px;
         text-transform: capitalize;
         width: 16.6667%;
         text-align: center;
+
+        > div {
+            word-break: break-word;
+        }
     }
 
     td[colspan="6"], td[colspan="8"] {
@@ -499,43 +503,7 @@ body.phone {
             vertical-align: top;
         }
     }
-    /*.tblRpt .tblDesc td.colW2,
-    .tblRpt .tblDesc td.colValue,
-    .tbl-sub-details td.colW2,
-    .tbl-sub-details td.colValue,
-    .tblRpt .tblDesc-ex td.colW2,
-    .tblRpt .tblDesc-ex td.colValue {
-        width: 120px;
-        word-break: break-all;
-    }
 
-    .tblRpt .tblDesc td.colW1,
-    .tblRpt .tblDesc td.colTitle,
-    .tbl-sub-details td.colW1,
-    .tbl-sub-details td.colTitle,
-    .tblRpt .tblDesc-ex td.colW1,
-    .tblRpt .tblDesc-ex td.colTitle {
-        width: 120px;
-    }
-
-    .tbl-style2 thead th, .tbl-style2 tbody td, .tbl-style2 tfoot td {
-        height: 30px;
-    }
-
-    #DataLog {
-        thead th {
-            border-bottom: 1px solid #ddd;
-        }
-        tbody tr td {
-            padding-top: 0;
-            padding-bottom: 0;
-
-            &.col-action {
-                padding-top: 8px;
-                padding-bottom: 8px;
-            }
-        }
-    }*/
     .tblDesc {
         tr {
             display: flex;
@@ -543,7 +511,7 @@ body.phone {
             align-items: center;
             width: 100%;
             height: auto;
-            min-height: 36px;
+            min-height: 20px;
         }
 
         .action-name td,
@@ -563,7 +531,7 @@ body.phone {
             float: left;
             align-items: center;
             border-bottom: 1px solid #D2D2D2;
-            min-height: 36px;
+            min-height: 38px;
         }
 
         tr:first-child td.colW1,
@@ -573,7 +541,7 @@ body.phone {
             border-bottom: 1px solid #D2D2D2 !important;
         }
 
-        tr:last-child td:nth-last-child(-n+2) {
+        tr:not(:only-child):last-child td:nth-last-child(-n+2) {
             border-bottom: none !important;
         }
 
@@ -581,6 +549,19 @@ body.phone {
             flex-direction: column;
             justify-content: center;
         }
+
+        .action-name ~ tr:first-of-type td:nth-child(-n+2) {
+            border-top: 1px solid #D2D2D2 !important;
+            height: auto !important;
+        }
+        /*.action-name ~ tr:first-of-type td:nth-child(-n+2) {
+            border-top: 1px solid #D2D2D2 !important;
+            height: auto !important;
+        }*/
+        .product-by-sport tr:first-of-type, .general-information td:nth-child(-n+2) {
+            border-top: 1px solid #D2D2D2 !important;
+        }
+
 
         tbody tr:first-child:nth-last-child(1) td {
             height: auto !important;
