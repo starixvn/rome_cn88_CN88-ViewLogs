@@ -6001,6 +6001,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is All Affected Downlines.
+        /// </summary>
+        public static string IsAllAffectedDownlines {
+            get {
+                return ResourceManager.GetString("IsAllAffectedDownlines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Super Auto Position Taking On Master.
         /// </summary>
         public static string isaPTonM {
@@ -8899,6 +8908,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Reviewed.
+        /// </summary>
+        public static string NotReviewed {
+            get {
+                return ResourceManager.GetString("NotReviewed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number Game.
         /// </summary>
         public static string NumberGame {
@@ -9237,6 +9255,24 @@ namespace Alpha.ViewLogs.AppResources {
         public static string returnErrCode {
             get {
                 return ResourceManager.GetString("returnErrCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reviewed.
+        /// </summary>
+        public static string Reviewed {
+            get {
+                return ResourceManager.GetString("Reviewed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Review Status.
+        /// </summary>
+        public static string ReviewStatus {
+            get {
+                return ResourceManager.GetString("ReviewStatus", resourceCulture);
             }
         }
         

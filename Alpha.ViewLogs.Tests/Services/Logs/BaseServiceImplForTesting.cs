@@ -3,12 +3,12 @@
     using System;
     using Fanex.Data.Repository;
     using Params;
+    using Sunplus.Agent.Model.Entities;
     using ViewLogs.Criteria;
     using ViewLogs.Criteria.Setting;
     using ViewLogs.DataAccesses;
     using ViewLogs.Services;
     using ViewLogs.Services.Impl;
-    using Sunplus.Agent.Model.Entities;
 
     public class BaseServiceForTesting : BaseService
     {
@@ -28,7 +28,7 @@
 
         internal override ICriteria CreateGetTotalLogsCriteria(LogParam logParam)
         {
-            return new GetTotalSettingOrStatusLogsCriteria(0, 0, DateTime.Now, DateTime.Now, false);
+            return new GetTotalSettingOrStatusLogsCriteria(0, 0, 0, DateTime.Now, DateTime.Now, false);
         }
     }
 }

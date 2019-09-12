@@ -7,12 +7,14 @@
     {
         public GetTotalSettingOrStatusLogsCriteria(
             int custId,
+            int loginUserId,
             int actionTypeId,
             DateTime fromDate,
             DateTime toDate,
             bool isInternal)
         {
             CustId = custId;
+            LoginUserId = loginUserId;
             ActionTypeId = actionTypeId;
             FromDate = fromDate;
             ToDate = toDate;
@@ -20,6 +22,8 @@
         }
 
         public int CustId { get; set; }
+
+        public int LoginUserId { get; }
 
         public int ActionTypeId { get; set; }
 

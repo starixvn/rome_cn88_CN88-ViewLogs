@@ -54,6 +54,7 @@
 
             return new GetTotalSettingOrStatusLogsCriteria(
                 logParam.CustId,
+                logParam.ActorId,
                 ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),

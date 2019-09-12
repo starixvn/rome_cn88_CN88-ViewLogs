@@ -354,4 +354,7 @@
   <data name="Type" xml:space="preserve">
     <value>类别</value>
   </data>
+  <data name="ProblemAccount" xml:space="preserve">
+    <value>问题账户</value>
+  </data>
 </root>

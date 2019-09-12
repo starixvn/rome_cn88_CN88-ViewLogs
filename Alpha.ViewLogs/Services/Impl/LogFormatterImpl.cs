@@ -420,5 +420,9 @@
                 nickname.Substring(5) : nickname;
 
         public string FormatSubAccName(string subAccName) => this.isHideSubAcc ? string.Empty : subAccName;
+
+        public string FormatProblemAccountReviewStatus(string value)
+            => value.Replace("0", TrackingValueResources.NotReviewed)
+                    .Replace("1", TrackingValueResources.Reviewed);
     }
 }

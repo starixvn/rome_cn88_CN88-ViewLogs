@@ -1,5 +1,6 @@
 ﻿namespace Alpha.ViewLogs.Services.Impl.Logs
 {
+    using System;
     using Criteria;
     using Criteria.Setting;
     using DataAccesses;
@@ -7,7 +8,6 @@
     using Helpers;
     using Params;
     using Sunplus.Agent.Model.Entities;
-    using System;
 
     public class SettingServiceImpl : BaseService, LogService
     {
@@ -52,6 +52,7 @@
 
             return new GetTotalSettingOrStatusLogsCriteria(
                 logParam.CustId,
+                logParam.ActorId,
                 ((SettingParam)logParam).ActionTypeId,
                 DateTimeHelper.GetBeginningOfDate(fromDate),
                 DateTimeHelper.GetEndingOfDate(logParam.ToDate),

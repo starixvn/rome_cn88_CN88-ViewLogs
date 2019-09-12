@@ -56,7 +56,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -83,7 +83,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -117,7 +117,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -146,7 +146,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -177,7 +177,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -207,7 +207,7 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(new PagingLogs<Log>());
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
@@ -257,19 +257,19 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
-            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null);
+            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords);
 
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[0], validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
             Assert.AreEqual(
                 expectedLogViewModelForTesting,
-                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
+                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords));
         }
 
         [TestCase("1/1/0001", "0001-01-01")] // MinDateTime-MinDateTime
@@ -315,19 +315,19 @@
 
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
 
-            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null, MicroSites);
-            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites);
+            var expectedLogViewModel = new LogViewModel(logParam, pagingLogs.TotalRecords, null);
+            var expectedLogViewModelForTesting = LogViewModelForTesting.FromLogViewModel(expectedLogViewModel, logParam, pagingLogs.TotalRecords);
             expectedLogViewModelForTesting.TotalRecords = 1;
             var validLogItemViewModels = ValidLogItemViewModels();
             expectedLogViewModelForTesting.LogItems = new List<LogItemViewModel>() { validLogItemViewModels[1] };
 
-            // Act 
+            // Act
             var actualLogViewModel = creditHandler.Handle(indexQuery);
 
             // Assert
             Assert.AreEqual(
                 expectedLogViewModelForTesting,
-                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords, MicroSites));
+                LogViewModelForTesting.FromLogViewModel(actualLogViewModel, logParam, pagingLogs.TotalRecords));
         }
 
         private List<LogItemViewModel> ValidLogItemViewModels()

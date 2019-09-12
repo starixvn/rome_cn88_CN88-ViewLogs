@@ -592,6 +592,15 @@ namespace Alpha.ViewLogs.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Problem Account.
+        /// </summary>
+        public static string ProblemAccount {
+            get {
+                return ResourceManager.GetString("ProblemAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reports.
         /// </summary>
         public static string Reports {

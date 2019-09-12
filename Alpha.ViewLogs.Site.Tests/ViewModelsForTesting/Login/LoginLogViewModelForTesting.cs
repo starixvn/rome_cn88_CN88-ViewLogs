@@ -2,13 +2,12 @@
 {
     using System.Linq;
     using Params;
-    using Site.Helpers;
     using ViewModels;
 
     public class LoginLogViewModelForTesting : LogViewModelForTesting
     {
-        public LoginLogViewModelForTesting(LogParam logParam, int totalRecords, MicroSites microSites) :
-            base(logParam, totalRecords, microSites)
+        public LoginLogViewModelForTesting(LogParam logParam, int totalRecords) :
+            base(logParam, totalRecords)
         {
         }
 

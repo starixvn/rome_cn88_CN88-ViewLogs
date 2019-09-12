@@ -50,8 +50,8 @@
     <CodeAnalysisRuleSet>Alpha.ViewLogs.Site.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Alpha.Auth, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Auth.3.0.2.1\lib\net461\Alpha.Auth.dll</HintPath>
+    <Reference Include="Alpha.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alpha.Logging.1.0.1\lib\net461\Alpha.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Alpha.SubAccount, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -62,16 +62,16 @@
       <HintPath>..\packages\Alpha.Utilities.IP.1.0.0.1\lib\net40\Alpha.Utilities.IP.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Alpha.Web, Version=1.0.1.8, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alpha.Web.1.0.1.8\lib\net461\Alpha.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="CN88.Web, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.1.5\lib\net461\CN88.Web.dll</HintPath>
+    <Reference Include="CN88.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CN88.Common.1.0.0\lib\net461\CN88.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CN88.Web, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CN88.Web.1.0.1.6\lib\net461\CN88.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
@@ -121,28 +121,28 @@
       <HintPath>..\packages\Fanex.Data.Repository.3.0.0\lib\net461\Fanex.Data.Repository.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.2.0.0\lib\net461\Fanex.Logging.dll</HintPath>
+    <Reference Include="Fanex.Logging, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.2.0.1\lib\net461\Fanex.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging.Extensions, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.Extensions.1.0.5\lib\net40\Fanex.Logging.Extensions.dll</HintPath>
+    <Reference Include="Fanex.Logging.Extensions, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.1.0.6\lib\net461\Fanex.Logging.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Logging.Extensions.Database, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.Extensions.Database.1.0.3\lib\net40\Fanex.Logging.Extensions.Database.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.5\lib\net40\Fanex.Logging.Extensions.Web.dll</HintPath>
+    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.8\lib\net461\Fanex.Logging.Extensions.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Logging.RabbitMQ, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.RabbitMQ.1.0.1\lib\net461\Fanex.Logging.RabbitMQ.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging.Sentry.RavenClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.Sentry.RavenClient.1.0.0\lib\net461\Fanex.Logging.Sentry.RavenClient.dll</HintPath>
+    <Reference Include="Fanex.Logging.Sentry.RavenClient, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Sentry.RavenClient.1.0.1\lib\net461\Fanex.Logging.Sentry.RavenClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Products, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
@@ -410,6 +410,9 @@
     <Content Include="App_Data\TrackingValueTransformTemplates\_300_399_BetSetting\action_149997.xslt">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31610.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31609.xslt" />
+    <Content Include="App_Data\TrackingValueTransformTemplates\_31601_31700_ProblemAccount\action_31608.xslt" />
     <Content Include="App_Data\TrackingValueTransformTemplates\_400_499_PositionTaking\action_119999.xslt">
       <SubType>Designer</SubType>
     </Content>
@@ -594,7 +597,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DependencyConfig.cs" />
-    <Compile Include="App_Start\LoggingManager.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Configurations\AppSettings.cs" />
     <Compile Include="Constants\SessionKey.cs" />
@@ -615,10 +617,8 @@
     <Compile Include="Handlers\SettingHandler.cs" />
     <Compile Include="Handlers\StatusHandler.cs" />
     <Compile Include="Helpers\AppPathHelper.cs" />
-    <Compile Include="Helpers\MicroSites.cs" />
     <Compile Include="Helpers\StaticResources\AssetScripts.cs" />
     <Compile Include="Helpers\StaticResources\AssetStyles.cs" />
-    <Compile Include="Helpers\MicroSitesImpl.cs" />
     <Compile Include="Helpers\StaticResources\ViewLogsScripts.cs" />
     <Compile Include="Helpers\StaticResources\ViewLogsStyles.cs" />
     <Compile Include="Helpers\TrackingValueFormatter.cs" />

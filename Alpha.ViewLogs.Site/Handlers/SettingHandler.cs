@@ -46,6 +46,7 @@
 
             var logsParam = new SettingParam
             {
+                ActorId = message.ActorId,
                 UplineId = message.UplineId,
                 SubAccId = message.SubAccId,
                 RoleId = message.RoleId,

@@ -3,19 +3,16 @@
     using System.Web.Mvc;
     using System.Web.SessionState;
     using CN88.Web.Controllers;
+    using CN88.Web.Helpers;
     using Configurations;
-    using Helpers;
     using Sunplus.Agent.Model.Entities;
 
     [SessionState(SessionStateBehavior.ReadOnly)]
     public abstract class ViewLogBaseController : CN88BaseController
     {
-        private readonly MicroSites microSites;
-
-        protected ViewLogBaseController(IUserSession userSession, MicroSites microSites)
+        protected ViewLogBaseController(IUserSession userSession)
         {
             UserSession = userSession;
-            this.microSites = microSites;
         }
 
         public IUserSession UserSession { get; set; }
@@ -28,7 +25,7 @@
 
             if (!pageAccess.ViewMemberInfo && !pageAccess.UpdateAccount)
             {
-                filterContext.Result = new RedirectResult(microSites.SiteMainPath(AppSettings.AccessDeniedPage));
+                filterContext.Result = new RedirectResult(MicroSites.MainUrl(AppSettings.AccessDeniedPage));
             }
         }
     }

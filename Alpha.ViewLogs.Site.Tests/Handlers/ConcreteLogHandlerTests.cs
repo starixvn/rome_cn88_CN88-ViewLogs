@@ -2,10 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
-    using Helpers;
     using NSubstitute;
     using Services;
-    using Site.Helpers;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
 
@@ -23,8 +21,6 @@
         protected IDateTime DateTimeWrapper { get; set; }
 
         protected IUserSession CurrentUserSession { get; set; }
-
-        protected MicroSites MicroSites { get; set; }
 
         protected Dictionary<int, bool> ActionIdVisibilities { get; set; }
 
@@ -44,10 +40,6 @@
             DateTimeWrapper.Now.Returns(toDate);
 
             CurrentUserSession = Substitute.For<IUserSession>();
-
-            MicroSites = Substitute.For<MicroSites>();
-            MicroSites.OldMainPath(Arg.Any<string>()).Returns(string.Empty);
-            MicroSites.ViewLogsPath(Arg.Any<string>()).Returns(string.Empty);
 
             ActionIdVisibilities = new Dictionary<int, bool>();
             CustStatuses = new Dictionary<string, bool>();

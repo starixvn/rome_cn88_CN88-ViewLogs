@@ -4059,4 +4059,16 @@
   <data name="NewManagedAccount" xml:space="preserve">
     <value>New Managed Account</value>
   </data>
+  <data name="ReviewStatus" xml:space="preserve">
+    <value>Review Status</value>
+  </data>
+  <data name="Reviewed" xml:space="preserve">
+    <value>Reviewed</value>
+  </data>
+  <data name="NotReviewed" xml:space="preserve">
+    <value>Not Reviewed</value>
+  </data>
+  <data name="IsAllAffectedDownlines" xml:space="preserve">
+    <value>Is All Affected Downlines</value>
+  </data>
 </root>
