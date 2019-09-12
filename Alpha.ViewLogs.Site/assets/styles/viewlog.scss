@@ -505,6 +505,10 @@ body.phone {
     }
 
     .tblDesc {
+        .headerSportTypeDetail td {
+            line-height: 18px;
+        }
+
         tr {
             display: flex;
             flex-wrap: wrap;
@@ -512,62 +516,36 @@ body.phone {
             width: 100%;
             height: auto;
             min-height: 20px;
-        }
 
-        .action-name td,
-        .product-by-sport > td,
-        .headerSportTypeDetail td {
-            width: 100%;
-            border-bottom: none !important;
-        }
+            td {
+                width: 100%;
+                border-bottom: none !important;
 
-        .headerSportTypeDetail td {
-            line-height: 18px;
-        }
+                &.colW1, &.colW2 {
+                    display: flex;
+                    flex-basis: 50%;
+                    float: left;
+                    align-items: center;
+                    border-bottom: 1px solid #D2D2D2 !important;
+                    min-height: 38px;
+                }
 
-        .colW1, .colW2 {
-            display: flex;
-            flex-basis: 50%;
-            float: left;
-            align-items: center;
-            border-bottom: 1px solid #D2D2D2;
-            min-height: 38px;
-        }
+                &.colW2 {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
 
-        tr:first-child td.colW1,
-        tr:first-child td.colW2,
-        tr:last-child td.colW1,
-        tr:last-child td.colW2 {
-            border-bottom: 1px solid #D2D2D2 !important;
-        }
+            &:first-child:nth-last-child(1) td {
+                height: auto !important;
+            }
 
-        tr:not(:only-child):last-child td:nth-last-child(-n+2) {
-            border-bottom: none !important;
-        }
-
-        .colW2 {
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .action-name ~ tr:first-of-type td:nth-child(-n+2) {
-            border-top: 1px solid #D2D2D2 !important;
-            height: auto !important;
-        }
-        /*.action-name ~ tr:first-of-type td:nth-child(-n+2) {
-            border-top: 1px solid #D2D2D2 !important;
-            height: auto !important;
-        }*/
-        .product-by-sport tr:first-of-type, .general-information td:nth-child(-n+2) {
-            border-top: 1px solid #D2D2D2 !important;
-        }
-
-        .headerSportTypeDetail ~ tr:last-of-type td:nth-last-child(-n+2) {
-            border-bottom: 1px solid #D2D2D2 !important;
-        }
-
-        tbody tr:first-child:nth-last-child(1) td {
-            height: auto !important;
+            &:last-of-type {
+                tr:last-of-type td:nth-last-child(-n+2),
+                tr.headerSportTypeDetail + tr:last-of-type td:nth-last-child(-n+2) {
+                    border-bottom: none !important;
+                }
+            }
         }
     }
 }
