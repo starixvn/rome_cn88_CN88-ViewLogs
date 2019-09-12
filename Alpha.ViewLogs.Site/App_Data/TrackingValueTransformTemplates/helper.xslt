@@ -60,7 +60,9 @@
         <xsl:value-of select="xslLogFormat:GetLogResource($key)" />
       </td>
       <td class="colW2">
-        <xsl:value-of select="$value" />
+        <div>
+          <xsl:value-of select="$value" />
+        </div>
       </td>
     </xsl:if>
   </xsl:template>
@@ -84,7 +86,7 @@
       <td class="colW2">
         <xsl:value-of select="xslLogFormat:FormatIP(@ip)" />
       </td>
-      <xsl:if test="isShowEmptyRow ='true'">
+      <xsl:if test="$isShowEmptyRow">
         <td class="colW1"></td>
         <td class="colW2"></td>
       </xsl:if>

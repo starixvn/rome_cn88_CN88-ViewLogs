@@ -562,6 +562,9 @@ body.phone {
             border-top: 1px solid #D2D2D2 !important;
         }
 
+        .headerSportTypeDetail ~ tr:last-of-type td:nth-last-child(-n+2) {
+            border-bottom: 1px solid #D2D2D2 !important;
+        }
 
         tbody tr:first-child:nth-last-child(1) td {
             height: auto !important;
