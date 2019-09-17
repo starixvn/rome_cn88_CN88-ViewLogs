@@ -3,8 +3,10 @@
 
 @model IndexViewModel
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Resources.ViewLog;
+                /**/
+
+                Layout = "~/Views/Shared/_Layout.cshtml";
+                ViewBag.Title = Resources.ViewLog;
 }
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()">
@@ -54,32 +56,32 @@
                     {
                         foreach (LoginLogItemViewModel logItem in Model.LogItems)
                         {
-                    <tr>
-                        <td class="col-action">
-                            <span class="action-name">@Html.Raw(logItem.ActionName)</span>
-                            <br />
-                            <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
-                            <span class="log-date">@Html.Raw(logItem.LogDate)</span>
-                            <br />
-                            <span class="logid">#@logItem.LogId</span>
-                        </td>
-                        <td>
-                            @logItem.Details
-                        </td>
-                        <td>@logItem.Domain</td>
-                        <td>@logItem.Browser</td>
-                        <td align="center">
-                            @Html.Raw(logItem.IP)
-                            <br />
-                            @Html.Raw(logItem.Country)
-                        </td>
-                    </tr>
+                            <tr>
+                                <td class="col-action">
+                                    <span class="action-name">@Html.Raw(logItem.ActionName)</span>
+                                    <br />
+                                    <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
+                                    <span class="log-date">@Html.Raw(logItem.LogDate)</span>
+                                    <br />
+                                    <span class="logid">#@logItem.LogId</span>
+                                </td>
+                                <td>
+                                    @logItem.Details
+                                </td>
+                                <td>@logItem.Domain</td>
+                                <td>@logItem.Browser</td>
+                                <td align="center">
+                                    @Html.Raw(logItem.IP)
+                                    <br />
+                                    @Html.Raw(logItem.Country)
+                                </td>
+                            </tr>
                         }
                     }
                     else
                     {
                         <tr>
-                            <td colspan="6" align="center">@Resources.NoInfo</td>
+                            <td colspan="6" align="center" data-isNoInfo="true">@Resources.NoInfo</td>
                         </tr>
                     }
             </table>
