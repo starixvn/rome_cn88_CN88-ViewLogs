@@ -494,11 +494,23 @@ body.phone {
         margin-top: 15px;
         margin-bottom: 0;
 
-        .no-padding {
-            padding: 0;
+        tr.RptHeader {
+            background-color: transparent;
         }
 
-        .col-action {
+        > tbody > tr > td {
+            border-bottom-color: #D2D2D2;
+        }
+
+        .no-padding {
+            padding: 0;
+
+            > .tblDesc > tbody > tr:last-child > td:nth-last-child(-n+2) {
+                border-bottom: none !important;
+            }
+        }
+
+        .col-logs-action {
             width: 120px;
             vertical-align: top;
         }
@@ -538,13 +550,6 @@ body.phone {
 
             &:first-child:nth-last-child(1) td {
                 height: auto !important;
-            }
-
-            &:last-of-type {
-                tr:last-of-type td:nth-last-child(-n+2),
-                tr.headerSportTypeDetail + tr:last-of-type td:nth-last-child(-n+2) {
-                    border-bottom: none !important;
-                }
             }
         }
     }

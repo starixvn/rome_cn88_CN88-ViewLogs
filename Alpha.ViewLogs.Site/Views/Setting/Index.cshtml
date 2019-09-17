@@ -62,7 +62,7 @@
             <table id="DataLog" class="width-100per tblRpt tbl-style2">
                 <thead>
                     <tr class="RptHeader">
-                        <th class="col-action">@Resources.Action</th>
+                        <th class="col-logs-action">@Resources.Action</th>
                         <th>@Resources.Details</th>
                     </tr>
 
@@ -73,7 +73,7 @@
                         foreach (var logItem in Model.LogItems)
                         {
                     <tr>
-                        <td class="col-action">
+                        <td class="col-logs-action">
                             <span class="action-name">@Html.Raw(logItem.ActionName)</span>
                             <br />
                             <span class="username">@Html.Raw(Resources.By + " " + logItem.Username)</span>
