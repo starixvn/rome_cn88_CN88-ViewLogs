@@ -51,7 +51,7 @@
     <Setting Key="CS_UserLog_CreditSelTotalRecords" SpName="CS_UserLog_CreditSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
     <Setting Key="CS_UserLog_LoginSelTotalRecords" SpName="CS_UserLog_LoginSelTotalRecords" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" />
 
-    <Setting Key="Acc_UserLog_LogActionTypeSel" SpName="Acc_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
+    <Setting Key="CS_UserLog_LogActionTypeSel" SpName="CS_UserLog_LogActionTypeSel" DbName="DBLOG.bodb_CustomerLog.BODBDownlineNet" Plain="0">
       <Mapping DataField="ActionTypeID" ObjectProperty="Id" />
       <Mapping DataField="ActionTypeNameEN" ObjectProperty="EnglishName" />
       <Mapping DataField="ActionTypeNameCH" ObjectProperty="ChineseTraditionalName" />

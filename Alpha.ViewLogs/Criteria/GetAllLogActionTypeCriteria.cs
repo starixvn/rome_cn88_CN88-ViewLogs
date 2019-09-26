@@ -6,7 +6,7 @@
     {
         public override string GetSettingKey()
         {
-            return "Acc_UserLog_LogActionTypeSel";
+            return "CS_UserLog_LogActionTypeSel";
         }
 
         public override bool IsValid()
