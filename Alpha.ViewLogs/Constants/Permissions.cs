@@ -41,7 +41,9 @@
 
         private static string GetShortPermissionKey(string key)
         {
-            return key.Substring(1, key.Length - 2);
+            const int ShortPermissionKeyLength = 2;
+
+            return key.Substring(1, key.Length - ShortPermissionKeyLength);
         }
     }
 }
