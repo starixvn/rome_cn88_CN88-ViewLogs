@@ -12,11 +12,9 @@
         public static string Replace(string text)
             => string.IsNullOrWhiteSpace(text)
             ? text
-            : CompiledRegex.Replace(text, match =>
-            {
-                var resourceValue = Resource.GetString(match.Groups[1].Value);
+            : CompiledRegex.Replace(text, match => GetResourceValue(match, Resource.GetString(match.Groups[1].Value)));
 
-                return string.IsNullOrWhiteSpace(resourceValue) ? match.Groups[0].Value : resourceValue;
-            });
+        private static string GetResourceValue(Match match, string resourceValue)
+            => string.IsNullOrWhiteSpace(resourceValue) ? match.Groups[0].Value : resourceValue;
     }
 }
