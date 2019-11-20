@@ -148,7 +148,7 @@
             var newValue = string.Empty;
             var oldValue = string.Empty;
 
-            var nodeCountIncaseOfHavingNewOldDivs = 2;
+            const int nodeCountIncaseOfHavingNewOldDivs = 2;
 
             if (nodeCount >= nodeCountIncaseOfHavingNewOldDivs)
             {
@@ -163,7 +163,7 @@
                 return dayCodesWithDiff;
             }
 
-            var nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
+            const int nodeCountIncaseOfUnchangeValuesOrNotShowOldValues = 1;
 
             if (nodeCount == nodeCountIncaseOfUnchangeValuesOrNotShowOldValues)
             {
@@ -264,7 +264,7 @@
                 return string.Empty;
             }
 
-            string statusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
+            const string statusHtmlFormat = "<tr><td colspan=\"3\" class=\"colW1\">{0}</td><td colspan=\"3\" class=\"colW2\">{1}</td></tr>";
             var lowerCaseResourceName = name.ToLower();
 
             var resourceValue = string.Empty;
@@ -315,7 +315,7 @@
             char[] codes = dayCodes.Trim().ToCharArray();
             string condition = string.Empty;
 
-            var indicatorOfWeekly = 7;
+            const int indicatorOfWeekly = 7;
 
             if (!codes.Any()
                 || codes.Length < indicatorOfWeekly)
@@ -401,7 +401,12 @@
             GetLogResource(CN88Sporttype[sporttype]) : GetSportName(sporttype);
 
         private static bool IsPossessActionId(int actionId)
-            => IsBetween(actionId, 105000, 119999);
+        {
+            const int PossessActionStart = 105000;
+            const int PossessActionEnd = 119999;
+
+            return IsBetween(actionId, PossessActionStart, PossessActionEnd);
+        }
 
         private static bool IsBetween(int value, int start, int end)
             => start <= value && value <= end;
@@ -410,14 +415,23 @@
             => sportType != 1;
 
         private static bool IsAllSports(int sportType)
-            => sportType == 9999;
+        {
+            const int AllSportsId = 9999;
+
+            return sportType == AllSportsId;
+        }
 
         public string FormatNickName(string nickname)
             => isHideNickname ? string.Empty : ReplacePrefixNickname(nickname ?? string.Empty);
 
         private static string ReplacePrefixNickname(string nickname)
-            => nickname.StartsWith("cn88$", StringComparison.OrdinalIgnoreCase) ?
-                nickname.Substring(5) : nickname;
+        {
+            const int CN88NicknamePrefixLength = 5;
+
+            return nickname.StartsWith("cn88$", StringComparison.OrdinalIgnoreCase)
+                ? nickname.Substring(CN88NicknamePrefixLength)
+                : nickname;
+        }
 
         public string FormatSubAccName(string subAccName) => this.isHideSubAcc ? string.Empty : subAccName;
 
