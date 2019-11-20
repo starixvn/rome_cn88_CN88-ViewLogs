@@ -79,47 +79,30 @@
 
         public IEnumerable<LogActionType> GetLogActionTypes()
         {
-            IEnumerable<LogActionType> logActionTypes = new List<LogActionType>
-            {
-                new LogActionType
-                {
-                    Id = 1,
-                    ChineseTraditionalName = GetFilterLogAction("Possess", "zh-TW"),
-                    NewChineseSimplifiedName = GetFilterLogAction("Possess", "zh-Hans"),
-                    EnglishName = GetFilterLogAction("Possess", "en-US")
-                },
-                new LogActionType
-                {
-                    Id = 2,
-                    ChineseTraditionalName = GetFilterLogAction("Commission", "zh-TW"),
-                    NewChineseSimplifiedName = GetFilterLogAction("Commission", "zh-Hans"),
-                    EnglishName = GetFilterLogAction("Commission", "en-US")
-                },
-                new LogActionType
-                {
-                    Id = 3,
-                    ChineseTraditionalName = GetFilterLogAction("BetLimit", "zh-TW"),
-                    NewChineseSimplifiedName = GetFilterLogAction("BetLimit", "zh-Hans"),
-                    EnglishName = GetFilterLogAction("BetLimit", "en-US")
-                },
-                new LogActionType
-                {
-                    Id = 4,
-                    ChineseTraditionalName = GetFilterLogAction("GeneralInfo", "zh-TW"),
-                    NewChineseSimplifiedName = GetFilterLogAction("GeneralInfo", "zh-Hans"),
-                    EnglishName = GetFilterLogAction("GeneralInfo", "en-US")
-                },
-                new LogActionType
-                {
-                    Id=6,
-                    ChineseTraditionalName = GetFilterLogAction("ProblemAccount", "zh-TW"),
-                    NewChineseSimplifiedName = GetFilterLogAction("ProblemAccount", "zh-Hans"),
-                    EnglishName = GetFilterLogAction("ProblemAccount", "en-US")
-                }
-            };
+            const int PossessId = 1;
+            const int CommissionId = 2;
+            const int BetLimitId = 3;
+            const int GeneralInfoId = 4;
+            const int ProblemAccountId = 6;
 
-            return logActionTypes;
+            return new List<LogActionType>
+            {
+                GetLogActionType(PossessId, "Possess"),
+                GetLogActionType(CommissionId, "Commission"),
+                GetLogActionType(BetLimitId, "BetLimit"),
+                GetLogActionType(GeneralInfoId, "GeneralInfo"),
+                GetLogActionType(ProblemAccountId, "ProblemAccount")
+            };
         }
+
+        private static LogActionType GetLogActionType(int id, string name)
+            => new LogActionType
+            {
+                Id = id,
+                ChineseTraditionalName = GetFilterLogAction(name, "zh-TW"),
+                NewChineseSimplifiedName = GetFilterLogAction(name, "zh-Hans"),
+                EnglishName = GetFilterLogAction(name, "en-US")
+            };
 
         private static string GetFilterLogAction(string name, string language)
             => Resources.ResourceManager.GetString(name, new CultureInfo(language));
