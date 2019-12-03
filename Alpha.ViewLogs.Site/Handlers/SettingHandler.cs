@@ -82,7 +82,7 @@
 
         private IEnumerable<LogActionTypeViewModel> BuildLogActionTypeViewModels(IndexQuery message)
         {
-            var logActionTypes = LogService.GetLogActionTypes();
+            var logActionTypes = LogService.GetLogActionTypes(message.RoleId);
 
             var logActionTypeViewModels = logActionTypes
                 .Select(logActionType => new LogActionTypeViewModel(logActionType, message.Language))

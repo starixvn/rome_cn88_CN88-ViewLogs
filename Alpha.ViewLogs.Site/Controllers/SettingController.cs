@@ -1,6 +1,8 @@
 ﻿namespace Alpha.ViewLogs.Site.Controllers
 {
     using System.Web.Mvc;
+    using CN88.Web.Helpers;
+    using Configurations;
     using MediatR;
     using Requests.Setting;
     using Sunplus.Agent.Model.Entities;
@@ -19,6 +21,11 @@
         public ActionResult Index(IndexQuery indexQuery)
         {
             indexQuery.TrackingValueTransformTemplatePath = HttpContext.Server.MapPath(TemplatePath);
+
+            if (indexQuery.Invalid())
+            {
+                return Redirect(MicroSites.MainUrl(AppSettings.AccessDeniedPage));
+            }
 
             var viewModel = mediator.Send(indexQuery);
 
