@@ -6,7 +6,7 @@
 
     public interface LogService
     {
-        IEnumerable<LogActionType> GetLogActionTypes();
+        IEnumerable<LogActionType> GetLogActionTypes(byte roleId);
 
         string GetLogActionName(int actionId, string language);
 

@@ -13,6 +13,7 @@
     using Fanex.Data.Repository;
     using Helpers;
     using Models;
+    using Models.Enumerations;
     using Params;
     using Sunplus.Agent.Model.Base;
     using Sunplus.Agent.Model.Entities;
@@ -77,7 +78,7 @@
             }
         }
 
-        public IEnumerable<LogActionType> GetLogActionTypes()
+        public IEnumerable<LogActionType> GetLogActionTypes(byte roleId)
         {
             const int PossessId = 1;
             const int CommissionId = 2;
@@ -85,14 +86,20 @@
             const int GeneralInfoId = 4;
             const int ProblemAccountId = 6;
 
-            return new List<LogActionType>
+            var types = new List<LogActionType>
             {
                 GetLogActionType(PossessId, "Possess"),
                 GetLogActionType(CommissionId, "Commission"),
                 GetLogActionType(BetLimitId, "BetLimit"),
-                GetLogActionType(GeneralInfoId, "GeneralInfo"),
-                GetLogActionType(ProblemAccountId, "ProblemAccount")
+                GetLogActionType(GeneralInfoId, "GeneralInfo")
             };
+
+            if (roleId == UserLevel.Super.Value)
+            {
+                types.Add(GetLogActionType(ProblemAccountId, "ProblemAccount"));
+            }
+
+            return types;
         }
 
         private static LogActionType GetLogActionType(int id, string name)

@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using MediatR;
+    using Models.Enumerations;
     using Sunplus.Agent.Model.Entities;
     using ViewLogs.Helpers;
     using ViewModels.Setting;
@@ -36,5 +37,8 @@
         }
 
         public string TrackingValueTransformTemplatePath { get; set; }
+
+        public bool Invalid()
+            => RoleId != UserLevel.Super.Value && !string.IsNullOrWhiteSpace(ActionTypeId) && ActionTypeId.Trim().Equals("6");
     }
 }

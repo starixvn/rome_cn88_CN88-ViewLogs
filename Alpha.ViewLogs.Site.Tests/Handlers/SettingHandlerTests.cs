@@ -441,10 +441,8 @@
                 }
             };
 
-            var logParam = GetLogParam(indexQuery);
-
             LogService.GetPagingLogs(Arg.Any<LogParam>()).Returns(pagingLogs);
-            LogService.GetLogActionTypes().Returns(new List<LogActionType>()
+            LogService.GetLogActionTypes(4).Returns(new List<LogActionType>()
             {
                 new LogActionType
                 {
