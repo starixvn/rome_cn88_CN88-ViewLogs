@@ -358,7 +358,9 @@
     </Content>
     <Content Include="App_Data\SPNames\Pro\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\Pro\DBCust.IPDB.xml" />
-    <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml" />
+    <Content Include="App_Data\SPNames\Pro\DBLOG.bodb_CustomerLog.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SPNames\Pro\DBONUSER.ON_USER.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBAGE.bodb02.BODBDownlineNet.xml" />
     <Content Include="App_Data\SPNames\SIT\DBCust.CustDB.BODBDownlineNet.xml" />
