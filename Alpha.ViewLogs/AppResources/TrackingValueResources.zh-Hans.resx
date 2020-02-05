@@ -3922,7 +3922,7 @@
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88BasketballLiveHandicap" xml:space="preserve">
-    <value>滚球让球, 滚球大小, 滚球单/双</value>
+    <value>滚球让分, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88BasketballOtherBettype" xml:space="preserve">
     <value>其他玩法</value>
@@ -3934,7 +3934,7 @@
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88OtherSporstLiveHandicap" xml:space="preserve">
-    <value>滚球让球, 滚球大小, 滚球单/双</value>
+    <value>滚球让分, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88OtherSports" xml:space="preserve">
     <value>其他</value>
@@ -3955,7 +3955,7 @@
     <value>让球, 大小, 单双</value>
   </data>
   <data name="CN88SoccerLiveHandicap" xml:space="preserve">
-    <value>滚球让球, 滚球大小, 滚球单/双</value>
+    <value>滚球让分, 滚球大小, 滚球单/双</value>
   </data>
   <data name="CN88SoccerLiveOtherBettype" xml:space="preserve">
     <value>滚球其他玩法</value>
